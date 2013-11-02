@@ -4,3 +4,7 @@
 # Ignore paths that contain user-generated content.
 /sites/*/files
 /sites/*/private
+
+# Ignore sass cache files
+/sites/*/.sass-cache
+
