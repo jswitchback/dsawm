@@ -1,0 +1,263 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// The word "Unpublished" displayed underneath unpublished nodes and comments.
+@mixin unpublished-div {
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word; // A very nice CSS3 property
+
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    .lt-ie8 &>* {
+      position: relative; // Otherwise these elements will appear below the "Unpublished" text.
+    }
+  }
+}
+
+// text-overflow
+@mixin text-overflow($method: ellipsis) {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: $method;
+  text-overflow: $method;
+  .ie & {
+    width: 100%;
+  }
+}
+
+////////////////////////////
+// ABSOLUTE PSEUDO ELEMENTS
+////////////////////////////
+
+// $side: can be 'before', 'after', or 'both'
+@mixin pseudo($side: "before") {
+  position: relative;
+  @if $side == "both" {
+    &:before, &:after {
+      position: absolute;
+    }
+  }
+  @else {
+    &:#{$side} {
+      position: absolute;
+    }
+  }
+}
+
+@mixin no-bullets {
+  li {
+    list-style-type: none;
+    list-style-image: none;
+  }
+}
+
+@mixin clean-list {
+  @include no-bullets;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+@mixin clear-floats {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// universal transitions
+@mixin transition-all($time: 0.15s, $ease: ease) {
+  * {
+    @include transition(all $time $ease);
+  }
+}
+
+@mixin horizontal-list($list-margin: 1em, $list-item-margin: .25em) {
+    list-style-type:none;
+    padding:0;
+    margin: $list-margin;
+    overflow:hidden;
+    > li{
+        display:block;
+        float:left;
+        margin-right: $list-item-margin;
+        &:last-child{
+            margin-right:0px;
+        }
+    }
+}
+
+// create simple tabs from <a> unside <ul>
+// $dir is 'bottom' for standard tabs
+// 'top' for hanging tabs
+// assumes placement on UL
+
+@mixin tabs(
+  $dir: top,
+  $border-color: $link-color,
+  $border-color-active: darken($link-color, 30%),
+  $background-color: $link-color,
+  $background-color-active: darken($link-color, 20%),
+  $list-margin: 1em,
+  $list-item-margin: .25em,
+  $link-padding: 0 1em,
+  $radius: 3px) {
+  $from-the: bottom;
+  @if $dir == bottom {
+    $from-the: top;
+  }
+  @include horizontal-list($list-margin, $list-item-margin);
+  position: relative;
+  li {
+    border-#{$from-the}: 1px solid $border-color;
+    margin-top: 1px;
+    &.active {
+      a {
+        border-#{$from-the}: 1px solid $border-color-active;
+        background-color: $background-color-active;
+      }
+    }
+    a {
+      padding: $link-padding;
+      border: {
+        width: 1px;
+        style: solid;
+        color: $border-color;
+      };
+      background-color: $background-color;
+      border-#{$from-the}-width: 0;
+      position: relative;
+      bottom: -0.25em;
+      @if $from-the == bottom {
+        @include border-top-radius($radius);
+      }
+      @else {
+        @include border-bottom-radius($radius);
+      }
+      &:hover {
+        background-color: $background-color-active;
+        border-#{$from-the}: 1px solid $border-color-active;
+      }
+    }
+  }
+}
+
+@mixin pixel-normalize {
+  // http://www.alistapart.com/articles/a-pixel-identity-crisis/
+
+  // Using a new pixel ratio of 6/5
+  // Standard 7" 1024x600 tablet (KINDLE FIRE)
+  @media screen and (-webkit-device-pixel-ratio: 1) and (device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape),
+    screen and (-webkit-device-pixel-ratio: 1) and (device-width: 600px) and (max-device-height: 1024px) and (orientation: portrait),
+    screen and (-o-device-pixel-ratio: 1) and (device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape),
+    screen and (-o-device-pixel-ratio: 1) and (device-width: 600px) and (max-device-height: 1024px) and (orientation: portrait),
+    screen and (device-pixel-ratio: 1) and (device-width: 1024px) and (max-device-height: 600px) and (orientation: landscape),
+    screen and (device-pixel-ratio: 1) and (device-width: 600px) and (max-device-height: 1024px) and (orientation: portrait) {
+    html {
+      font-size: $base-font-size * (6/5);
+    }
+  }
+
+  // 1024x600 tablet with pixel ratio of 3/2 (GALAXY TAB)
+  // Because we have a solid device-pixel-ratio we can avoid the device height
+  @media screen and (-webkit-device-pixel-ratio: 1.5) and (device-width: 683px) and (orientation: landscape),
+    screen and (-webkit-device-pixel-ratio: 1.5) and (device-width: 400px) and (orientation: portrait),
+    screen and (-o-device-pixel-ratio: 3/2) and (device-width: 683px) and (orientation: landscape),
+    screen and (-o-device-pixel-ratio: 3/2) and (device-width: 400px) and (orientation: portrait),
+    screen and (device-pixel-ratio: 1.5) and (device-width: 683px) and (orientation: landscape),
+    screen and (device-pixel-ratio: 1.5) and (device-width: 400px) and (orientation: portrait),
+    screen and (device-pixel-ratio: 3/2) and (device-width: 683px) and (orientation: landscape),
+    screen and (device-pixel-ratio: 3/2) and (device-width: 400px) and (orientation: portrait) {
+    html {
+      font-size: $base-font-size * (2/3) * (6/5);
+    }
+  }
+}
+
+// hide-text
+@mixin hide-text() {
+  border:0;
+  font: 0/0 a; 
+  text-shadow: none; 
+  color: transparent; 
+  background-color: transparent; 
+}
+
+// Embossed ui-box... http://sachagreif.com/useful-sass-mixins/
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+// Embossed text... http://sachagreif.com/useful-sass-mixins/
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+
+// Used to create equilateral triangles
+@mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset $triangle-size;
+  @if ($triangle-direction == top) {
+    border-color: $triangle-color transparent transparent transparent;
+    border-top-style: solid;
+  }
+  @if ($triangle-direction == bottom) {
+    border-color: transparent transparent $triangle-color transparent;
+    border-bottom-style: solid;
+  }
+  @if ($triangle-direction == left) {
+    border-color: transparent transparent transparent $triangle-color;
+    border-left-style: solid;
+  }
+  @if ($triangle-direction == right) {
+    border-color: transparent $triangle-color transparent transparent;
+    border-right-style: solid;
+  }
+}

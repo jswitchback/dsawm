@@ -1,0 +1,147 @@
+/* Darken table when in a ui-block */
+/*
+  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
+  rgba-background mixin can now be passed an option $dir variable
+*/
+div.vertical-tabs {
+  margin: 2em 0 1em 15em;
+  /* LTR */
+  border: 1px solid white;
+  background-color: white;
+  position: relative;
+  /* IE6/7 */
+}
+
+.vertical-tabs ul.vertical-tabs-list {
+  width: 15em;
+  list-style: none;
+  list-style-image: none;
+  /* IE6 */
+  border-top: 1px solid white;
+  padding: 0;
+  position: relative;
+  /* IE6 */
+  margin: -1px 0 -1px -15em;
+  /* LTR */
+  float: left;
+  /* LTR */
+}
+
+.vertical-tabs fieldset.vertical-tabs-pane {
+  margin: 0 !important;
+  padding: 1em;
+  border: 0;
+}
+
+fieldset.vertical-tabs-pane legend {
+  display: none;
+}
+
+fieldset.vertical-tabs-pane fieldset legend {
+  display: block;
+}
+
+/* Layout of each tab */
+.vertical-tabs ul.vertical-tabs-list li {
+  background: white;
+  border: 1px solid white;
+  border-top: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  /* IE7 */
+}
+.vertical-tabs ul.vertical-tabs-list li:focus, .vertical-tabs ul.vertical-tabs-list li:active {
+  outline: none;
+}
+.vertical-tabs ul.vertical-tabs-list li:hover, .vertical-tabs ul.vertical-tabs-list li:focus {
+  background: #f1f1f1;
+}
+
+.vertical-tabs ul.vertical-tabs-list li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5em 0.6em;
+  font-size: .875em;
+}
+
+.vertical-tabs ul.vertical-tabs-list li a:focus strong,
+.vertical-tabs ul.vertical-tabs-list li a:active strong,
+.vertical-tabs ul.vertical-tabs-list li a:hover strong {
+  text-decoration: none;
+}
+
+.vertical-tabs ul.vertical-tabs-list li a:hover {
+  outline: none;
+  color: #3c3b3b;
+}
+
+.vertical-tabs ul.vertical-tabs-list li.selected {
+  background-color: white;
+  border-right-width: 0;
+  /* LTR */
+}
+.vertical-tabs ul.vertical-tabs-list li.selected a {
+  border-left: 0.25em solid #8fd4e0;
+}
+
+.vertical-tabs ul.vertical-tabs-list .selected strong {
+  color: #000;
+}
+
+.vertical-tabs ul.vertical-tabs-list .summary {
+  display: block;
+}
+
+.vertical-tabs ul.vertical-tabs ul.vertical-tabs-list .summary {
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+/**
+ * Prevent text inputs from overflowing when container is too narrow. "width" is
+ * applied to override hardcoded cols or size attributes and used in conjunction
+ * with "box-sizing" to prevent box model issues from occurring in most browsers.
+*/
+.vertical-tabs .form-type-textfield input {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* html .vertical-tabs .form-type-textfield,
+* html .vertical-tabs .form-textarea-wrapper {
+  width: 95%;
+  /* IE6 */
+}
+
+/* ADDED */
+.vertical-tab-button.first {
+  -moz-border-radius-topleft: 1.99999px;
+  -webkit-border-top-left-radius: 1.99999px;
+  border-top-left-radius: 1.99999px;
+}
+
+.vertical-tab-button.last {
+  -moz-border-radius-bottomleft: 1.99999px;
+  -webkit-border-bottom-left-radius: 1.99999px;
+  border-bottom-left-radius: 1.99999px;
+}
+
+.vertical-tabs-pane {
+  -moz-border-radius-topright: 1.99999px;
+  -webkit-border-top-right-radius: 1.99999px;
+  border-top-right-radius: 1.99999px;
+  -moz-border-radius-bottomright: 1.99999px;
+  -webkit-border-bottom-right-radius: 1.99999px;
+  border-bottom-right-radius: 1.99999px;
+  -moz-border-radius-bottomleft: 1.99999px;
+  -webkit-border-bottom-left-radius: 1.99999px;
+  border-bottom-left-radius: 1.99999px;
+}
+
+.vertical-tabs-pane fieldset {
+  background: none;
+  border: none;
+}

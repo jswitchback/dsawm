@@ -1,0 +1,15 @@
+ @import "my-sass-resources/_base.scss";
+ 
+.browser-width {
+  @include border-radius(5px);
+  @include rgba-background(rgba(0, 0, 0, 0.75));
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 13px;
+  color: #fff;
+  max-width: 100%;
+  margin: 5px;
+  padding: 5px 10px;
+}   

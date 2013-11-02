@@ -1,0 +1,66 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+$nav-color: $link-color;
+
+
+
+/* Behavior
+   ========================================================================= */
+
+html.js #navigation {
+  @include breakpoint($tablet-portrait-max-width) {
+    overflow: hidden;
+    @include transition(max-height .5s cubic-bezier(.17,.67,.66,1.04));
+    max-height: 0;
+  }
+  @include breakpoint($tablet-portrait-min-width) {
+    max-height: 30em;
+  }
+} 
+
+html.js body.show-nav #navigation {
+  max-height: 30em;
+}
+// End behavior
+
+
+/* Styles
+   ========================================================================= */
+
+#navigation {
+  clear: both;
+  float: none;
+  background: $nav-color;
+  margin-left: -$zen-gutter-width;
+  margin-right: -$zen-gutter-width;
+  .block {
+    margin-bottom: 0;
+  }
+  ul.menu{
+    li {
+      float: none;
+      text-align: center;
+      border-bottom: 1px solid darken($nav-color, 10%);
+      margin-bottom: 0;
+      &.last a {
+        border-bottom: 1px solid $nav-color;
+      }
+      a {
+        padding: .5em;
+        display: block;
+        text-align: center;
+        color: #fff;
+        @include single-text-shadow(darken($nav-color, 20%) 0 0 1px);
+        &:hover {
+          background: darken($nav-color, 5%);
+        }
+        &:active {
+          @include box-shadow(darken($nav-color, 5%) 0 0 10px inset);
+          background: lighten($nav-color, 5%);
+        }
+
+      }
+    }
+  }
+}

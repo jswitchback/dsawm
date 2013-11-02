@@ -1,0 +1,63 @@
+
+// GOLDEN RATIO TYPEFACE GUIDELINES BY CONTENT WIDTH
+
+// http://www.pearsonified.com/typography/
+
+
+// ******** 480px Optimized: 
+// Golden Scale for 14px Font / Line-height 22px
+
+// Title: 37px
+
+// Headlines: 23px
+
+// Sub-headlines: 18px
+
+// Primary Text: 14px
+
+// Secondary Text: 11px
+
+// ******** 600px Optiomized: 
+
+// Golden Scale for 15px Font / Line-height 24px
+
+// Title: 39px
+
+// Headlines: 24px
+
+// Sub-headlines: 19px
+
+// Primary Text: 15px
+
+// Secondary Text: 12px
+
+
+// ******** 768px Optimized: 
+// Golden Scale for 17px Font / Line-height 28px
+
+// Title: 45px
+
+// Headlines: 28px
+
+// Sub-headlines: 22px
+
+// Primary Text: 17px
+
+// Secondary Text: 13px
+
+/* Zen Compass tag styles
+
+
+// ******** 960px Optimized: 
+// Golden Scale for 19px Font / Line-height 31px
+
+// Title: 50px
+
+// Headlines: 31px
+
+// Sub-headlines: 24px
+
+// Primary Text: 19px
+
+// Secondary Text: 15px
+

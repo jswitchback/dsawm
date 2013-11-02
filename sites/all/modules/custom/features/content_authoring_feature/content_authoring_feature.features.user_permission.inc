@@ -1,0 +1,51 @@
+<?php
+/**
+ * @file
+ * content_authoring_feature.features.user_permission.inc
+ */
+
+/**
+ * Implements hook_user_default_permissions().
+ */
+function content_authoring_feature_user_default_permissions() {
+  $permissions = array();
+
+  // Exported permission: 'access ckeditor link'.
+  $permissions['access ckeditor link'] = array(
+    'name' => 'access ckeditor link',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+      'developer' => 'developer',
+    ),
+    'module' => 'ckeditor_link',
+  );
+
+  // Exported permission: 'administer ckeditor'.
+  $permissions['administer ckeditor'] = array(
+    'name' => 'administer ckeditor',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'ckeditor',
+  );
+
+  // Exported permission: 'administer ckeditor link'.
+  $permissions['administer ckeditor link'] = array(
+    'name' => 'administer ckeditor link',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'ckeditor_link',
+  );
+
+  // Exported permission: 'customize ckeditor'.
+  $permissions['customize ckeditor'] = array(
+    'name' => 'customize ckeditor',
+    'roles' => array(
+      'developer' => 'developer',
+    ),
+    'module' => 'ckeditor',
+  );
+
+  return $permissions;
+}

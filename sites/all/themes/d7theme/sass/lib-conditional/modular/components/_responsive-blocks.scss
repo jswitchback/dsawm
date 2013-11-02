@@ -1,0 +1,195 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+/**
+ * @file
+ * CSS to be coupled with classes added via template php.
+ *
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com  
+ */    
+
+
+// $grids: 24;
+// $gutters: 4;
+// $gutter-styles: 'split';
+
+// Add box-sizing and padding seperate. Replaced by custom mixin @include zen-grid-padding(both)... left... right
+$zen-auto-include-item-base: false;
+
+
+
+/* Use CSS to show general grid layout. Not 100% accurate representation
+body {
+  margin: 0;
+  padding: 0;
+  @include background-grid;
+} */
+ 
+
+
+/* 1 COlUMN LAYOUT (Generally min-width: 320px)
+   ========================================================================== */
+
+@include breakpoint($min-layout-width) {
+
+}
+
+
+/* 2 COLUMN LAYOUT (Generally min-width: 600px to 759px)
+   ========================================================================== */
+
+@include breakpoint($tablet-small-min-width) { 
+  .max-two {
+    &:nth-child(2n+1) {
+      @include zen-grid-item(12, 1);
+      clear: left;
+    }
+    &:nth-child(2n+2) {
+      @include zen-grid-item(12, 13);
+    }
+  }  
+}   
+   
+@include breakpoint($tablet-small-min-width $tablet-portrait-max-width) {
+
+  .max-three, .max-five {
+    &:nth-child(3n+1) {
+      @include zen-grid-item(12, 1);
+      clear: left;
+    }
+    &:nth-child(3n+2) {
+      @include zen-grid-item(12, 13);
+    }
+    &:nth-child(3n+3) {
+      @include zen-grid-item(24, 1);
+      clear: both;
+      &.contained {
+        width: 50%;
+      }
+    }
+  }
+  .max-four {
+    &:nth-child(2n+1) {
+      @include zen-grid-item(12, 1);
+      clear: left;
+    }
+    &:nth-child(2n+2) {
+      @include zen-grid-item(12, 13);
+    }
+  }
+  .max-six {
+    &:nth-child(2n+1) {
+      @include zen-grid-item(12, 1);
+      clear: left;
+    }
+    &:nth-child(2n+2) {
+      @include zen-grid-item(12, 13);
+    }
+  }
+}
+   
+
+/* 3 COLUMN LAYOUT (Generally min-width: 760px)
+   ========================================================================== */
+
+
+@include breakpoint($tablet-portrait-min-width) {
+  .max-three, .max-six {
+    &:nth-child(3n+1) {
+      @include zen-grid-item(8, 1);
+      clear: left;
+    }
+    &:nth-child(3n+2) {
+      @include zen-grid-item(8, 9);
+    }
+    &:nth-child(3n+3) {
+      @include zen-grid-item(8, 17);
+    }
+  }
+}
+
+@include breakpoint($tablet-portrait-min-width $desktop-max-width) {
+  .max-four {
+    &:nth-child(4n+1) {
+      @include zen-grid-item(8, 1);
+      clear: left;
+    }
+    &:nth-child(4n+2) {
+      @include zen-grid-item(8, 9);
+    }
+    &:nth-child(4n+3) {
+      @include zen-grid-item(8, 17);
+    }
+    &:nth-child(4n+4) {
+      @include zen-grid-item(24, 1);
+      clear: both;
+      &.contained {
+        width: 33%;
+      }
+    }
+  }
+  .max-five {
+    &:nth-child(5n+1) {
+      @include zen-grid-item(8, 1);
+      clear: left;
+    }
+    &:nth-child(5n+2) {
+      @include zen-grid-item(8, 9);
+    }
+    &:nth-child(5n+3) {
+      @include zen-grid-item(8, 17);
+    }
+    &:nth-child(5n+4) {
+      @include zen-grid-item(12, 1);
+      clear: left;
+    }
+    &:nth-child(5n+5) {
+      @include zen-grid-item(12, 13);
+    }
+  }
+}
+
+/* 4 COLUMN LAYOUT (Generally min-width: 960px)
+   ========================================================================== */
+
+
+@include breakpoint($desktop-min-width) {
+  .max-four {
+    &:nth-child(4n+1) {
+      @include zen-grid-item(6, 1);
+      clear: left;
+    }
+    &:nth-child(4n+2) {
+      @include zen-grid-item(6, 7);
+    }
+    &:nth-child(4n+3) {
+      @include zen-grid-item(6, 13);
+    }
+    &:nth-child(4n+4) {
+      @include zen-grid-item(6, 19);
+    }
+  }
+  .max-five {
+    &:nth-child(5n+1) {
+      @include zen-grid-item(6, 1);
+      clear: left;
+    }
+    &:nth-child(5n+2) {
+      @include zen-grid-item(6, 7);
+    }
+    &:nth-child(5n+3) {
+      @include zen-grid-item(6, 13);
+    }
+    &:nth-child(5n+4) {
+      @include zen-grid-item(6, 19);
+    }
+    &:nth-child(5n+5) {
+      @include grid-span(24, 1);
+      clear: left;
+      &.contained {
+        width: 25%;
+      }
+    }
+  }
+}

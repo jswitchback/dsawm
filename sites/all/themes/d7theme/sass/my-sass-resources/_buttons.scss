@@ -1,0 +1,61 @@
+// Button Base Styles
+
+@mixin submit-btn($btn-color: #000000, $btn-radius: $button-border-radius) {
+  background-color: $btn-color;
+  color: lighten($btn-color, 60%);
+  font-weight: normal;
+  background-repeat: repeat-x;
+  border: 1px solid darken($btn-color, 10%);
+  @include border-radius($btn-radius);
+  @include box-shadow(rgba(255, 255, 255, 0.2) 0 0 8px inset, rgba(0, 0, 0, 0.05) 0 1px 2px);
+  font-size: .75em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px darken($btn-color, 20%);
+  text-align: center; 
+  display: inline-block;
+  line-height: $base-font-size * 1.5;
+  height: $base-font-size * 1.5;
+  padding: 0 1.5em;
+  &:hover {
+    text-decoration: none;
+    @include background-image(linear-gradient(center top, darken($btn-color, 10%), $btn-color));
+  }
+  &:active {
+    background-color: darken($btn-color, 10%);
+  }
+}
+
+@mixin theme-btn($theme-color: #000000) {
+  background: $theme-color;
+  color: lighten($theme-color, 60%);
+  font-weight: normal;
+  background-repeat: repeat-x;
+  border: 1px solid darken($theme-color, 5%);
+  @include border-radius($ui-border-radius);
+  @include box-shadow(rgba(255, 255, 255, 0.2) 0 0 8px inset, rgba(0, 0, 0, 0.05) 0 1px 2px);
+  text-align: center; 
+  &:hover {
+    background-color: darken($theme-color, 6%);
+    text-decoration: none;
+    background: #99CC66;
+    box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht, inset 0 -.188em lighten($theme-color, 2%);
+  }
+  &:active {
+    background-color: darken($theme-color, 10%);
+    box-shadow: 0 .063em $off-wht, inset 0 0 1.094em darken($theme-color, 30%), inset 0 .063em darken($theme-color, 20%),inset 0 -0.188em darken($theme-color, 20%); 
+  }
+}
+
+
+// Themes
+
+.btn-delete {
+}
+.btn-start {
+}
+.btn-order {
+}
+.btn-submit {
+}
+
+// Add more

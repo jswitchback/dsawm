@@ -1,0 +1,7 @@
+// First we tell Zen grids to reverse the direction of all floats.
+$zen-reverse-all-floats: true;
+
+// Then we import the LTR layout and the directions are automatically reversed.
+// Comment out unwanted layout
+@import "components/_responsive-rtl.scss";
+// @import "components/_fixed-rtl.scss";

@@ -1,0 +1,112 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+$nav-color: $link-color;
+
+
+/* Behavior
+   ========================================================================= */
+
+#mobile-nav-toggle {
+  @include breakpoint($tablet-portrait-min-width) {
+    display: none;
+  }
+}
+ 
+#mobile-nav-toggle {
+  float: right;
+}
+
+/* Toggle Button
+   ========================================================================= */
+
+.nav-button {
+  display: block;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+}
+
+
+.nav-button {
+  background-color: transparent;
+  color: $nav-color;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 7px 5px;
+  @include border-radius($ui-border-radius);
+  line-height: 18px;
+  margin-bottom: 0;
+  text-align: center;
+  &:hover, &:active {
+    color: lighten($nav-color, 20%);
+    .toggle-bar {
+      background-color: lighten($nav-color, 20%);
+    }
+  }
+}
+
+.toggle-bar {
+  background-color: $nav-color;
+  @include border-radius(1px);
+  display: block;
+  margin-top: 0;
+  height: 3px;
+  width: 24px;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+.toggle-bar + .toggle-bar {
+  margin-top: 3px;
+}
+
+/* Base Desktop Styles
+   ========================================================================= */
+
+@include breakpoint($tablet-portrait-min-width) {
+  #navigation {
+    margin-left: 0;
+    margin-right: 0;
+    float: right;
+    clear: none;
+    background: none;
+
+    .block-menu .block-title,
+    .block-menu-block .block-title {
+      @include element-invisible();
+    }
+
+    ul.links, /* Main menu and secondary menu links */
+    ul.menu { /* Menu block links */
+      margin: 0;
+      padding: 0;
+      text-align: left; /* LTR */
+
+      li { /* A simple method to get navigation links to appear in one line. */
+        float: left; /* LTR */
+        padding: 0 10px 0 0; /* LTR */
+        list-style-type: none;
+        list-style-image: none;
+        border-bottom: none;
+        &.last a {
+          border: none;
+        }
+        a {
+          color: $link-color;
+          background: none;
+        &:hover {
+          background: darken($nav-color, 5%);
+          color: #fff;
+        }
+        &:active {
+          @include box-shadow(darken($nav-color, 5%) 0 0 10px inset);
+          background: lighten($nav-color, 5%);
+          color: #fff;
+        }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+/* Off-Canvas Sidebar (body.has-mobile-sidebar)
+   ========================================================================== */
+
+html.js #navigation {
+	display: none;
+	@include breakpoint($tablet-portrait-min-width) {
+		display: block;
+	}
+}
+   
+#page {
+   width: 100%;
+}
+
+#page:before {
+   content: " ";
+   height: 100%;
+   left: -100%;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   z-index: -1;
+}
+
+#mobile-sidebar, #page {
+   display: block;
+   position: relative;
+   @include transition(all 0.25s ease-in-out);
+   width: 100%;
+   z-index: 1;
+}
+
+#mobile-sidebar {
+	padding: $ui-padding;
+   height: 100%;
+   float: right;
+   margin-right: -100%;
+   width: 80%;
+   z-index: 2;
+   @include box-sizing(border-box);
+}
+#page {
+   float: left;
+   margin-right: 0;
+   position: relative;
+   z-index: 1;
+}
+
+.show-nav #mobile-sidebar {
+   margin-right: 0;
+   @include breakpoint($tablet-portrait-min-width) {
+	   float: right;
+	   margin-right: -100%;
+	   width: 80%;
+   }
+}
+.show-nav #page {
+   margin-left: -80%;
+   @include breakpoint($tablet-portrait-min-width) {
+	   margin-left: 0%;
+	   margin-right: -100%;
+	   width: 100%;
+   }
+}
+

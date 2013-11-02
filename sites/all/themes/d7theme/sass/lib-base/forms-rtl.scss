@@ -1,0 +1,55 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+/**
+ * @file
+ * RTL companion for the forms.css file.
+ */
+
+
+/**
+ * Forms.
+ */
+
+/* Drupal's default login form block */
+#user-login-form {
+  text-align: right;
+}
+
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* Un-do some of the padding on the ul list. */
+  margin-left: 0;
+  margin-right: -20px;
+}
+
+/*
+ * Drupal admin tables.
+ */
+form {
+  th {
+    text-align: right;
+    padding-left: 1em;
+    padding-right: 0;
+  }
+}
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+.fieldset-legend {
+  html.js .collapsible & {
+    background-position: 98% 75%;
+    padding-left: 0;
+    padding-right: 15px;
+  }
+  html.js .collapsed & {
+    background-image: inline-image("menu-collapsed-rtl.png");
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+      *background-image: image-url("menu-collapsed-rtl.png");
+    }
+    background-position: 98% 50%;
+  }
+}

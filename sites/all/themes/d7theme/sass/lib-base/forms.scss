@@ -1,0 +1,708 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+/**
+ * @file
+ * Form Styling
+ */
+
+
+/* Forms
+   ========================================================================== */
+
+/* Wrapper for a form element (or group of form elements) and its label. */
+.form-item {
+  margin: $vert-gutter 0;
+
+  /* Pack groups of checkboxes and radio buttons closer together. */
+  .form-checkboxes & ,
+  .form-radios & {
+    /* Drupal core uses "0.4em 0". */
+    margin: 0;
+  }
+
+  /* Form items in a table. */
+  tr.odd &,
+  tr.even & {
+    margin: 0;
+  }
+  label { /* The label for a form element */
+    display: block;
+    font-weight: $form-item-label-font-weight;
+    margin: $form-item-label-margin;
+    font-size: $form-item-label-font-size;
+  }
+
+  /* Highlight the form elements that caused a form submission error. */
+  input.error,
+  textarea.error,
+  select.error {
+   border: 1px solid $error-color;
+  }
+
+  /* The descriptive help text (separate from the label). */
+  .description {
+   font-size: $form-item-description-font-size;
+  }
+}
+
+.form-type-radio,
+.form-type-checkbox {
+  .description {
+    margin-left: 2.4em;
+  }
+}
+
+.form-required { /* The part of the label that indicates a required field */
+   color: $error-color;
+ }
+
+/* Labels for radios and checkboxes. */
+label.option {
+  display: inline;
+  font-weight: normal;
+}
+
+/* Buttons used by contrib modules like Media. */
+a.button {
+  @include appearance(button);
+}
+
+/* Password confirmation. */
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+/* Drupal's default login form block. */
+#user-login-form {
+  text-align: left; /* LTR */
+}
+
+@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+  /* Correct margin displayed oddly in IE 6/7. */
+  form {
+    margin: 0;
+  }
+} 
+
+/**
+ * Autocomplete.
+ *
+ * @see autocomplete.js
+ */
+
+/* Suggestion list. */
+#autocomplete .selected {
+  background: #0072b9;
+  color: #fff;
+}
+
+ 
+/* Fieldsets & helper class for div around fieldset
+   ========================================================================== */
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+  font-weight: $legend-font-weight;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *margin-left: -7px; /* 3 */ /* LTR */
+  }
+}
+ 
+fieldset, .fieldset {
+  border-color: $fieldset-border-color;
+  @include apply-side-rhythm-border(top,    $width: 1px, $lines: 0.35);
+  @include apply-side-rhythm-border(bottom, $width: 1px, $lines: 0.65);
+  @include apply-side-rhythm-border(left,   $width: 1px, $lines: 0.65);
+  @include apply-side-rhythm-border(right,  $width: 1px, $lines: 0.65);
+  border-style: $fieldset-border-style;
+  padding: $fieldset-padding;
+  margin: $form-item-margin;
+  @include border-radius($fieldset-border-radius);
+  background: none repeat scroll 0 0 $fieldset-background-color;
+}
+
+/* Drupal body field footer */
+fieldset.filter-wrapper {
+ margin: $form-item-margin;
+ padding: 1.5em 0 0 0;
+ font-size: .875em;
+ @include border-top-radius(0);  
+ @include border-bottom-radius($fieldset-border-radius); 
+ .filter-help {
+   margin:0;
+ } 
+}
+
+/**
+ * Collapsible fieldsets.
+ *
+ * @see collapse.js
+ */
+.fieldset-legend {
+  html.js .collapsible & {
+    background-image: inline-image("menu-expanded.png");
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+      *background-image: image-url("menu-expanded.png");
+    }
+    background-position: 5px 65%; /* LTR */
+    background-repeat: no-repeat;
+    padding-left: 15px; /* LTR */
+  }
+  html.js .collapsed & {
+    background-image: inline-image("menu-collapsed.png"); /* LTR */
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+      *background-image: image-url("menu-collapsed.png"); /* LTR */
+    }
+    background-position: 5px 50%; /* LTR */
+  }
+  .summary {
+    color: #999;
+    font-size: 0.9em;
+    margin-left: 0.5em;
+  }
+}
+
+.field {
+    margin: 1em 0;
+}
+
+.text-format-wrapper {
+  position: relative;
+ .form-item {
+   margin-bottom: 0;
+  }
+}
+
+/* Set the disable rich text bottom to right bottom corner */
+.field-widget-text-textarea-with-summary, .field-widget-text-textarea { 
+ .wysiwyg-toggle-wrapper {
+   position: absolute;
+   bottom: 10px;
+   right: 26px;
+ }
+}
+
+// Remove styling from Drupal vertical tabs
+.vertical-tabs fieldset.vertical-tabs-pane {
+    background: none repeat scroll 0 0 transparent;
+}
+
+/* Submit Buttons and Node Edit Inputs Submit
+   ========================================================================== */
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ * 4. Improve appearance and consistency with IE 6/7.
+ * 5. Keep form elements constrained in their containers.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 2 */
+  margin: 0; /* 3 */
+  &:focus, &:active {
+    border: 1px solid $input-border-color-focus;
+    /* for Opera */
+    z-index: 1;
+  }
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    vertical-align: baseline; /* 4 */
+    *vertical-align: middle; /* 4 */
+  }
+  max-width: 100%; /* 5 */
+  @include box-sizing(border-box); /* 5 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  @if $legacy-support-for-ie7 {
+    *overflow: visible; /* 4 */
+  }
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  @include box-sizing(border-box); /* 1 */
+  padding: 0; /* 2 */
+  @if $legacy-support-for-ie7 {
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+  }
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  @include box-sizing(content-box); /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="submit"], 
+.node-readmore a {
+  @include submit-btn($button-color);
+}
+
+
+.form-actions input {
+  margin-right: 1em;
+}
+
+body.page-node-add input[type="submit"] {
+  width: auto;
+}
+
+input[value="Delete"], input[value="Remove"] {
+  @include submit-btn($delete-color);
+}
+
+
+#webform-component-edit-form { /* adding spacing to webform submit bottom */
+  input [type="submit"] {
+    margin-top: 1em;
+  }
+}
+
+
+// textarea, /* Every input field known to css. work in progress */
+// input[type="date"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="email"],
+// input[type="month"],
+// input[type="number"],
+// input[type="password"],
+// input[type="search"],
+// input[type="tel"],
+// input[type="text"],
+// input[type="time"],
+// input[type="url"],
+// input[type="week"]
+// input[type="text"], 
+// input[type="email"], 
+// input[type="password"]
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="week"],
+input[type="text"] {
+  width: $width-medium;
+}
+input[type="email"],
+input[type="url"],
+#user-login .form-text,
+.form-item-title input[type="text"] {
+  width: $width-xlarge;
+}
+input[type="number"] {
+  width:  $width-small;
+}
+
+// Node edit form title field
+ .form-item-title .form-text {
+  width: $width-xxlarge;
+}
+
+textarea,
+input { 
+  background: $input-background-color;
+  border: 1px solid $input-border-color;
+  @include box-shadow($input-box-shadow);
+  @include border-radius($input-border-radius);
+  @include box-sizing(border-box);
+  @include transition-property(all); 
+  @include transition-duration($input-focus-transition-timing);
+  @include transition-timing-function(ease-in);
+  padding: $input-padding;
+  font-family: $input-font-family;
+  color: $input-font-color;
+  font-size: $input-font-size;
+  max-width: 100%; /* fixed overflow of input fields in drupal 6 layouts */
+  /* IE7
+  *padding-top: 2px;
+  *padding-bottom: 1px;
+  *height: auto; */ 
+  &:focus, &:active {
+   border: 1px solid $input-border-color-focus;
+   @include box-shadow($input-box-shadow-focus);
+   background: $input-backgroud-color-focus;
+   outline: none;
+  }
+}
+
+input {
+   height: $base-font-size * 1.5;
+}
+
+/*
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+   height: $base-font-size * 1.8;
+}
+*/
+
+input[type="radio"], 
+input[type="checkbox"] {
+   margin-right: .25em;
+   background: none;
+   @include box-shadow(none);
+}
+
+// Fix positioning of throbber after adding height to inputs. Original css found in systems
+html.js input.form-autocomplete {
+   background-position: 99% 5px;
+}
+html.js input.throbbing {
+   background-position: 99% -15px;
+}
+
+.form-type-managed-file input.form-submit {
+  margin-left: .5em;
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer; /* 1 */
+  -webkit-appearance: button; /* 2 */
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    *overflow: visible;  /* 3 */
+  }
+  &:focus {
+    background-color: $link-color-hover;
+  }
+}
+ 
+button,
+input[type="button"],
+input[type="reset"] {
+  padding: 2px 10px;
+}
+
+textarea[disabled],
+select[disabled],
+input[disabled] {
+  background-color: $input-disabled-background-color;
+  color: $input-disabled-font-color;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+}
+
+
+/* Definition Lists & Drupal Content add list
+   ========================================================================== */
+
+.node-type-list {
+  dd {
+    margin: 0 0 1em 0;
+    font-size: .875em;
+  }
+  
+}
+
+
+/* Tables
+   ========================================================================== */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+   width: 100%; /* Prevent cramped-looking tables */
+  /* Add vertical rhythm margins. */
+  margin: $vert-gutter 0;
+}
+
+tbody {
+  border-style: $table-tbody-border-style;
+  border-width: $table-tbody-border-width;
+  border-color: $table-tbody-border-color;
+}
+
+th {
+ text-align: left; /* LTR */
+ padding-right: 1em; /* LTR */
+ border-style: $table-th-border-style;
+ border-width: $table-th-border-width;
+ border-color: $table-th-border-color;
+}
+
+td {
+padding: $table-td-padding;
+}
+
+
+tr.even {
+  background: $table-tr-even-background;
+  border-style: $table-tr-even-border-style;
+  border-width: $table-tr-even-border-width;
+  border-color: $table-tr-even-border-color;
+
+}
+
+tr.odd {
+  background: $table-tr-odd-background;
+  border-style: $table-tr-odd-border-style;
+  border-width: $table-tr-odd-border-width;
+  border-color: $table-tr-odd-border-color;
+}
+
+tr.drag {
+  background: $table-tr-drag-background;
+}
+
+fieldset { /* Darken table when in a ui-block */
+  th {
+   border-color: $ui-table-th-border-color;
+  }
+  tbody {
+    border-color: $ui-table-tbody-border-color;
+  }
+
+  tr.even {
+    background: $ui-table-tr-even-background;
+    border-color: $ui-table-tr-even-border-color;
+
+  }
+  tr.odd {
+    background: $ui-table-tr-odd-background;
+    border-color: $ui-table-tr-odd-border-color;
+  }
+  tr.drag-previous {
+    background-color: #fffce5;
+  }
+  tr.drag { 
+    background: $ui-table-tr-drag-background;
+  }
+}
+
+table .item-list ul {
+ margin: 0;
+}
+
+td.menu-disabled {
+ background: $table-td-disabled-background;
+}
+
+/**
+ * TableDrag behavior.
+ *
+ * @see tabledrag.js
+ */
+
+a.tabledrag-handle .handle {
+  background-position: center center;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  display: block;
+}
+
+a.tabledrag-handle-hover .handle {
+  background-position: center center;
+}
+
+.draggable a.tabledrag-handle {
+  height: 1.7em;
+  margin-left: 0;
+  background-color: #f1f1f1;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  &:hover {
+    background-color: #d1d1d1;
+  }
+}
+
+tr.drag {
+  background-color: #fffff0;
+}
+tr.drag-previous {
+  background-color: #fffce5;
+}
+.tabledrag-toggle-weight {
+  font-size: 0.9em;
+}
+
+
+@if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+ .lt-ie8 tr.even,
+ .lt-ie8 tr.odd {
+   th,
+   td {
+     border-style: $table-tr-even-border-style;
+     border-width: $table-tr-even-border-width;
+     border-color: $table-tr-even-border-color; /* IE doesnt display borders on table rows */
+   }
+ }
+}
+ 
+/**
+ * TableSelect behavior.
+ *
+ * @see tableselect.js
+ */
+tr.selected td {
+  background: #ffc;
+}
+
+/**
+ * Progress bar.
+ *
+ * @see progress.js
+ */
+.progress {
+  font-weight: bold;
+
+  .bar {
+    background: #ccc;
+    border-color: #666;
+    margin: 0 0.2em;
+    @include border-radius(3px);
+  }
+  .filled {
+    background-color: #0072b9;
+    background-image: image-url("progress.gif");
+  }
+}
+
+
+ /* Buttons
+    ========================================================================== */
+
+
+/*Base Button Styles */
+$off-wht: rgba(white,.4);
+
+.btn {
+  display: inline-block;
+  margin: 1rem; 
+  padding: .938em 1.875em;
+  border: .094em solid;
+  border-radius: .625em;
+  box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $off-wht, inset 0 -.188em rgba(black,.15);
+  color: #FFF;
+  font: bold 1em sans-serif;
+  text: {
+    transform: uppercase;
+    decoration: none;
+    shadow: 0 .063em rgba(black,.3);
+  }
+  transition: .3s;
+  cursor:pointer;
+}
+
+ /* Search
+    ========================================================================== */
+
+.search-results {
+  padding-left: 0;
+}
+
+#search-form {
+  .form-item-keys label {
+    display: block;
+  }
+}
+
+

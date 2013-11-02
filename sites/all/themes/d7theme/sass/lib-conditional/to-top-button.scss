@@ -1,0 +1,32 @@
+@import "my-sass-resources/base";
+
+/* =============================================================================
+   MOBILE "To Top" nav
+   ========================================================================== */
+
+html.js #toTop {
+  display: none;
+}
+
+#toTop {
+    background: $link-color;
+    z-index: 1;
+    @include single-text-shadow(darken($link-color, 20%), 1px, 1px, 0);
+    border-radius: 4px 0 0 4px;
+    color: white;
+}
+
+#toTop {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  padding: 1em 1.5em;
+}
+
+html.fontface {
+  #toTop {
+    padding: 1em 1.5em .8em 1.5em;
+  } 
+}
+
+ 

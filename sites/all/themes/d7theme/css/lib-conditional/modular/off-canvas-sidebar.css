@@ -1,0 +1,211 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+/* Darken table when in a ui-block */
+/*
+  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
+  rgba-background mixin can now be passed an option $dir variable
+*/
+/* Behavior
+   ========================================================================= */
+@media (min-width: 47.5em) {
+  #mobile-nav-toggle {
+    display: none;
+  }
+}
+
+#mobile-nav-toggle {
+  float: right;
+}
+
+/* Toggle Button
+   ========================================================================= */
+.nav-button {
+  display: block;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: #8fd4e0;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 7px 5px;
+  -webkit-border-radius: 1.99999px;
+  -moz-border-radius: 1.99999px;
+  -ms-border-radius: 1.99999px;
+  -o-border-radius: 1.99999px;
+  border-radius: 1.99999px;
+  line-height: 18px;
+  margin-bottom: 0;
+  text-align: center;
+}
+.nav-button:hover, .nav-button:active {
+  color: #dff3f6;
+}
+.nav-button:hover .toggle-bar, .nav-button:active .toggle-bar {
+  background-color: #dff3f6;
+}
+
+.toggle-bar {
+  background-color: #8fd4e0;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  display: block;
+  margin-top: 0;
+  height: 3px;
+  width: 24px;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+
+.toggle-bar + .toggle-bar {
+  margin-top: 3px;
+}
+
+/* Base Desktop Styles
+   ========================================================================= */
+@media (min-width: 47.5em) {
+  #navigation {
+    margin-left: 0;
+    margin-right: 0;
+    float: right;
+    clear: none;
+    background: none;
+  }
+  #navigation .block-menu .block-title,
+  #navigation .block-menu-block .block-title {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  #navigation ul.links,
+  #navigation ul.menu {
+    /* Menu block links */
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    /* LTR */
+  }
+  #navigation ul.links li,
+  #navigation ul.menu li {
+    /* A simple method to get navigation links to appear in one line. */
+    float: left;
+    /* LTR */
+    padding: 0 10px 0 0;
+    /* LTR */
+    list-style-type: none;
+    list-style-image: none;
+    border-bottom: none;
+  }
+  #navigation ul.links li.last a,
+  #navigation ul.menu li.last a {
+    border: none;
+  }
+  #navigation ul.links li a,
+  #navigation ul.menu li a {
+    color: #8fd4e0;
+    background: none;
+  }
+  #navigation ul.links li a:hover,
+  #navigation ul.menu li a:hover {
+    background: #7bccda;
+    color: #fff;
+  }
+  #navigation ul.links li a:active,
+  #navigation ul.menu li a:active {
+    -webkit-box-shadow: #7bccda 0 0 10px inset;
+    -moz-box-shadow: #7bccda 0 0 10px inset;
+    box-shadow: #7bccda 0 0 10px inset;
+    background: #a3dce6;
+    color: #fff;
+  }
+}
+/* Import Sass mixins, variables, Compass modules, etc. */
+/* Darken table when in a ui-block */
+/*
+  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
+  rgba-background mixin can now be passed an option $dir variable
+*/
+/* Off-Canvas Sidebar (body.has-mobile-sidebar)
+   ========================================================================== */
+html.js #navigation {
+  display: none;
+}
+@media (min-width: 47.5em) {
+  html.js #navigation {
+    display: block;
+  }
+}
+
+#page {
+  width: 100%;
+}
+
+#page:before {
+  content: " ";
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#mobile-sidebar, #page {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 100%;
+  z-index: 1;
+}
+
+#mobile-sidebar {
+  padding: 24px;
+  height: 100%;
+  float: right;
+  margin-right: -100%;
+  width: 80%;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#page {
+  float: left;
+  margin-right: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.show-nav #mobile-sidebar {
+  margin-right: 0;
+}
+@media (min-width: 47.5em) {
+  .show-nav #mobile-sidebar {
+    float: right;
+    margin-right: -100%;
+    width: 80%;
+  }
+}
+
+.show-nav #page {
+  margin-left: -80%;
+}
+@media (min-width: 47.5em) {
+  .show-nav #page {
+    margin-left: 0%;
+    margin-right: -100%;
+    width: 100%;
+  }
+}

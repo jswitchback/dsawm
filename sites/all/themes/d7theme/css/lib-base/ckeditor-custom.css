@@ -1,0 +1,10 @@
+/* This file is called directly from the ckeditor js */
+/* Darken table when in a ui-block */
+/*
+  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
+  rgba-background mixin can now be passed an option $dir variable
+*/
+/* correct wysiwyg background in iframe */
+.cke_editable {
+  padding: 1.5em 1em;
+}

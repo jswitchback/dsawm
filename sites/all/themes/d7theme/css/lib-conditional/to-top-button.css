@@ -1,0 +1,30 @@
+/* Darken table when in a ui-block */
+/*
+  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
+  rgba-background mixin can now be passed an option $dir variable
+*/
+/* =============================================================================
+   MOBILE "To Top" nav
+   ========================================================================== */
+html.js #toTop {
+  display: none;
+}
+
+#toTop {
+  background: #8fd4e0;
+  z-index: 1;
+  text-shadow: 1px 1px 0 #3fb5ca;
+  border-radius: 4px 0 0 4px;
+  color: white;
+}
+
+#toTop {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  padding: 1em 1.5em;
+}
+
+html.fontface #toTop {
+  padding: 1em 1.5em .8em 1.5em;
+}

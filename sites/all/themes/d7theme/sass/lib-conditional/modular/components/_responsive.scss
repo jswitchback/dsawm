@@ -1,0 +1,227 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+// We are going to create a fluid grid with 24 columns and 20px gutters
+// between columns (applied as 10px of left/right padding on each column).
+$zen-column-count:  24;
+$zen-gutter-width:  20px;
+
+// If you need IE6/7 support for box-sizing: border-box (default), see _base.scss
+//$zen-box-sizing: content-box;
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+// Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
+@if $zen-reverse-all-floats == false {
+  
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+ 
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+#main,
+#header,
+#footer,
+#page-title,
+.region-bottom {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: $min-layout-width;
+  max-width: $max-layout-width;
+}
+
+
+/*
+ * Center the page.
+ */
+ 
+#main,
+#header,
+.region-bottom {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: $min-layout-width;
+  max-width: $max-layout-width;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+// See the note about $zen-auto-include-item-base above.
+
+#header,
+#content,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  @include zen-grid-item-base();
+}
+
+
+/*
+ * Containers for grid items and flow items.
+ */
+
+/* Clears floats without overflow hidden */
+#header,
+#main,
+.region-highlighted,
+#mobile-sidebar,
+#page-title,
+.region-footer .region-inner {
+  @include zen-grid-container();
+}
+
+} // End of @if $zen-reverse-all-floats == true
+
+
+ /* PHONE PORTRAIT LAYOUT (min-width: 480px)
+    ========================================================================== */
+
+@include breakpoint($phone-min-width) {
+}
+
+@include breakpoint($phone-min-width $desktop-max-width) {
+
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first {
+    #content {
+      @include zen-grid-item(16, 9);
+    }
+
+    .region-sidebar-first { 
+      @include zen-grid-item(8, 1);
+    }
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+
+  .sidebar-second {
+    #content { 
+      @include zen-grid-item(16, 1);
+    }
+
+    .region-sidebar-second {
+      @include zen-grid-item(8, 17);
+    }
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+
+  .two-sidebars {
+    #content { 
+      @include zen-grid-item(16, 9);
+    }
+
+    .region-sidebar-first { 
+      @include zen-grid-item(8, 1);
+    }
+
+    .region-sidebar-second { /* Start a new row and span all columns. */
+      @include zen-grid-item(24, 1);
+      @include zen-nested-container(); // Since we're making every block in this region be a grid item.
+      @include zen-clear();
+
+      .block {
+        @include zen-grid-item-base();
+      }
+      .block:nth-child(3n+1) { 
+        @include zen-grid-item(8, 1);
+        @include zen-clear();
+      }
+      .block:nth-child(3n+2) { 
+        @include zen-grid-item(8, 9);
+      }
+      .block:nth-child(3n) {
+        @include zen-grid-item(8, 17);
+      }
+    }
+  }
+}
+
+
+/* TABLET PORTRAIT LAYOUT (min-width: 600px to 960px)
+   ========================================================================== */
+
+ 
+
+/* DESKTOP LAYOUT (min-width: 960px+)
+  ========================================================================== */
+
+@include breakpoint($desktop-min-width) {
+  
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first {
+    #content { 
+      @include zen-grid-item(18, 7);
+    }
+
+    .region-sidebar-first { 
+      @include zen-grid-item(6, 1);
+    }
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+
+  .sidebar-second {
+    #content { 
+      @include zen-grid-item(18, 1);
+    }
+
+    .region-sidebar-second { 
+      @include zen-grid-item(6, 19);
+    }
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+
+  .two-sidebars {
+    #content { /* Span 3 columns, starting in 2nd column from left. */
+      @include zen-grid-item(12, 7);
+    }
+
+    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+      @include zen-grid-item(6, 1);
+    }
+
+    .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+      @include zen-grid-item(6, 19);
+    }
+  }
+}

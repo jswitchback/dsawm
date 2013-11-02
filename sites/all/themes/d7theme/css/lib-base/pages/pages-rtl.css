@@ -1,0 +1,89 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+/* Darken table when in a ui-block */
+/*
+  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
+  rgba-background mixin can now be passed an option $dir variable
+*/
+/**
+ * @file
+ * RTL companion for the pages.css file.
+ */
+/**
+ * Branding header.
+ */
+/* Wrapping link for logo. */
+.header__logo {
+  float: right;
+}
+
+/* The secondary menu (login, etc.) */
+.header__secondary-menu {
+  float: left;
+}
+
+/**
+ * Navigation bar.
+ */
+/* Main menu and secondary menu links and menu block links. */
+#navigation .links,
+#navigation .menu {
+  text-align: right;
+}
+#navigation .links li,
+#navigation .menu li {
+  /* A simple method to get navigation links to appear in one line. */
+  float: right;
+  padding: 0 0 0 10px;
+}
+
+/*
+ * Content
+ */
+ul.inline li {
+  /* List of links */
+  display: inline-block;
+  /* Bug in Safari causes display: inline to fail. */
+  padding: 0 0 0 1em;
+}
+
+span.field-label {
+  /* The inline field label used by the Fences.module */
+  padding: 0 0 0 1em;
+}
+
+/* The inline field label used by the Fences.module */
+span.field-label {
+  padding: 0 0 0 1em;
+}
+
+/**
+ * "More" links.
+ */
+.more-link {
+  text-align: left;
+}
+
+.more-help-link {
+  text-align: left;
+}
+
+.more-help-link a {
+  background-position: 100% 50%;
+  padding: 1px 20px 1px 0;
+}
+
+/**
+ * Menus.
+ */
+.menu__item.is-collapsed {
+  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');
+}
+
+/**
+ * Comments.
+ */
+/* Nested comments are indented. */
+.indented {
+  margin-left: 0;
+  margin-right: 36px;
+}

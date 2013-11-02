@@ -1,0 +1,11 @@
+/* This file is called directly from the ckeditor js */
+
+
+
+@import "my-sass-resources/_base.scss";
+
+
+/* correct wysiwyg background in iframe */
+.cke_editable {
+  padding: 1.5em 1em;
+}

@@ -1,0 +1,11 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+/**
+ * Blocks.
+ */
+ 
+/* Block wrapper. */
+.block {
+  margin-bottom: $vert-gutter;
+}

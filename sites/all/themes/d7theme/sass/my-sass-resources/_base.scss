@@ -1,0 +1,396 @@
+//
+// Initialization partial
+//
+// To make it easier to use all variables and mixins in any Sass file in this
+// theme, each .scss file has a @import "init" declaration. And this _init.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+// This initialization partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import Compass plug-ins (Sass mixin libraries).
+// - Last we define our custom mixins for this theme.
+//
+
+//
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// To turn on support for IE6 or IE7, set those variables to true.
+//
+// Zen does not require special handling for IE8 or later. But Compass uses that
+// variable for a couple edge cases. We include it for completeness sake. See
+// the documentation at http://compass-style.org/reference/compass/support/
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+
+//
+// Layout
+//
+
+// Converts breakpoints to ems for better font scaling & accessibility.
+$breakpoint-to-ems: true; 
+
+// Set min and max width of layout
+$min-layout-width: 320px;
+$max-layout-width: 980px;
+
+// Standard dpi breakpoints
+$phone-max-width: max-width 479px;
+$phone-min-width: 480px;
+
+$tablet-small-max-width: max-width 599px;
+$tablet-small-min-width: 600px;
+
+$tablet-portrait-max-width: max-width 759px;
+$tablet-portrait-min-width: 760px;
+
+$desktop-max-width: max-width 979px;
+$desktop-min-width: 980px;
+
+
+// As needed variables for wider viewport projects.
+$tablet-landscape-min-width: 1024px;
+$tablet-landscape-max-width: max-width 1023px;
+$desktop-medium: 1280px;
+$widescreen-max-width: max-width 1439px;
+$widescreen-min-width: 1440px;
+$orientation-landscape: "only screen and (orientation: landscape)";
+$orientation-portrait: "only screen and (orientation: portrait)";
+
+
+//
+// Compass Grid Background Variables
+//
+
+$grid-background-column-color: rgba(100, 100, 225, 0.25);
+
+// Set the color of your columns
+$grid-background-gutter-color: rgba(0, 0, 0, 0);
+
+// Set the color of your gutters
+$grid-background-total-columns: 24;
+
+// Set the total number of columns in your grid
+$grid-background-column-width: 30px;
+
+// Set the width of your columns
+$grid-background-gutter-width: 10px;
+
+// Set the width of your gutters
+$grid-background-offset: 0px;
+
+// Set the offset, if your columns are padded in from the container edge
+$grid-background-baseline-color: rgba(0, 0, 0, 0.5);
+
+// Set the color of your baseline
+$grid-background-baseline-height: 1.5em;
+
+// Set the height of your baseline grid
+$show-column-grid-backgrounds: true;
+
+// toggle your columns grids on and off
+$show-baseline-grid-backgrounds: true;
+
+// toggle your vertical grids on and off
+$show-grid-backgrounds: true;
+
+// toggle all your grids on and off
+$grid-background-force-fluid: true;
+
+
+//
+// Font faces, stacks and sizes.
+//
+
+// Set to false if you want font, line-height and header margins in pixels.
+$relative-font-sizing: true;
+
+
+// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// use in the normalize.scss file.
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.67 * $base-font-size;
+
+// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $header-font-weight: bold;
+// $header-font-style: normal;
+// $header-font-color: #222;
+// $header-line-height: 1.4;
+// $header-top-margin: .2em;
+// $header-bottom-margin: .5em;
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+//
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// First, let's create some font stacks.
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$sans-serif:     "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+$webfont-normal:      Arial, Helvetica, sans-serif;
+$webfont-bold:        Arial, Helvetica, sans-serif;
+
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         monospace, "Courier New", "DejaVu Sans Mono", sans-serif;
+
+// Now create some variables for the font stacks we want to use on this site.
+$base-title-family:  $webfont-bold; 
+$base-page-title-family: $sans-serif;
+$base-block-title: $webfont-bold;
+$base-font-family: $sans-serif;
+$font-monospace:   $courier;
+
+
+// VERTICAL RHTHYM & GRID VARIABLES __________________________________________
+
+// Universal vertical rhthym gutter. Determines baseline gutters as well as block and form element margins.
+
+$vr-gutters-desktop: rhythm(1);
+$vert-gutter: rhythm(1);
+
+//If using zen-grids as seen with Zen starter kit. 
+$zen-column-count:  24;
+$zen-gutter-width: $base-line-height;
+
+// If using Singularity grid system
+$grids: 24;
+$gutters: $base-line-height;
+// $gutter-styles: 'split';
+
+
+
+// THEME VARIABLES __________________________________________
+
+// TYPOGRAPHY
+$page-title-color: #454545; 
+$block-title-color: $page-title-color;
+$body-font-color: #3c3b3b;
+$body-bgrd-color: #ffffff;
+$form-input-font-size: .85em;
+
+
+
+// UI THEME VARIABLES
+$primary-color: #8fd4e0;
+$delete-color: #e02443;
+$error-color: $delete-color;
+
+$disabled-background-color: #eeeeee;
+$disabled-font-color: #888888;
+
+
+
+// LINKS, BUTTONS, SUBMITS & PAGERS
+$link-color: $primary-color;
+$link-color-visited: darken($link-color, 20%);
+$link-color-hover: lighten($link-color, 10%);
+$link-color-focus: lighten($link-color, 10%);
+$link-color-active: darken($link-color, 10%); 
+$link-text-decoration: none;
+
+$pager-color: $link-color;
+
+$button-color: $link-color;
+$button-border: #DDDDDD;
+$button-border-radius: $base-line-height;
+
+
+
+// GENERAL UI BLOCK & FIELDSETS
+$ui-border-color: lighten($link-color, 65%);
+$ui-background-color: lighten($link-color, 67%);
+$ui-padding: $base-line-height;
+$ui-border-radius: .083333  * $base-line-height;
+
+$fieldset-background-color: $ui-background-color;
+$fieldset-border-color: $ui-border-color;
+$fieldset-border-radius: $ui-border-radius;
+$fieldset-padding: $ui-padding;
+$fieldset-border-style: solid;
+$legend-font-weight: bold;
+
+
+
+// TABLES
+$table-tbody-border-style: solid;  
+$table-tbody-border-width: 1px 1px 1px 1px;
+$table-tbody-border-color: darken($body-bgrd-color, 2%) transparent transparent transparent;
+
+$table-th-border-style: solid;
+$table-th-border-width: 1px 1px 1px 1px;
+$table-th-border-color: transparent transparent darken($body-bgrd-color, 2%) transparent;
+
+$table-tr-even-background: lighten($body-bgrd-color, 2%);
+$table-tr-even-border-style: solid;
+$table-tr-even-border-width: 1px 1px 1px 1px;
+$table-tr-even-border-color: darken($body-bgrd-color, 2%) transparent darken($body-bgrd-color, 2%) transparent;
+
+$table-tr-odd-background: transparent;
+$table-tr-odd-border-style: solid;
+$table-tr-odd-border-width: 1px 1px 1px 1px;
+$table-tr-odd-border-color: darken($body-bgrd-color, 2%) transparent transparent transparent;
+
+$table-tr-drag-background: $table-tr-odd-border-color;
+$table-td-padding: .25em .5em;
+$table-td-disabled-background: #ccc;
+
+/* Darken table when in a ui-block */
+$ui-table-th-border-color: darken($ui-background-color, 3%);
+$ui-table-tbody-border-color: darken($ui-background-color, 3%);
+$ui-table-tr-even-background: darken($ui-background-color, 3%);
+$ui-table-tr-even-border-color: darken($ui-background-color, 3%);
+$ui-table-tr-odd-background: transparent;
+$ui-table-tr-odd-border-color: darken($ui-background-color, 3%);
+$ui-table-tr-drag-background: $ui-table-tr-odd-border-color;
+
+
+
+
+// EDIT TABS
+$tabs-edit-container-background-color: #ffffff;
+$tabs-edit-background-color: $ui-background-color; 
+$tabs-edit-border-color: $ui-border-color;
+$tabs-edit-border-radius: $ui-border-radius;
+
+
+
+// VERTICAL & HORIZONTAL TABS
+$tabs-display-background-color: $ui-background-color;
+$tabs-display-border-color: $ui-border-color; 
+$tabs-display-active-border-color: $link-color;
+$tabs-display-active-content-color: lighten($tabs-display-border-color, 20%);
+$tabs-display-border-radius: $ui-border-radius;
+
+
+
+// FORM ITEMS
+$form-item-margin: 0 0 $vert-gutter 0;
+
+$form-item-label-font-weight: bold;
+$form-item-label-font-size: .875em;
+$form-item-label-margin: 0 0 $vert-gutter 0;
+
+$form-item-description-font-size: .75em;
+
+
+
+// INPUT ELEMENTS
+$input-padding: .25em .5em;
+$input-font-family: inherit;
+$input-font-color: $body-font-color;
+$input-font-size: 1em;
+
+$input-background-color: #fff;
+$input-backgroud-color-focus: lighten;
+
+$input-border-color: $ui-border-color;
+$input-border-color-focus: $link-color;
+$input-border-radius: $ui-border-radius;
+
+$input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$input-box-shadow-focus: 0 0 2px $link-color;
+$input-focus-transition-timing: .2s;
+
+$input-disabled-background-color: $disabled-background-color;
+$input-disabled-font-color: $disabled-font-color;
+
+$width-small: 100px;
+$width-medium: 120px;
+$width-large: 220px;
+$width-xlarge: 220px;
+$width-xxlarge: 380px;
+$inline-field-gutter: .5em;
+
+
+
+// LISTS, BLOCKQUOTES & COMMENTS
+$indent-amount: 1.5 * $base-line-height;
+$blockquote-border-color: $ui-border-color;
+ 
+
+// _________________________________________________________________
+
+//
+// Partials to be shared with all .scss files.
+//
+
+// =============================================================================
+// Partials to be shared with all .scss files.
+// =============================================================================
+
+// Add Compass' IE and vendor prefix support variables.
+@import "compass/support";
+
+// Better than Drupal's clearfix.
+@import "compass/utilities/general/clearfix";
+
+// See http://compass-style.org/help/tutorials/spriting/
+@import "compass/utilities/sprites";
+
+// Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/css3";
+
+// Helps set up a vertical rhythm.
+@import "compass/typography/vertical_rhythm";
+
+// Add the Zen Grids responsive layout mixins.
+@import "zen";
+
+// Alternate to zen grid frame work for asymmetrical grids
+@import "singularitygs";
+
+// Grid backgrounds for proper layout and vertical rhthym
+@import "compass/layout/grid-background"; 
+
+ // Plugin that compiles nested media queries and pixel-to-ems conversions
+@import "breakpoint";
+
+// Now we add our custom helper mixins.
+@import "mixins";
+
+// Automatically compiles transparent pngs forfallback when using RGBA color values. Variables for generated pngs
+// https://github.com/aaronrussell/compass-rgbapng
+@import "rgbapng"; 
+$rgbapng_path: 'generated';
+$rgbapng_px_size: 8;
+
+// My buttons
+@import "buttons";   
+
+// Buttons from the web
+@import "sassy-buttons";
+
+// Misc as needed 
+// @import "color_schemer";           
+// @import "color_names";       
+// @import "colors";
+//@import "button_themes";

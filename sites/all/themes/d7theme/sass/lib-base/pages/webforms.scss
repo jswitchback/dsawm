@@ -1,0 +1,32 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+/* General Webform Styles
+   ========================================================================== */
+
+.webform-client-form {
+	border-top: 5px solid #ffffff;
+	border-bottom: 5px solid $link-color;
+	fieldset {
+		@include clear-floats;
+		background: none;
+		border: none;
+		padding: 0;
+		border-bottom: 1px solid #D1D1D1;
+		padding-bottom: 1em;
+		margin-bottom: 1.5em;
+		legend {
+			font-size: 1.143em;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			color: #E36E5F;
+			font-weight: bold;
+		}
+	} 
+}
+
+.node-webform.view-mode-full {
+	.field-body {
+		padding: 1em 0;
+	}
+}

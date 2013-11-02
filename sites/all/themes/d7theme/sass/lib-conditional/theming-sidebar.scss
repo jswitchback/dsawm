@@ -1,0 +1,87 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "my-sass-resources/base";
+
+
+/* admin nav menu */
+#theming-sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  height: 100%;
+  @include translateX(-275px);
+  @include transition-property(all);
+  @include transition-duration(.15s);
+  @include transition-timing-function(cubic-bezier(.455,.03,.515,.955));
+  width: 280px;
+  background: #fff;
+  background: rgba(255,255,255,.95);
+  border-right: 5px solid $link-color;
+  border-right-radius: 6px;
+  @include box-sizing(border-box);
+  padding: 46px 20px 20px 20px;
+  &.active {
+    @include translateX(0px);
+    #links-toggle {
+      border-top: 1px solid $link-color;
+      border-right: 1px solid $link-color;
+      border-bottom: 1px solid $link-color;
+    }
+  }
+} 
+
+.no-csstransforms.no-csstransitions {
+  #theming-sidebar {
+    left: -270px;
+    &.active {
+      left: 0;
+    }
+  }
+}
+
+.no-js {
+  #theming-tab {
+    display: none;
+  }
+  #theming-sidebar{
+    position: static;
+    @include translateX(0);
+    width: auto;
+  }
+}
+
+#theming-tab {
+  display: block;
+  border-top: 1px solid lighten($link-color, 10%);
+  border-right: 1px solid lighten($link-color, 10%);
+  border-bottom: 1px solid lighten($link-color, 10%);
+  @include transition-property(all);
+  @include transition-duration(.15s);
+  @include transition-timing-function(ease-in-out);
+  cursor: pointer;
+  vertical-align: middle;
+  position: absolute;
+  right: -32px;
+  top: 120px;
+  color: white;
+  display: block;
+  @include border-right-radius(4px);
+  background: $link-color;
+  height: 32px;
+  line-height: 28px;
+  width: 32px;
+  text-align: center;
+  &:hover {
+    background: lighten($link-color, 10%);
+    border-top: 1px solid $link-color;
+    border-right: 1px solid $link-color;
+    border-bottom: 1px solid $link-color;
+  }
+  @include breakpoint ($tablet-small-min-width) {
+    top: 110px;
+  }
+  @include breakpoint ($tablet-portrait-min-width) {
+    top: 100px;
+  }
+}
+

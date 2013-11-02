@@ -1,0 +1,640 @@
+3.2.7 (Media Mark)
+aa2c4fd3e247cf8b3f7d57bb74f43694c0811291
+o:Sass::Tree::RootNode
+:@template"c///
+// Initialization partial
+//
+// To make it easier to use all variables and mixins in any Sass file in this
+// theme, each .scss file has a @import "init" declaration. And this _init.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+// This initialization partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import Compass plug-ins (Sass mixin libraries).
+// - Last we define our custom mixins for this theme.
+//
+
+//
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// To turn on support for IE6 or IE7, set those variables to true.
+//
+// Zen does not require special handling for IE8 or later. But Compass uses that
+// variable for a couple edge cases. We include it for completeness sake. See
+// the documentation at http://compass-style.org/reference/compass/support/
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+
+//
+// Layout
+//
+
+// Converts breakpoints to ems for better font scaling & accessibility.
+$breakpoint-to-ems: true; 
+
+// Set min and max width of layout
+$min-layout-width: 320px;
+$max-layout-width: 980px;
+
+// Standard dpi breakpoints
+$phone-max-width: max-width 479px;
+$phone-min-width: 480px;
+
+$tablet-small-max-width: max-width 599px;
+$tablet-small-min-width: 600px;
+
+$tablet-portrait-max-width: max-width 759px;
+$tablet-portrait-min-width: 760px;
+
+$desktop-max-width: max-width 979px;
+$desktop-min-width: 980px;
+
+
+// As needed variables for wider viewport projects.
+$tablet-landscape-min-width: 1024px;
+$tablet-landscape-max-width: max-width 1023px;
+$desktop-medium: 1280px;
+$widescreen-max-width: max-width 1439px;
+$widescreen-min-width: 1440px;
+$orientation-landscape: "only screen and (orientation: landscape)";
+$orientation-portrait: "only screen and (orientation: portrait)";
+
+
+//
+// Compass Grid Background Variables
+//
+
+$grid-background-column-color: rgba(100, 100, 225, 0.25);
+
+// Set the color of your columns
+$grid-background-gutter-color: rgba(0, 0, 0, 0);
+
+// Set the color of your gutters
+$grid-background-total-columns: 24;
+
+// Set the total number of columns in your grid
+$grid-background-column-width: 30px;
+
+// Set the width of your columns
+$grid-background-gutter-width: 10px;
+
+// Set the width of your gutters
+$grid-background-offset: 0px;
+
+// Set the offset, if your columns are padded in from the container edge
+$grid-background-baseline-color: rgba(0, 0, 0, 0.5);
+
+// Set the color of your baseline
+$grid-background-baseline-height: 1.5em;
+
+// Set the height of your baseline grid
+$show-column-grid-backgrounds: true;
+
+// toggle your columns grids on and off
+$show-baseline-grid-backgrounds: true;
+
+// toggle your vertical grids on and off
+$show-grid-backgrounds: true;
+
+// toggle all your grids on and off
+$grid-background-force-fluid: true;
+
+
+//
+// Font faces, stacks and sizes.
+//
+
+// Set to false if you want font, line-height and header margins in pixels.
+$relative-font-sizing: true;
+
+
+// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// use in the normalize.scss file.
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1.5  * $base-font-size;
+$h3-font-size: 1.17 * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.67 * $base-font-size;
+
+// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $header-font-weight: bold;
+// $header-font-style: normal;
+// $header-font-color: #222;
+// $header-line-height: 1.4;
+// $header-top-margin: .2em;
+// $header-bottom-margin: .5em;
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+//
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// First, let's create some font stacks.
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$sans-serif:     "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+$webfont-normal:      Arial, Helvetica, sans-serif;
+$webfont-bold:        Arial, Helvetica, sans-serif;
+
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         monospace, "Courier New", "DejaVu Sans Mono", sans-serif;
+
+// Now create some variables for the font stacks we want to use on this site.
+$base-title-family:  $webfont-bold; 
+$base-page-title-family: $sans-serif;
+$base-block-title: $webfont-bold;
+$base-font-family: $sans-serif;
+$font-monospace:   $courier;
+
+
+// VERTICAL RHTHYM & GRID VARIABLES __________________________________________
+
+// Universal vertical rhthym gutter. Determines baseline gutters as well as block and form element margins.
+
+$vr-gutters-desktop: rhythm(1);
+$vert-gutter: rhythm(1);
+
+//If using zen-grids as seen with Zen starter kit. 
+$zen-column-count:  24;
+$zen-gutter-width: $base-line-height;
+
+// If using Singularity grid system
+$grids: 24;
+$gutters: $base-line-height;
+// $gutter-styles: 'split';
+
+
+
+// THEME VARIABLES __________________________________________
+
+// TYPOGRAPHY
+$page-title-color: #454545; 
+$block-title-color: $page-title-color;
+$body-font-color: #3c3b3b;
+$body-bgrd-color: #ffffff;
+$form-input-font-size: .85em;
+
+
+
+// UI THEME VARIABLES
+$primary-color: #8fd4e0;
+$delete-color: #e02443;
+$error-color: $delete-color;
+
+$disabled-background-color: #eeeeee;
+$disabled-font-color: #888888;
+
+
+
+// LINKS, BUTTONS, SUBMITS & PAGERS
+$link-color: $primary-color;
+$link-color-visited: darken($link-color, 20%);
+$link-color-hover: lighten($link-color, 10%);
+$link-color-focus: lighten($link-color, 10%);
+$link-color-active: darken($link-color, 10%); 
+$link-text-decoration: none;
+
+$pager-color: $link-color;
+
+$button-color: $link-color;
+$button-border: #DDDDDD;
+$button-border-radius: $base-line-height;
+
+
+
+// GENERAL UI BLOCK & FIELDSETS
+$ui-border-color: lighten($link-color, 65%);
+$ui-background-color: lighten($link-color, 67%);
+$ui-padding: $base-line-height;
+$ui-border-radius: .083333  * $base-line-height;
+
+$fieldset-background-color: $ui-background-color;
+$fieldset-border-color: $ui-border-color;
+$fieldset-border-radius: $ui-border-radius;
+$fieldset-padding: $ui-padding;
+$fieldset-border-style: solid;
+$legend-font-weight: bold;
+
+
+
+// TABLES
+$table-tbody-border-style: solid;  
+$table-tbody-border-width: 1px 1px 1px 1px;
+$table-tbody-border-color: darken($body-bgrd-color, 2%) transparent transparent transparent;
+
+$table-th-border-style: solid;
+$table-th-border-width: 1px 1px 1px 1px;
+$table-th-border-color: transparent transparent darken($body-bgrd-color, 2%) transparent;
+
+$table-tr-even-background: lighten($body-bgrd-color, 2%);
+$table-tr-even-border-style: solid;
+$table-tr-even-border-width: 1px 1px 1px 1px;
+$table-tr-even-border-color: darken($body-bgrd-color, 2%) transparent darken($body-bgrd-color, 2%) transparent;
+
+$table-tr-odd-background: transparent;
+$table-tr-odd-border-style: solid;
+$table-tr-odd-border-width: 1px 1px 1px 1px;
+$table-tr-odd-border-color: darken($body-bgrd-color, 2%) transparent transparent transparent;
+
+$table-tr-drag-background: $table-tr-odd-border-color;
+$table-td-padding: .25em .5em;
+$table-td-disabled-background: #ccc;
+
+/* Darken table when in a ui-block */
+$ui-table-th-border-color: darken($ui-background-color, 3%);
+$ui-table-tbody-border-color: darken($ui-background-color, 3%);
+$ui-table-tr-even-background: darken($ui-background-color, 3%);
+$ui-table-tr-even-border-color: darken($ui-background-color, 3%);
+$ui-table-tr-odd-background: transparent;
+$ui-table-tr-odd-border-color: darken($ui-background-color, 3%);
+$ui-table-tr-drag-background: $ui-table-tr-odd-border-color;
+
+
+
+
+// EDIT TABS
+$tabs-edit-container-background-color: #ffffff;
+$tabs-edit-background-color: $ui-background-color; 
+$tabs-edit-border-color: $ui-border-color;
+$tabs-edit-border-radius: $ui-border-radius;
+
+
+
+// VERTICAL & HORIZONTAL TABS
+$tabs-display-background-color: $ui-background-color;
+$tabs-display-border-color: $ui-border-color; 
+$tabs-display-active-border-color: $link-color;
+$tabs-display-active-content-color: lighten($tabs-display-border-color, 20%);
+$tabs-display-border-radius: $ui-border-radius;
+
+
+
+// FORM ITEMS
+$form-item-margin: 0 0 $vert-gutter 0;
+
+$form-item-label-font-weight: bold;
+$form-item-label-font-size: .875em;
+$form-item-label-margin: 0 0 $vert-gutter 0;
+
+$form-item-description-font-size: .75em;
+
+
+
+// INPUT ELEMENTS
+$input-padding: .25em .5em;
+$input-font-family: inherit;
+$input-font-color: $body-font-color;
+$input-font-size: 1em;
+
+$input-background-color: #fff;
+$input-backgroud-color-focus: lighten;
+
+$input-border-color: $ui-border-color;
+$input-border-color-focus: $link-color;
+$input-border-radius: $ui-border-radius;
+
+$input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$input-box-shadow-focus: 0 0 2px $link-color;
+$input-focus-transition-timing: .2s;
+
+$input-disabled-background-color: $disabled-background-color;
+$input-disabled-font-color: $disabled-font-color;
+
+$width-small: 100px;
+$width-medium: 120px;
+$width-large: 220px;
+$width-xlarge: 220px;
+$width-xxlarge: 380px;
+$inline-field-gutter: .5em;
+
+
+
+// LISTS, BLOCKQUOTES & COMMENTS
+$indent-amount: 1.5 * $base-line-height;
+$blockquote-border-color: $ui-border-color;
+ 
+
+// _________________________________________________________________
+
+//
+// Partials to be shared with all .scss files.
+//
+
+// =============================================================================
+// Partials to be shared with all .scss files.
+// =============================================================================
+
+// Add Compass' IE and vendor prefix support variables.
+@import "compass/support";
+
+// Better than Drupal's clearfix.
+@import "compass/utilities/general/clearfix";
+
+// See http://compass-style.org/help/tutorials/spriting/
+@import "compass/utilities/sprites";
+
+// Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/css3";
+
+// Helps set up a vertical rhythm.
+@import "compass/typography/vertical_rhythm";
+
+// Add the Zen Grids responsive layout mixins.
+@import "zen";
+
+// Alternate to zen grid frame work for asymmetrical grids
+@import "singularitygs";
+
+// Grid backgrounds for proper layout and vertical rhthym
+@import "compass/layout/grid-background"; 
+
+ // Plugin that compiles nested media queries and pixel-to-ems conversions
+@import "breakpoint";
+
+// Now we add our custom helper mixins.
+@import "mixins";
+
+// Automatically compiles transparent pngs forfallback when using RGBA color values. Variables for generated pngs
+// https://github.com/aaronrussell/compass-rgbapng
+@import "rgbapng"; 
+$rgbapng_path: 'generated';
+$rgbapng_px_size: 8;
+
+// My buttons
+@import "buttons";   
+
+// Buttons from the web
+@import "sassy-buttons";
+
+// Misc as needed 
+// @import "color_schemer";           
+// @import "color_names";       
+// @import "colors";
+//@import "button_themes";
+:@has_childrenT:@options{ :@children[Áo:Sass::Tree::CommentNode
+:
+@type:silent:@value["Ó/*
+ * Initialization partial
+ *
+ * To make it easier to use all variables and mixins in any Sass file in this
+ * theme, each .scss file has a @import "init" declaration. And this _init.scss
+ * file is in charge of importing all the other partials needed for the theme.
+ *
+ * This initialization partial is organized in this way:
+ * - First we set any shared Sass variables.
+ * - Next we import Compass plug-ins (Sass mixin libraries).
+ * - Last we define our custom mixins for this theme.
+ * */;@;	[ :
+@lineio;
+
+;;;["’/*
+ * Legacy IE support
+ *
+ * These variables are used by many mixins to add additional CSS to support
+ * specific versions of IE or specific vendor prefixes.
+ *
+ * To turn on support for IE6 or IE7, set those variables to true.
+ *
+ * Zen does not require special handling for IE8 or later. But Compass uses that
+ * variable for a couple edge cases. We include it for completeness sake. See
+ * the documentation at http://compass-style.org/reference/compass/support/ */;@;	[ ;io:Sass::Tree::VariableNode:@guarded0:
+@expro:Sass::Script::Bool;F;@;i:
+@name"legacy-support-for-ie6;@;	[ ;io;;0;o;;F;@;i;"legacy-support-for-ie7;@;	[ ;io;;0;o;;T;@;i ;"legacy-support-for-ie8;@;	[ ;i o;
+
+;;;["/*
+ * Layout
+ * */;@;	[ ;i#o;
+
+;;;["O/* Converts breakpoints to ems for better font scaling & accessibility. */;@;	[ ;i'o;;0;o;;T;@;i(;"breakpoint-to-ems;@;	[ ;i(o;
+
+;;;["*/* Set min and max width of layout */;@;	[ ;i*o;;0;o:Sass::Script::Number:@numerator_units["px:@original"
+320px;i@;@:@denominator_units[ ;i+;"min-layout-width;@;	[ ;i+o;;0;o;;["px;"
+980px;i‘;@;[ ;i,;"max-layout-width;@;	[ ;i,o;
+
+;;;["#/* Standard dpi breakpoints */;@;	[ ;i.o;;0;o:Sass::Script::List	:@separator:
+space;[o:Sass::Script::String	;:identifier;"max-width;@;i/o;;["px;"
+479px;iﬂ;@;[ ;i/;@;i/;"phone-max-width;@;	[ ;i/o;;0;o;;["px;"
+480px;i‡;@;[ ;i0;"phone-min-width;@;	[ ;i0o;;0;o;	;;;[o;	;;;"max-width;@;i2o;;["px;"
+599px;iW;@;[ ;i2;@;i2;"tablet-small-max-width;@;	[ ;i2o;;0;o;;["px;"
+600px;iX;@;[ ;i3;"tablet-small-min-width;@;	[ ;i3o;;0;o;	;;;[o;	;;;"max-width;@;i5o;;["px;"
+759px;i˜;@;[ ;i5;@;i5;"tablet-portrait-max-width;@;	[ ;i5o;;0;o;;["px;"
+760px;i¯;@;[ ;i6;"tablet-portrait-min-width;@;	[ ;i6o;;0;o;	;;;[o;	;;;"max-width;@;i8o;;["px;"
+979px;i”;@;[ ;i8;@;i8;"desktop-max-width;@;	[ ;i8o;;0;o;;["px;"
+980px;i‘;@;[ ;i9;"desktop-min-width;@;	[ ;i9o;
+
+;;;[";/* As needed variables for wider viewport projects. */;@;	[ ;i<o;;0;o;;["px;"1024px;i ;@;[ ;i=;"tablet-landscape-min-width;@;	[ ;i=o;;0;o;	;;;[o;	;;;"max-width;@;i>o;;["px;"1023px;iˇ;@;[ ;i>;@;i>;"tablet-landscape-max-width;@;	[ ;i>o;;0;o;;["px;"1280px;i ;@;[ ;i?;"desktop-medium;@;	[ ;i?o;;0;o;	;;;[o;	;;;"max-width;@;i@o;;["px;"1439px;iü;@;[ ;i@;@;i@;"widescreen-max-width;@;	[ ;i@o;;0;o;;["px;"1440px;i†;@;[ ;iA;"widescreen-min-width;@;	[ ;iAo;;0;o;	;:string;"-only screen and (orientation: landscape);@;iB;"orientation-landscape;@;	[ ;iBo;;0;o;	;;;",only screen and (orientation: portrait);@;iC;"orientation-portrait;@;	[ ;iCo;
+
+;;;["2/*
+ * Compass Grid Background Variables
+ * */;@;	[ ;iFo;;0;o:Sass::Script::Funcall:@keywords{ ;"	rgba;@:@splat0;iJ:
+@args[	o;;[ ;"100;ii;@;[ ;iJo;;[ ;"100;ii;@;@÷;iJo;;[ ;"225;i·;@;@÷;iJo;;[ ;"	0.25;f	0.25;@;@÷;iJ;"!grid-background-column-color;@;	[ ;iJo;
+
+;;;["(/* Set the color of your columns */;@;	[ ;iLo;;0;o;;{ ;"	rgba;@; 0;iM;![	o;;[ ;"0;i ;@;@÷;iMo;;[ ;"0;i ;@;@÷;iMo;;[ ;"0;i ;@;@÷;iMo;;[ ;"0;i ;@;@÷;iM;"!grid-background-gutter-color;@;	[ ;iMo;
+
+;;;["(/* Set the color of your gutters */;@;	[ ;iOo;;0;o;;[ ;"24;i;@;@÷;iP;""grid-background-total-columns;@;	[ ;iPo;
+
+;;;["7/* Set the total number of columns in your grid */;@;	[ ;iRo;;0;o;;["px;"	30px;i#;@;[ ;iS;"!grid-background-column-width;@;	[ ;iSo;
+
+;;;["(/* Set the width of your columns */;@;	[ ;iUo;;0;o;;["px;"	10px;i;@;[ ;iV;"!grid-background-gutter-width;@;	[ ;iVo;
+
+;;;["(/* Set the width of your gutters */;@;	[ ;iXo;;0;o;;["px;"0px;i ;@;[ ;iY;"grid-background-offset;@;	[ ;iYo;
+
+;;;["P/* Set the offset, if your columns are padded in from the container edge */;@;	[ ;i[o;;0;o;;{ ;"	rgba;@; 0;i\;![	o;;[ ;"0;i ;@;@÷;i\o;;[ ;"0;i ;@;@÷;i\o;;[ ;"0;i ;@;@÷;i\o;;[ ;"0.5;f0.5;@;@÷;i\;"#grid-background-baseline-color;@;	[ ;i\o;
+
+;;;[")/* Set the color of your baseline */;@;	[ ;i^o;;0;o;;["em;"
+1.5em;f1.5;@;[ ;i_;"$grid-background-baseline-height;@;	[ ;i_o;
+
+;;;["//* Set the height of your baseline grid */;@;	[ ;iao;;0;o;;T;@;ib;"!show-column-grid-backgrounds;@;	[ ;ibo;
+
+;;;["//* toggle your columns grids on and off */;@;	[ ;ido;;0;o;;T;@;ie;"#show-baseline-grid-backgrounds;@;	[ ;ieo;
+
+;;;["0/* toggle your vertical grids on and off */;@;	[ ;igo;;0;o;;T;@;ih;"show-grid-backgrounds;@;	[ ;iho;
+
+;;;["+/* toggle all your grids on and off */;@;	[ ;ijo;;0;o;;T;@;ik;" grid-background-force-fluid;@;	[ ;iko;
+
+;;;["./*
+ * Font faces, stacks and sizes.
+ * */;@;	[ ;ino;
+
+;;;["S/* Set to false if you want font, line-height and header margins in pixels. */;@;	[ ;iro;;0;o;;T;@;is;"relative-font-sizing;@;	[ ;iso;
+
+;;;["/* Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+ * rhythm for your entire page. You can see some of its mixins and functions in
+ * use in the normalize.scss file.
+ * @see http://compass-style.org/reference/compass/typography/vertical_rhythm/ */;@;	[ ;ivo;;0;o;;["px;"	16px;i;@;[ ;i{;"base-font-size;@;	[ ;i{o;
+
+;;;["6/* The font size set on the root html element. */;@;	[ ;i{o;;0;o;;["px;"	24px;i;@;[ ;i|;"base-line-height;@;	[ ;i|o;
+
+;;;["I/* This line-height determines the basic unit of vertical rhythm. */;@;	[ ;i|o;;0;o:Sass::Script::Operation
+:@operand2o:Sass::Script::Variable	:@underscored_name"base_font_size;"base-font-size;@;i~:@operand1o;;[ ;"2;i;@;@÷;i~;@:@operator:
+times;i~;"h1-font-size;@;	[ ;i~o;;0;o;"
+;#o;$	;%"base_font_size;"base-font-size;@;i;&o;;[ ;"1.5;f1.5;@;@÷;i;@;';(;i;"h2-font-size;@;	[ ;io;;0;o;"
+;#o;$	;%"base_font_size;"base-font-size;@;i{;&o;;[ ;"	1.17;f1.1699999999999999 ∏;@;@÷;i{;@;';(;i{;"h3-font-size;@;	[ ;i{o;;0;o;"
+;#o;$	;%"base_font_size;"base-font-size;@;i|;&o;;[ ;"1;i;@;@÷;i|;@;';(;i|;"h4-font-size;@;	[ ;i|o;;0;o;"
+;#o;$	;%"base_font_size;"base-font-size;@;i};&o;;[ ;"	0.83;f0.82999999999999996 ¬è;@;@÷;i};@;';(;i};"h5-font-size;@;	[ ;i}o;;0;o;"
+;#o;$	;%"base_font_size;"base-font-size;@;i~;&o;;[ ;"	0.67;f0.67000000000000004 =q;@;@÷;i~;@;';(;i~;"h6-font-size;@;	[ ;i~o;
+
+;;;["/* $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+ * $header-font-weight: bold;
+ * $header-font-style: normal;
+ * $header-font-color: #222;
+ * $header-line-height: 1.4;
+ * $header-top-margin: .2em;
+ * $header-bottom-margin: .5em; */;@;	[ ;iÄo;
+
+;;;["Ö/* The following font family declarations are based on the Microsoft core web
+ * fonts which are common fonts available on most computer systems. The DejaVu
+ * and Nimbus Sans fonts are commonly available on Linux systems where the MS
+ * fonts are less common. Tahoma and Helvetica are also widely available.
+ *
+ * A user's web browser will look at the comma-separated list and will
+ * attempt to use each font in turn until it finds one that is available
+ * on the user's computer. The final "generic" font (sans-serif, serif or
+ * monospace) hints at what type of font to use if the web browser doesn't
+ * find any of the fonts in the list. */;@;	[ ;iào;
+
+;;;["0/* First, let's create some font stacks. */;@;	[ ;iìo;;0;o;	;:
+comma;[
+o;	;;;"Times New Roman;@;iîo;	;;;"
+Times;@;iîo;	;;;"Georgia;@;iîo;	;;;"DejaVu Serif;@;iîo;	;;;"
+serif;@;iî;@;iî;"times-new-roman;@;	[ ;iîo;;0;o;	;;);[
+o;	;;;"
+Times;@;iïo;	;;;"Times New Roman;@;iïo;	;;;"Georgia;@;iïo;	;;;"DejaVu Serif;@;iïo;	;;;"
+serif;@;iï;@;iï;"
+times;@;	[ ;iïo;;0;o;	;;);[	o;	;;;"Georgia;@;iño;	;;;"Times New Roman;@;iño;	;;;"DejaVu Serif;@;iño;	;;;"
+serif;@;iñ;@;iñ;"georgia;@;	[ ;iño;;0;o;	;;);[	o;	;;;"Verdana;@;iòo;	;;;"Tahoma;@;iòo;	;;;"DejaVu Sans;@;iòo;	;;;"sans-serif;@;iò;@;iò;"verdana;@;	[ ;iòo;;0;o;	;;);[	o;	;;;"Tahoma;@;iôo;	;;;"Verdana;@;iôo;	;;;"DejaVu Sans;@;iôo;	;;;"sans-serif;@;iô;@;iô;"tahoma;@;	[ ;iôo;;0;o;	;;);[	o;	;;;"
+Arial;@;iöo;	;;;"Helvetica;@;iöo;	;;;"Nimbus Sans L;@;iöo;	;;;"sans-serif;@;iö;@;iö;"
+arial;@;	[ ;iöo;;0;o;	;;);[o;	;;;"HelveticaNeue-Light;@;iõo;	;;;"Helvetica Neue Light;@;iõo;	;;;"Helvetica Neue;@;iõo;	;;;"Helvetica;@;iõo;	;;;"
+Arial;@;iõo;	;;;"Lucida Grande;@;iõo;	;;;"sans-serif;@;iõ;@;iõ;"sans-serif;@;	[ ;iõo;;0;o;	;;);[o;	;;;"
+Arial;@;iùo;	;;;"Helvetica;@;iùo;	;;;"sans-serif;@;iù;@;iù;"webfont-normal;@;	[ ;iùo;;0;o;	;;);[o;	;;;"
+Arial;@;iûo;	;;;"Helvetica;@;iûo;	;;;"sans-serif;@;iû;@;iû;"webfont-bold;@;	[ ;iûo;
+
+;;;["î/* For an explanation of why "sans-serif" is at the end of this list, see
+ * http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/ */;@;	[ ;i°o;;0;o;	;;);[	o;	;;;"monospace;@;i£o;	;;;"Courier New;@;i£o;	;;;"DejaVu Sans Mono;@;i£o;	;;;"sans-serif;@;i£;@;i£;"courier;@;	[ ;i£o;
+
+;;;["U/* Now create some variables for the font stacks we want to use on this site. */;@;	[ ;i•o;;0;o;$	;%"webfont_bold;"webfont-bold;@;i¶;"base-title-family;@;	[ ;i¶o;;0;o;$	;%"sans_serif;"sans-serif;@;iß;"base-page-title-family;@;	[ ;ißo;;0;o;$	;%"webfont_bold;"webfont-bold;@;i®;"base-block-title;@;	[ ;i®o;;0;o;$	;%"sans_serif;"sans-serif;@;i©;"base-font-family;@;	[ ;i©o;;0;o;$	;%"courier;"courier;@;i™;"font-monospace;@;	[ ;i™o;
+
+;;;["V/* VERTICAL RHTHYM & GRID VARIABLES __________________________________________ */;@;	[ ;i≠o;
+
+;;;["s/* Universal vertical rhthym gutter. Determines baseline gutters as well as block and form element margins. */;@;	[ ;iØo;;0;o;;{ ;"rhythm;@; 0;i±;![o;;[ ;"1;i;@;@÷;i±;"vr-gutters-desktop;@;	[ ;i±o;;0;o;;{ ;"rhythm;@; 0;i≤;![o;;[ ;"1;i;@;@÷;i≤;"vert-gutter;@;	[ ;i≤o;
+
+;;;[";/*If using zen-grids as seen with Zen starter kit.  */;@;	[ ;i¥o;;0;o;;[ ;"24;i;@;@÷;iµ;"zen-column-count;@;	[ ;iµo;;0;o;$	;%"base_line_height;"base-line-height;@;i∂;"zen-gutter-width;@;	[ ;i∂o;
+
+;;;["+/* If using Singularity grid system */;@;	[ ;i∏o;;0;o;;[ ;"24;i;@;@÷;iπ;"
+grids;@;	[ ;iπo;;0;o;$	;%"base_line_height;"base-line-height;@;i∫;"gutters;@;	[ ;i∫o;
+
+;;;["#/* $gutter-styles: 'split'; */;@;	[ ;iªo;
+
+;;;["E/* THEME VARIABLES __________________________________________ */;@;	[ ;iøo;
+
+;;;["/* TYPOGRAPHY */;@;	[ ;i¡o;;0;o:Sass::Script::Color	:@attrs{	:rediJ:
+alphai:
+greeniJ:	blueiJ;0;@;i¬;"page-title-color;@;	[ ;i¬o;;0;o;$	;%"page_title_color;"page-title-color;@;i√;"block-title-color;@;	[ ;i√o;;0;o;*	;+{	;,iA;-i;.i@;/i@;0;@;iƒ;"body-font-color;@;	[ ;iƒo;;0;o;*	;+{	;,iˇ;-i;.iˇ;/iˇ;0;@;i≈;"body-bgrd-color;@;	[ ;i≈o;;0;o;;["em;"0.85em;f0.84999999999999998 33;@;[ ;i∆;"form-input-font-size;@;	[ ;i∆o;
+
+;;;["/* UI THEME VARIABLES */;@;	[ ;i o;;0;o;*	;+{	;,iè;-i;.i‘;/i‡;0;@;iÀ;"primary-color;@;	[ ;iÀo;;0;o;*	;+{	;,i‡;-i;.i);/iH;0;@;iÃ;"delete-color;@;	[ ;iÃo;;0;o;$	;%"delete_color;"delete-color;@;iÕ;"error-color;@;	[ ;iÕo;;0;o;*	;+{	;,iÓ;-i;.iÓ;/iÓ;0;@;iœ;"disabled-background-color;@;	[ ;iœo;;0;o;*	;+{	;,ià;-i;.ià;/ià;0;@;i–;"disabled-font-color;@;	[ ;i–o;
+
+;;;["+/* LINKS, BUTTONS, SUBMITS & PAGERS */;@;	[ ;i‘o;;0;o;$	;%"primary_color;"primary-color;@;i’;"link-color;@;	[ ;i’o;;0;o;;{ ;"darken;@; 0;i÷;![o;$	;%"link_color;"link-color;@;i÷o;;["%;"20%;i;@;[ ;i÷;"link-color-visited;@;	[ ;i÷o;;0;o;;{ ;"lighten;@; 0;i◊;![o;$	;%"link_color;"link-color;@;i◊o;;["%;"10%;i;@;[ ;i◊;"link-color-hover;@;	[ ;i◊o;;0;o;;{ ;"lighten;@; 0;iÿ;![o;$	;%"link_color;"link-color;@;iÿo;;["%;"10%;i;@;[ ;iÿ;"link-color-focus;@;	[ ;iÿo;;0;o;;{ ;"darken;@; 0;iŸ;![o;$	;%"link_color;"link-color;@;iŸo;;["%;"10%;i;@;[ ;iŸ;"link-color-active;@;	[ ;iŸo;;0;o;	;;;"	none;@;i⁄;"link-text-decoration;@;	[ ;i⁄o;;0;o;$	;%"link_color;"link-color;@;i‹;"pager-color;@;	[ ;i‹o;;0;o;$	;%"link_color;"link-color;@;iﬁ;"button-color;@;	[ ;iﬁo;;0;o;*	;+{	;,i›;-i;.i›;/i›;0;@;iﬂ;"button-border;@;	[ ;iﬂo;;0;o;$	;%"base_line_height;"base-line-height;@;i‡;"button-border-radius;@;	[ ;i‡o;
+
+;;;["'/* GENERAL UI BLOCK & FIELDSETS */;@;	[ ;i‰o;;0;o;;{ ;"lighten;@; 0;iÂ;![o;$	;%"link_color;"link-color;@;iÂo;;["%;"65%;iF;@;[ ;iÂ;"ui-border-color;@;	[ ;iÂo;;0;o;;{ ;"lighten;@; 0;iÊ;![o;$	;%"link_color;"link-color;@;iÊo;;["%;"67%;iH;@;[ ;iÊ;"ui-background-color;@;	[ ;iÊo;;0;o;$	;%"base_line_height;"base-line-height;@;iÁ;"ui-padding;@;	[ ;iÁo;;0;o;"
+;#o;$	;%"base_line_height;"base-line-height;@;iË;&o;;[ ;"0.08333;f0.083333000000000004 u;@;@÷;iË;@;';(;iË;"ui-border-radius;@;	[ ;iËo;;0;o;$	;%"ui_background_color;"ui-background-color;@;iÍ;"fieldset-background-color;@;	[ ;iÍo;;0;o;$	;%"ui_border_color;"ui-border-color;@;iÎ;"fieldset-border-color;@;	[ ;iÎo;;0;o;$	;%"ui_border_radius;"ui-border-radius;@;iÏ;"fieldset-border-radius;@;	[ ;iÏo;;0;o;$	;%"ui_padding;"ui-padding;@;iÌ;"fieldset-padding;@;	[ ;iÌo;;0;o;	;;;"
+solid;@;iÓ;"fieldset-border-style;@;	[ ;iÓo;;0;o;	;;;"	bold;@;iÔ;"legend-font-weight;@;	[ ;iÔo;
+
+;;;["/* TABLES */;@;	[ ;iÛo;;0;o;	;;;"
+solid;@;iÙ;"table-tbody-border-style;@;	[ ;iÙo;;0;o;	;;;[	o;;["px;"1px;i;@;[ ;iıo;;["px;"1px;i;@;[ ;iıo;;["px;"1px;i;@;[ ;iıo;;["px;"1px;i;@;[ ;iı;@;iı;"table-tbody-border-width;@;	[ ;iıo;;0;o;	;;;[	o;;{ ;"darken;@; 0;iˆ;![o;$	;%"body_bgrd_color;"body-bgrd-color;@;iˆo;;["%;"2%;i;@;[ ;iˆo;	;;;"transparent;@;iˆo;	;;;"transparent;@;iˆo;	;;;"transparent;@;iˆ;@;iˆ;"table-tbody-border-color;@;	[ ;iˆo;;0;o;	;;;"
+solid;@;i¯;"table-th-border-style;@;	[ ;i¯o;;0;o;	;;;[	o;;["px;"1px;i;@;[ ;i˘o;;["px;"1px;i;@;[ ;i˘o;;["px;"1px;i;@;[ ;i˘o;;["px;"1px;i;@;[ ;i˘;@;i˘;"table-th-border-width;@;	[ ;i˘o;;0;o;	;;;[	o;	;;;"transparent;@;i˙o;	;;;"transparent;@;i˙o;;{ ;"darken;@; 0;i˙;![o;$	;%"body_bgrd_color;"body-bgrd-color;@;i˙o;;["%;"2%;i;@;[ ;i˙o;	;;;"transparent;@;i˙;@;i˙;"table-th-border-color;@;	[ ;i˙o;;0;o;;{ ;"lighten;@; 0;i¸;![o;$	;%"body_bgrd_color;"body-bgrd-color;@;i¸o;;["%;"2%;i;@;[ ;i¸;"table-tr-even-background;@;	[ ;i¸o;;0;o;	;;;"
+solid;@;i˝;"table-tr-even-border-style;@;	[ ;i˝o;;0;o;	;;;[	o;;["px;"1px;i;@;[ ;i˛o;;["px;"1px;i;@;[ ;i˛o;;["px;"1px;i;@;[ ;i˛o;;["px;"1px;i;@;[ ;i˛;@;i˛;"table-tr-even-border-width;@;	[ ;i˛o;;0;o;	;;;[	o;;{ ;"darken;@; 0;iˇ;![o;$	;%"body_bgrd_color;"body-bgrd-color;@;iˇo;;["%;"2%;i;@;[ ;iˇo;	;;;"transparent;@;iˇo;;{ ;"darken;@; 0;iˇ;![o;$	;%"body_bgrd_color;"body-bgrd-color;@;iˇo;;["%;"2%;i;@;[ ;iˇo;	;;;"transparent;@;iˇ;@;iˇ;"table-tr-even-border-color;@;	[ ;iˇo;;0;o;	;;;"transparent;@;i;"table-tr-odd-background;@;	[ ;io;;0;o;	;;;"
+solid;@;i;"table-tr-odd-border-style;@;	[ ;io;;0;o;	;;;[	o;;["px;"1px;i;@;[ ;io;;["px;"1px;i;@;[ ;io;;["px;"1px;i;@;[ ;io;;["px;"1px;i;@;[ ;i;@;i;"table-tr-odd-border-width;@;	[ ;io;;0;o;	;;;[	o;;{ ;"darken;@; 0;i;![o;$	;%"body_bgrd_color;"body-bgrd-color;@;io;;["%;"2%;i;@;[ ;io;	;;;"transparent;@;io;	;;;"transparent;@;io;	;;;"transparent;@;i;@;i;"table-tr-odd-border-color;@;	[ ;io;;0;o;$	;%"table_tr_odd_border_color;"table-tr-odd-border-color;@;i;"table-tr-drag-background;@;	[ ;io;;0;o;	;;;[o;;["em;"0.25em;f	0.25;@;[ ;io;;["em;"
+0.5em;f0.5;@;[ ;i;@;i;"table-td-padding;@;	[ ;io;;0;o;*	;+{	;,iÃ;-i;.iÃ;/iÃ;0;@;i;"!table-td-disabled-background;@;	[ ;io;
+
+;:normal;["*/* Darken table when in a ui-block */;@;	[ ;i
+o;;0;o;;{ ;"darken;@; 0;i;![o;$	;%"ui_background_color;"ui-background-color;@;io;;["%;"3%;i;@;[ ;i;"ui-table-th-border-color;@;	[ ;io;;0;o;;{ ;"darken;@; 0;i;![o;$	;%"ui_background_color;"ui-background-color;@;io;;["%;"3%;i;@;[ ;i;" ui-table-tbody-border-color;@;	[ ;io;;0;o;;{ ;"darken;@; 0;i;![o;$	;%"ui_background_color;"ui-background-color;@;io;;["%;"3%;i;@;[ ;i;" ui-table-tr-even-background;@;	[ ;io;;0;o;;{ ;"darken;@; 0;i;![o;$	;%"ui_background_color;"ui-background-color;@;io;;["%;"3%;i;@;[ ;i;""ui-table-tr-even-border-color;@;	[ ;io;;0;o;	;;;"transparent;@;i;"ui-table-tr-odd-background;@;	[ ;io;;0;o;;{ ;"darken;@; 0;i;![o;$	;%"ui_background_color;"ui-background-color;@;io;;["%;"3%;i;@;[ ;i;"!ui-table-tr-odd-border-color;@;	[ ;io;;0;o;$	;%"!ui_table_tr_odd_border_color;"!ui-table-tr-odd-border-color;@;i;" ui-table-tr-drag-background;@;	[ ;io;
+
+;;;["/* EDIT TABS */;@;	[ ;io;;0;o;*	;+{	;,iˇ;-i;.iˇ;/iˇ;0;@;i;")tabs-edit-container-background-color;@;	[ ;io;;0;o;$	;%"ui_background_color;"ui-background-color;@;i;"tabs-edit-background-color;@;	[ ;io;;0;o;$	;%"ui_border_color;"ui-border-color;@;i;"tabs-edit-border-color;@;	[ ;io;;0;o;$	;%"ui_border_radius;"ui-border-radius;@;i;"tabs-edit-border-radius;@;	[ ;io;
+
+;;;["%/* VERTICAL & HORIZONTAL TABS */;@;	[ ;io;;0;o;$	;%"ui_background_color;"ui-background-color;@;i;""tabs-display-background-color;@;	[ ;io;;0;o;$	;%"ui_border_color;"ui-border-color;@;i ;"tabs-display-border-color;@;	[ ;i o;;0;o;$	;%"link_color;"link-color;@;i!;"%tabs-display-active-border-color;@;	[ ;i!o;;0;o;;{ ;"lighten;@; 0;i";![o;$	;%"tabs_display_border_color;"tabs-display-border-color;@;i"o;;["%;"20%;i;@;[ ;i";"&tabs-display-active-content-color;@;	[ ;i"o;;0;o;$	;%"ui_border_radius;"ui-border-radius;@;i#;"tabs-display-border-radius;@;	[ ;i#o;
+
+;;;["/* FORM ITEMS */;@;	[ ;i'o;;0;o;	;;;[	o;;[ ;"0;i ;@;@÷;i(o;;[ ;"0;i ;@;@÷;i(o;$	;%"vert_gutter;"vert-gutter;@;i(o;;[ ;"0;i ;@;@÷;i(;@;i(;"form-item-margin;@;	[ ;i(o;;0;o;	;;;"	bold;@;i*;" form-item-label-font-weight;@;	[ ;i*o;;0;o;;["em;"0.875em;f
+0.875;@;[ ;i+;"form-item-label-font-size;@;	[ ;i+o;;0;o;	;;;[	o;;[ ;"0;i ;@;@÷;i,o;;[ ;"0;i ;@;@÷;i,o;$	;%"vert_gutter;"vert-gutter;@;i,o;;[ ;"0;i ;@;@÷;i,;@;i,;"form-item-label-margin;@;	[ ;i,o;;0;o;;["em;"0.75em;f	0.75;@;[ ;i.;"$form-item-description-font-size;@;	[ ;i.o;
+
+;;;["/* INPUT ELEMENTS */;@;	[ ;i2o;;0;o;	;;;[o;;["em;"0.25em;f	0.25;@;[ ;i3o;;["em;"
+0.5em;f0.5;@;[ ;i3;@;i3;"input-padding;@;	[ ;i3o;;0;o;	;;;"inherit;@;i4;"input-font-family;@;	[ ;i4o;;0;o;$	;%"body_font_color;"body-font-color;@;i5;"input-font-color;@;	[ ;i5o;;0;o;;["em;"1em;i;@;[ ;i6;"input-font-size;@;	[ ;i6o;;0;o;*	;+{	;,iˇ;-i;.iˇ;/iˇ;0;@;i8;"input-background-color;@;	[ ;i8o;;0;o;	;;;"lighten;@;i9;" input-backgroud-color-focus;@;	[ ;i9o;;0;o;$	;%"ui_border_color;"ui-border-color;@;i;;"input-border-color;@;	[ ;i;o;;0;o;$	;%"link_color;"link-color;@;i<;"input-border-color-focus;@;	[ ;i<o;;0;o;$	;%"ui_border_radius;"ui-border-radius;@;i=;"input-border-radius;@;	[ ;i=o;;0;o;	;;;[
+o;	;;;"
+inset;@;i?o;;[ ;"0;i ;@;@÷;i?o;;["px;"1px;i;@;[ ;i?o;;["px;"2px;i;@;[ ;i?o;;{ ;"	rgba;@; 0;i?;![	o;;[ ;"0;i ;@;@÷;i?o;;[ ;"0;i ;@;@÷;i?o;;[ ;"0;i ;@;@÷;i?o;;[ ;"0.1;f0.10000000000000001 ôö;@;@÷;i?;@;i?;"input-box-shadow;@;	[ ;i?o;;0;o;	;;;[	o;;[ ;"0;i ;@;@÷;i@o;;[ ;"0;i ;@;@÷;i@o;;["px;"2px;i;@;[ ;i@o;$	;%"link_color;"link-color;@;i@;@;i@;"input-box-shadow-focus;@;	[ ;i@o;;0;o;;["s;"	0.2s;f0.20000000000000001 ôö;@;[ ;iA;""input-focus-transition-timing;@;	[ ;iAo;;0;o;$	;%"disabled_background_color;"disabled-background-color;@;iC;"$input-disabled-background-color;@;	[ ;iCo;;0;o;$	;%"disabled_font_color;"disabled-font-color;@;iD;"input-disabled-font-color;@;	[ ;iDo;;0;o;;["px;"
+100px;ii;@;[ ;iF;"width-small;@;	[ ;iFo;;0;o;;["px;"
+120px;i};@;[ ;iG;"width-medium;@;	[ ;iGo;;0;o;;["px;"
+220px;i‹;@;[ ;iH;"width-large;@;	[ ;iHo;;0;o;;["px;"
+220px;i‹;@;[ ;iI;"width-xlarge;@;	[ ;iIo;;0;o;;["px;"
+380px;i|;@;[ ;iJ;"width-xxlarge;@;	[ ;iJo;;0;o;;["em;"
+0.5em;f0.5;@;[ ;iK;"inline-field-gutter;@;	[ ;iKo;
+
+;;;["(/* LISTS, BLOCKQUOTES & COMMENTS */;@;	[ ;iOo;;0;o;"
+;#o;$	;%"base_line_height;"base-line-height;@;iP;&o;;[ ;"1.5;f1.5;@;@÷;iP;@;';(;iP;"indent-amount;@;	[ ;iPo;;0;o;$	;%"ui_border_color;"ui-border-color;@;iQ;"blockquote-border-color;@;	[ ;iQo;
+
+;;;["L/* _________________________________________________________________ */;@;	[ ;iTo;
+
+;;;["</*
+ * Partials to be shared with all .scss files.
+ * */;@;	[ ;iVo;
+
+;;;["”/* =============================================================================
+ * Partials to be shared with all .scss files.
+ * ============================================================================= */;@;	[ ;iZo;
+
+;;;["?/* Add Compass' IE and vendor prefix support variables. */;@;	[ ;i^o:Sass::Tree::ImportNode:@imported_file0:@imported_filename"compass/support;0;@;	[ ;i_o;
+
+;;;[")/* Better than Drupal's clearfix. */;@;	[ ;iao;1;20;3"'compass/utilities/general/clearfix;0;@;	[ ;ibo;
+
+;;;["@/* See http://compass-style.org/help/tutorials/spriting/ */;@;	[ ;ido;1;20;3"compass/utilities/sprites;0;@;	[ ;ieo;
+
+;;;["B/* Use one CSS3 mixin instead of multiple vendor prefixes. */;@;	[ ;igo;1;20;3"compass/css3;0;@;	[ ;iho;
+
+;;;["*/* Helps set up a vertical rhythm. */;@;	[ ;ijo;1;20;3"'compass/typography/vertical_rhythm;0;@;	[ ;iko;
+
+;;;["6/* Add the Zen Grids responsive layout mixins. */;@;	[ ;imo;1;20;3"zen;0;@;	[ ;ino;
+
+;;;["B/* Alternate to zen grid frame work for asymmetrical grids */;@;	[ ;ipo;1;20;3"singularitygs;0;@;	[ ;iqo;
+
+;;;["A/* Grid backgrounds for proper layout and vertical rhthym */;@;	[ ;iso;1;20;3"#compass/layout/grid-background;0;@;	[ ;ito;
+
+;;;["Q/* Plugin that compiles nested media queries and pixel-to-ems conversions */;@;	[ ;ivo;1;20;3"breakpoint;0;@;	[ ;iwo;
+
+;;;["//* Now we add our custom helper mixins. */;@;	[ ;iyo;1;20;3"mixins;0;@;	[ ;izo;
+
+;;;["ß/* Automatically compiles transparent pngs forfallback when using RGBA color values. Variables for generated pngs
+ * https://github.com/aaronrussell/compass-rgbapng */;@;	[ ;i|o;1;20;3"rgbapng;0;@;	[ ;i~o;;0;o;	;;;"generated;@;i;"rgbapng_path;@;	[ ;io;;0;o;;[ ;"8;i;@;@÷;iÄ;"rgbapng_px_size;@;	[ ;iÄo;
+
+;;;["/* My buttons */;@;	[ ;iÇo;1;20;3"buttons;0;@;	[ ;iÉo;
+
+;;;["/* Buttons from the web */;@;	[ ;iÖo;1;20;3"sassy-buttons;0;@;	[ ;iÜo;
+
+;;;["ç/* Misc as needed 
+ * @import "color_schemer";           
+ * @import "color_names";       
+ * @import "colors";
+ *@import "button_themes"; */;@;	[ ;ià;i
