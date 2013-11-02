@@ -52,36 +52,24 @@
 
 #theming-tab {
   display: block;
-  border-top: 1px solid lighten($link-color, 10%);
-  border-right: 1px solid lighten($link-color, 10%);
-  border-bottom: 1px solid lighten($link-color, 10%);
   @include transition-property(all);
   @include transition-duration(.15s);
   @include transition-timing-function(ease-in-out);
   cursor: pointer;
   vertical-align: middle;
   position: absolute;
-  right: -32px;
-  top: 120px;
-  color: white;
+  right: -24px;
+  color: #fff;
+  top: 140px;
   display: block;
-  @include border-right-radius(4px);
+  @include border-right-radius(30px);
   background: $link-color;
   height: 32px;
   line-height: 28px;
-  width: 32px;
+  width: 22px;
   text-align: center;
   &:hover {
     background: lighten($link-color, 10%);
-    border-top: 1px solid $link-color;
-    border-right: 1px solid $link-color;
-    border-bottom: 1px solid $link-color;
-  }
-  @include breakpoint ($tablet-small-min-width) {
-    top: 110px;
-  }
-  @include breakpoint ($tablet-portrait-min-width) {
-    top: 100px;
   }
 }
 

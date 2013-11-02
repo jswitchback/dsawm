@@ -182,7 +182,7 @@ strong {
 blockquote {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
   margin: rhythm(1) 36px;
-  border-left: 3.2px solid white;
+  border-left: 3.2px solid #cbeafa;
   padding: 8px 16px;
 }
 
@@ -299,7 +299,7 @@ button, input, textarea {
 /* WYSIWYG / BASIC PAGE FIELD CSS */
 .wys-divider {
   height: 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #e9e9a5;
   margin: rhythm(1) 0;
 }
 
@@ -317,5 +317,5 @@ button, input, textarea {
 
 .wys-block-title {
   font-weight: bold;
-  color: #090808;
+  color: #4b4b46;
 }

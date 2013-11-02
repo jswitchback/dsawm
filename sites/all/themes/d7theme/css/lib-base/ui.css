@@ -98,14 +98,14 @@
   display: inline;
   padding: 0 0.5em;
   list-style-type: none;
-  background-color: #8fd4e0;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fd4e0), color-stop(100%, #67c5d5));
-  background-image: -webkit-linear-gradient(center top, #8fd4e0, #67c5d5);
-  background-image: -moz-linear-gradient(center top, #8fd4e0, #67c5d5);
-  background-image: -o-linear-gradient(center top, #8fd4e0, #67c5d5);
-  background-image: linear-gradient(center top, #8fd4e0, #67c5d5);
+  background-color: #0b4d6e;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0b4d6e), color-stop(100%, #062d40));
+  background-image: -webkit-linear-gradient(center top, #0b4d6e, #062d40);
+  background-image: -moz-linear-gradient(center top, #0b4d6e, #062d40);
+  background-image: -o-linear-gradient(center top, #0b4d6e, #062d40);
+  background-image: linear-gradient(center top, #0b4d6e, #062d40);
   background-repeat: repeat-x;
-  border: 1px solid #67c5d5;
+  border: 1px solid #062d40;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   -webkit-border-radius: 1.99999px;
   -moz-border-radius: 1.99999px;
@@ -138,14 +138,14 @@
 .pager-next a:active,
 .pager-last a:active,
 .pager-ellipsis a:active, .pager-current a:active {
-  background-color: #67c5d5;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #87d1de), color-stop(100%, #8fd4e0));
-  background-image: -webkit-linear-gradient(center top, #87d1de, #8fd4e0);
-  background-image: -moz-linear-gradient(center top, #87d1de, #8fd4e0);
-  background-image: -o-linear-gradient(center top, #87d1de, #8fd4e0);
-  background-image: linear-gradient(center top, #87d1de, #8fd4e0);
+  background-color: #062d40;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0a4765), color-stop(100%, #0b4d6e));
+  background-image: -webkit-linear-gradient(center top, #0a4765, #0b4d6e);
+  background-image: -moz-linear-gradient(center top, #0a4765, #0b4d6e);
+  background-image: -o-linear-gradient(center top, #0a4765, #0b4d6e);
+  background-image: linear-gradient(center top, #0a4765, #0b4d6e);
   background-repeat: repeat-x;
-  border: 1px solid #dff3f6;
+  border: 1px solid #148ecb;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   -webkit-border-radius: 1.99999px;
   -moz-border-radius: 1.99999px;
@@ -155,7 +155,7 @@
   -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 0 8px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
   -moz-box-shadow: rgba(255, 255, 255, 0.2) 0 0 8px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
   box-shadow: rgba(255, 255, 255, 0.2) 0 0 8px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
-  text-shadow: 0 1px 1px #67c5d5;
+  text-shadow: 0 1px 1px #062d40;
   text-transform: uppercase;
   color: white;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
@@ -223,7 +223,7 @@ ul.tabs-secondary a:link {
 }
 
 ul.tabs-primary li {
-  border: 1px solid #67c5d5;
+  border: 1px solid #062d40;
   border-bottom: 0;
   margin: 0.5em 0 0 3px;
   /* LTR */
@@ -236,16 +236,16 @@ ul.tabs-primary li {
   text-shadow: 1px 1px 0 white;
 }
 ul.tabs-primary li.active a {
-  background-color: #8fd4e0;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fd4e0), color-stop(100%, #67c5d5));
-  background-image: -webkit-linear-gradient(center top, #8fd4e0, #67c5d5);
-  background-image: -moz-linear-gradient(center top, #8fd4e0, #67c5d5);
-  background-image: -o-linear-gradient(center top, #8fd4e0, #67c5d5);
-  background-image: linear-gradient(center top, #8fd4e0, #67c5d5);
-  color: white;
+  background-color: #0b4d6e;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0b4d6e), color-stop(100%, #062d40));
+  background-image: -webkit-linear-gradient(center top, #0b4d6e, #062d40);
+  background-image: -moz-linear-gradient(center top, #0b4d6e, #062d40);
+  background-image: -o-linear-gradient(center top, #0b4d6e, #062d40);
+  background-image: linear-gradient(center top, #0b4d6e, #062d40);
+  color: #85cef3;
   font-weight: normal;
   background-repeat: repeat-x;
-  border: 1px solid #67c5d5;
+  border: 1px solid #062d40;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 0 8px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
   -moz-box-shadow: rgba(255, 255, 255, 0.2) 0 0 8px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
@@ -258,33 +258,33 @@ ul.tabs-primary li a {
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase;
-  background: none repeat scroll 0 0 #8fd4e0;
-  border: 1px solid #8fd4e0;
+  background: none repeat scroll 0 0 #0b4d6e;
+  border: 1px solid #0b4d6e;
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;
   border-top-left-radius: 4px;
   -moz-border-radius-topright: 4px;
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
-  -webkit-box-shadow: #b7e3eb 0 0 2px inset;
-  -moz-box-shadow: #b7e3eb 0 0 2px inset;
-  box-shadow: #b7e3eb 0 0 2px inset;
+  -webkit-box-shadow: #106d9c 0 0 2px inset;
+  -moz-box-shadow: #106d9c 0 0 2px inset;
+  box-shadow: #106d9c 0 0 2px inset;
   color: #ffffff;
-  text-shadow: 0 1px 1px #67c5d5;
+  text-shadow: 0 1px 1px #062d40;
   line-height: 26px;
   padding: 0 20px;
 }
 ul.tabs-primary li a:hover {
   text-decoration: none;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fd4e0), color-stop(100%, #67c5d5));
-  background-image: -webkit-linear-gradient(center top, #8fd4e0, #67c5d5);
-  background-image: -moz-linear-gradient(center top, #8fd4e0, #67c5d5);
-  background-image: -o-linear-gradient(center top, #8fd4e0, #67c5d5);
-  background-image: linear-gradient(center top, #8fd4e0, #67c5d5);
-  -webkit-box-shadow: #b7e3eb 0 0 4px;
-  -moz-box-shadow: #b7e3eb 0 0 4px;
-  box-shadow: #b7e3eb 0 0 4px;
-  border: 1px solid #b7e3eb;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0b4d6e), color-stop(100%, #062d40));
+  background-image: -webkit-linear-gradient(center top, #0b4d6e, #062d40);
+  background-image: -moz-linear-gradient(center top, #0b4d6e, #062d40);
+  background-image: -o-linear-gradient(center top, #0b4d6e, #062d40);
+  background-image: linear-gradient(center top, #0b4d6e, #062d40);
+  -webkit-box-shadow: #106d9c 0 0 4px;
+  -moz-box-shadow: #106d9c 0 0 4px;
+  box-shadow: #106d9c 0 0 4px;
+  border: 1px solid #106d9c;
 }
 ul.tabs-primary li a.active {
   background: none repeat scroll 0 0 #ffffff;
@@ -316,7 +316,7 @@ ul.tabs-primary li a.active:hover {
 /* Placeholder and highlight color
    ========================================================================== */
 ::-webkit-input-placeholder {
-  color: #6f6e6e;
+  color: #b1b1ac;
 }
 ::-webkit-input-placeholder * {
   -webkit-transition: all 0.15s ease;
@@ -325,46 +325,46 @@ ul.tabs-primary li a.active:hover {
   transition: all 0.15s ease;
 }
 ::-webkit-input-placeholder:focus {
-  color: #fbfbfb;
+  color: white;
 }
 
 :focus::-webkit-input-placeholder {
-  color: #fbfbfb;
+  color: white;
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #6f6e6e;
+  color: #b1b1ac;
 }
 :-moz-placeholder:focus {
-  color: #fbfbfb;
+  color: white;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #6f6e6e;
+  color: #b1b1ac;
 }
 ::-moz-placeholder:focus {
-  color: #fbfbfb;
+  color: white;
 }
 
 :-ms-input-placeholder {
-  color: #6f6e6e;
+  color: #b1b1ac;
 }
 :-ms-input-placeholder:focus {
-  color: #fbfbfb;
+  color: white;
 }
 
 ::selection {
-  background: #8fd4e0;
+  background: #0b4d6e;
   /* Safari */
-  color: white;
+  color: #b4e1f7;
 }
 
 ::-moz-selection {
-  background: #8fd4e0;
+  background: #0b4d6e;
   /* Firefox */
-  color: white;
+  color: #b4e1f7;
 }
 
 /* Misc

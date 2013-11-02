@@ -69,7 +69,7 @@
  * @see template_process()
  */
 ?><!DOCTYPE html>
-<?php if (theme_get_setting('conditional_classes_html')): ?>
+<?php if (theme_get_setting('d7theme_conditional_classes_html')): ?>
   <!--[if IEMobile 7]><html class="ie iem7 no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"><![endif]-->
   <!--[if lte IE 6]><html class="ie lt-ie9 lt-ie8 lt-ie7 no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"><![endif]-->
   <!--[if (IE 7)&(!IEMobile)]><html class="ie ie-7 lt-ie9 lt-ie8 no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"><![endif]-->

@@ -27,7 +27,7 @@
 
 .nav-button {
   background-color: transparent;
-  color: #8fd4e0;
+  color: #0b4d6e;
   display: block;
   font-size: 1.5em;
   font-weight: bold;
@@ -42,14 +42,14 @@
   text-align: center;
 }
 .nav-button:hover, .nav-button:active {
-  color: #dff3f6;
+  color: #148ecb;
 }
 .nav-button:hover .toggle-bar, .nav-button:active .toggle-bar {
-  background-color: #dff3f6;
+  background-color: #148ecb;
 }
 
 .toggle-bar {
-  background-color: #8fd4e0;
+  background-color: #0b4d6e;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -110,20 +110,20 @@
   }
   #navigation ul.links li a,
   #navigation ul.menu li a {
-    color: #8fd4e0;
+    color: #0b4d6e;
     background: none;
   }
   #navigation ul.links li a:hover,
   #navigation ul.menu li a:hover {
-    background: #7bccda;
+    background: #093d57;
     color: #fff;
   }
   #navigation ul.links li a:active,
   #navigation ul.menu li a:active {
-    -webkit-box-shadow: #7bccda 0 0 10px inset;
-    -moz-box-shadow: #7bccda 0 0 10px inset;
-    box-shadow: #7bccda 0 0 10px inset;
-    background: #a3dce6;
+    -webkit-box-shadow: #093d57 0 0 10px inset;
+    -moz-box-shadow: #093d57 0 0 10px inset;
+    box-shadow: #093d57 0 0 10px inset;
+    background: #0d5d85;
     color: #fff;
   }
 }

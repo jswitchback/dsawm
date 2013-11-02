@@ -209,7 +209,7 @@
 
 <?php if ($theming_sidebar && $is_admin): ?>
   <div id="theming-sidebar" class="off-canvas">
-    <span id="theming-tab"><</span>
+    <span id="theming-tab"></span>
     <?php print $theming_sidebar ; ?>
   </div>
 <?php endif; ?>

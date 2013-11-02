@@ -6,7 +6,7 @@
 div.vertical-tabs {
   margin: 2em 0 1em 15em;
   /* LTR */
-  border: 1px solid white;
+  border: 1px solid #cbeafa;
   background-color: white;
   position: relative;
   /* IE6/7 */
@@ -17,7 +17,7 @@ div.vertical-tabs {
   list-style: none;
   list-style-image: none;
   /* IE6 */
-  border-top: 1px solid white;
+  border-top: 1px solid #cbeafa;
   padding: 0;
   position: relative;
   /* IE6 */
@@ -43,8 +43,8 @@ fieldset.vertical-tabs-pane fieldset legend {
 
 /* Layout of each tab */
 .vertical-tabs ul.vertical-tabs-list li {
-  background: white;
-  border: 1px solid white;
+  background: #d4eefb;
+  border: 1px solid #cbeafa;
   border-top: 0;
   padding: 0;
   margin: 0;
@@ -73,7 +73,7 @@ fieldset.vertical-tabs-pane fieldset legend {
 
 .vertical-tabs ul.vertical-tabs-list li a:hover {
   outline: none;
-  color: #3c3b3b;
+  color: #7f8077;
 }
 
 .vertical-tabs ul.vertical-tabs-list li.selected {
@@ -82,7 +82,7 @@ fieldset.vertical-tabs-pane fieldset legend {
   /* LTR */
 }
 .vertical-tabs ul.vertical-tabs-list li.selected a {
-  border-left: 0.25em solid #8fd4e0;
+  border-left: 0.25em solid #0b4d6e;
 }
 
 .vertical-tabs ul.vertical-tabs-list .selected strong {

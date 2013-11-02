@@ -13,7 +13,7 @@ div.horizontal-tabs {
 }
 
 .horizontal-tabs-panes {
-  border: 1px solid white;
+  border: 1px solid #cbeafa;
   margin-top: -9px;
   -moz-border-radius-bottomleft: 1.99999px;
   -webkit-border-bottom-left-radius: 1.99999px;
@@ -58,10 +58,10 @@ fieldset.field-group-htab {
 
 /* Layout of each tab */
 .horizontal-tabs ul.horizontal-tabs-list li {
-  background: white;
-  border-right: 1px solid white;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  background: #d4eefb;
+  border-right: 1px solid #cbeafa;
+  border-top: 1px solid #cbeafa;
+  border-bottom: 1px solid #cbeafa;
   padding: 1px;
   padding-top: 0;
   margin: 0;
@@ -70,7 +70,7 @@ fieldset.field-group-htab {
   float: left;
 }
 .horizontal-tabs ul.horizontal-tabs-list li.first {
-  border-left: 1px solid white;
+  border-left: 1px solid #cbeafa;
 }
 .horizontal-tabs ul.horizontal-tabs-list li.selected {
   border-bottom: 1px solid #fff;
@@ -78,7 +78,7 @@ fieldset.field-group-htab {
   padding: 0 0 1px 0;
 }
 .horizontal-tabs ul.horizontal-tabs-list li.selected a {
-  border-top: 0.25em solid #8fd4e0;
+  border-top: 0.25em solid #0b4d6e;
   color: #000;
   display: block;
   text-decoration: none;
@@ -101,7 +101,7 @@ fieldset.field-group-htab {
 }
 .horizontal-tabs ul.horizontal-tabs-list li a:hover {
   outline: none;
-  color: #3c3b3b;
+  color: #7f8077;
   background-color: #f1f1f1;
 }
 .horizontal-tabs ul.horizontal-tabs-list li a:hover strong {
