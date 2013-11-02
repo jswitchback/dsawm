@@ -96,9 +96,7 @@ function content_authoring_feature_ckeditor_profile_defaults() {
           ),
         ),
       ),
-      'input_formats' => array(
-        'wysiwyg' => 'WYSIWYG',
-      ),
+      'input_formats' => array(),
     ),
   );
   return $data;

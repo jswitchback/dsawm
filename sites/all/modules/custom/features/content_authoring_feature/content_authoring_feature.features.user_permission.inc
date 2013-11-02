@@ -15,7 +15,6 @@ function content_authoring_feature_user_default_permissions() {
     'name' => 'access ckeditor link',
     'roles' => array(
       'authenticated user' => 'authenticated user',
-      'developer' => 'developer',
     ),
     'module' => 'ckeditor_link',
   );
@@ -23,27 +22,21 @@ function content_authoring_feature_user_default_permissions() {
   // Exported permission: 'administer ckeditor'.
   $permissions['administer ckeditor'] = array(
     'name' => 'administer ckeditor',
-    'roles' => array(
-      'developer' => 'developer',
-    ),
+    'roles' => array(),
     'module' => 'ckeditor',
   );
 
   // Exported permission: 'administer ckeditor link'.
   $permissions['administer ckeditor link'] = array(
     'name' => 'administer ckeditor link',
-    'roles' => array(
-      'developer' => 'developer',
-    ),
+    'roles' => array(),
     'module' => 'ckeditor_link',
   );
 
   // Exported permission: 'customize ckeditor'.
   $permissions['customize ckeditor'] = array(
     'name' => 'customize ckeditor',
-    'roles' => array(
-      'developer' => 'developer',
-    ),
+    'roles' => array(),
     'module' => 'ckeditor',
   );
 
