@@ -59,6 +59,10 @@ html {
 /*
  * Addresses font-family inconsistency between 'textarea' and other form elements.
  */
+body {
+  font-size: 87.5%;
+}
+
 /* =============================================================================
    Typography
 

@@ -1,0 +1,18 @@
+.resource-center ul {
+  margin: 0;
+}
+.resource-center .field-resource-category-image {
+  padding: 1em;
+}
+.resource-center .resource-title {
+  font-size: 1.15em;
+  margin-top: 0;
+  margin-bottom: 6px;
+  padding: 0 1em;
+}
+.resource-center .resource-item {
+  margin-bottom: 12px;
+}
+.resource-center .resource-text {
+  padding: 0 1em;
+}

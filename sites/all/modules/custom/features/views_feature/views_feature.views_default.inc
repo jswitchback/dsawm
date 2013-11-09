@@ -31,6 +31,7 @@ function views_feature_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '12';
   $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['class'] = 'ui-list';
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'full';
   $handler->display->display_options['row_options']['links'] = FALSE;
@@ -126,6 +127,10 @@ function views_feature_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['row_class'] = 'max-four';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['wrapper_class'] = 'item-list max-grid';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Taxonomy term: Landing Page Image */
   $handler->display->display_options['fields']['field_resource_category_image']['id'] = 'field_resource_category_image';
@@ -133,7 +138,7 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['field_resource_category_image']['field'] = 'field_resource_category_image';
   $handler->display->display_options['fields']['field_resource_category_image']['label'] = '';
   $handler->display->display_options['fields']['field_resource_category_image']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_resource_category_image']['alter']['path'] = 'resources/[name]';
+  $handler->display->display_options['fields']['field_resource_category_image']['alter']['path'] = 'resources/%1';
   $handler->display->display_options['fields']['field_resource_category_image']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['field_resource_category_image']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['field_resource_category_image']['element_type'] = '0';
@@ -142,7 +147,7 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['field_resource_category_image']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_resource_category_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_resource_category_image']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'resource_center_grid_retina',
     'image_link' => '',
   );
   $handler->display->display_options['fields']['field_resource_category_image']['field_api_classes'] = TRUE;
@@ -152,25 +157,25 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/%1';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['name']['element_class'] = 'resource-title';
+  $handler->display->display_options['fields']['name']['element_label_type'] = '0';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Term description */
   $handler->display->display_options['fields']['description']['id'] = 'description';
   $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['description']['field'] = 'description';
   $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['element_type'] = 'p';
+  $handler->display->display_options['fields']['description']['element_class'] = 'resource-text';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
-  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name_1']['field'] = 'name';
-  $handler->display->display_options['fields']['name_1']['label'] = '';
-  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
   /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
@@ -191,6 +196,19 @@ function views_feature_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'resource-center';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['row_class'] = 'max-four resource-item';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['class'] = 'ui-list';
+  $handler->display->display_options['style_options']['wrapper_class'] = 'max-grid';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['block_description'] = 'Landing Page Resource Types Block';
 
   /* Display: Category Header Block */
@@ -218,6 +236,15 @@ function views_feature_views_default_views() {
 
   /* Display: Category Navigation */
   $handler = $view->new_display('block', 'Category Navigation', 'block_2');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['class'] = 'ui-list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
@@ -225,7 +252,7 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/%1';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;

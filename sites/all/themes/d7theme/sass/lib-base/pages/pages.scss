@@ -32,6 +32,8 @@ body {
   height: auto;
   padding: 0 24px 0 0;
   margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: -12px;
   @include breakpoint($tablet-portrait-min-width) {
     height: 90px;
     width: 393px;
@@ -82,6 +84,12 @@ html.no-svg #logo {
   float: left;
 }
 
+
+#header-wrapper {
+  background-color: $body-bgrd-color;
+  border-bottom: 1px solid darken($body-bgrd-color, 55%);
+  @include box-shadow(0,0,12px, #ffffff)
+}
 /* The name of the website. */
 .header__site-name {
   margin: 0;
@@ -120,6 +128,9 @@ html.no-svg #logo {
 
 /* MAIN
    ========================================================================== */
+#main {
+  padding-top: 24px;
+}
 
 #main-wrapper {
   @include background(linear-gradient(#89c3d1 100px, white 100%));
@@ -130,6 +141,8 @@ html.no-svg #logo {
    ========================================================================== */
    
 #content {
+  @include rgba-background(rgba(255,255,255, .9));
+  @include box-shadow(0,0,12px, #ffffff, inset)
 }
 
 .region-content-top,
