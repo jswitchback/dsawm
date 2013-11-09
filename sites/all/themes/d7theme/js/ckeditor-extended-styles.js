@@ -69,24 +69,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             /* Object Styles */
 
             {
-                    name : 'Intro Title',
-                    element : 'h2',
-                    attributes :
-                    {
-                            'class' : 'wys-title wys-intro-title'
-                    }
-            },
-
-            {
-                    name : 'Intro Text',
-                    element : 'p',
-                    attributes :
-                    {
-                            'class' : 'wys-intro-text'
-                    }
-            },
-
-            {
                     name : 'Section Title',
                     element : 'h3',
                     attributes :
@@ -110,15 +92,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
                     attributes :
                     {
                             'class' : 'wys-block-text'
-                    }
-            },
-
-            {
-                    name : 'List Title',
-                    element : 'h4',
-                    attributes :
-                    {
-                            'class' : 'wys-title wys-list-title'
                     }
             }
 

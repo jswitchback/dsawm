@@ -265,8 +265,46 @@ body {
   padding: 0;
   @include background-grid;
 } */
+.max-grid {
+  margin-left: 0;
+  padding-left: 0;
+}
+.max-grid li {
+  list-style-type: none;
+  list-style-image: none;
+}
+
 /* 1 COlUMN LAYOUT (Generally min-width: 320px)
    ========================================================================== */
+@media (min-width: 30em) and (max-width: 47.4375em) {
+  .max-four:nth-child(2n+1) {
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -50%;
+    clear: left;
+  }
+  .max-four:nth-child(2n+2) {
+    float: left;
+    width: 50%;
+    margin-left: 50%;
+    margin-right: -100%;
+  }
+
+  .max-six:nth-child(2n+1) {
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -50%;
+    clear: left;
+  }
+  .max-six:nth-child(2n+2) {
+    float: left;
+    width: 50%;
+    margin-left: 50%;
+    margin-right: -100%;
+  }
+}
 /* 2 COLUMN LAYOUT (Generally min-width: 600px to 759px)
    ========================================================================== */
 @media (min-width: 37.5em) {
@@ -308,34 +346,6 @@ body {
   .max-three:nth-child(3n+3).contained, .max-five:nth-child(3n+3).contained {
     width: 50%;
   }
-
-  .max-four:nth-child(2n+1) {
-    float: left;
-    width: 50%;
-    margin-left: 0%;
-    margin-right: -50%;
-    clear: left;
-  }
-  .max-four:nth-child(2n+2) {
-    float: left;
-    width: 50%;
-    margin-left: 50%;
-    margin-right: -100%;
-  }
-
-  .max-six:nth-child(2n+1) {
-    float: left;
-    width: 50%;
-    margin-left: 0%;
-    margin-right: -50%;
-    clear: left;
-  }
-  .max-six:nth-child(2n+2) {
-    float: left;
-    width: 50%;
-    margin-left: 50%;
-    margin-right: -100%;
-  }
 }
 /* 3 COLUMN LAYOUT (Generally min-width: 760px)
    ========================================================================== */
@@ -361,34 +371,24 @@ body {
   }
 }
 @media (min-width: 47.5em) and (max-width: 61.1875em) {
-  .max-four:nth-child(4n+1) {
+  .max-four:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
     clear: left;
   }
-  .max-four:nth-child(4n+2) {
+  .max-four:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  .max-four:nth-child(4n+3) {
+  .max-four:nth-child(3n+3) {
     float: left;
     width: 33.33333%;
     margin-left: 66.66667%;
     margin-right: -100%;
-  }
-  .max-four:nth-child(4n+4) {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-    clear: both;
-  }
-  .max-four:nth-child(4n+4).contained {
-    width: 33%;
   }
 
   .max-five:nth-child(5n+1) {

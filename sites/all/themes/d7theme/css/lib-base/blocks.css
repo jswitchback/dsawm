@@ -9,5 +9,5 @@
  */
 /* Block wrapper. */
 .block {
-  margin-bottom: rhythm(1);
+  margin-bottom: 24px;
 }

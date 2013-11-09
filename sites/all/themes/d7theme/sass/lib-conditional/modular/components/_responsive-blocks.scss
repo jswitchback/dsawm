@@ -26,6 +26,10 @@ body {
   @include background-grid;
 } */
  
+// Class on the ul
+.max-grid {
+  @include clean-list;
+}
 
 
 /* 1 COlUMN LAYOUT (Generally min-width: 320px)
@@ -33,6 +37,27 @@ body {
 
 @include breakpoint($min-layout-width) {
 
+}
+
+@include breakpoint($phone-min-width $tablet-portrait-max-width) {
+  .max-four {
+    &:nth-child(2n+1) {
+      @include zen-grid-item(12, 1);
+      clear: left;
+    }
+    &:nth-child(2n+2) {
+      @include zen-grid-item(12, 13);
+    }
+  }
+  .max-six {
+    &:nth-child(2n+1) {
+      @include zen-grid-item(12, 1);
+      clear: left;
+    }
+    &:nth-child(2n+2) {
+      @include zen-grid-item(12, 13);
+    }
+  }
 }
 
 
@@ -69,24 +94,6 @@ body {
       }
     }
   }
-  .max-four {
-    &:nth-child(2n+1) {
-      @include zen-grid-item(12, 1);
-      clear: left;
-    }
-    &:nth-child(2n+2) {
-      @include zen-grid-item(12, 13);
-    }
-  }
-  .max-six {
-    &:nth-child(2n+1) {
-      @include zen-grid-item(12, 1);
-      clear: left;
-    }
-    &:nth-child(2n+2) {
-      @include zen-grid-item(12, 13);
-    }
-  }
 }
    
 
@@ -111,22 +118,15 @@ body {
 
 @include breakpoint($tablet-portrait-min-width $desktop-max-width) {
   .max-four {
-    &:nth-child(4n+1) {
+    &:nth-child(3n+1) {
       @include zen-grid-item(8, 1);
       clear: left;
     }
-    &:nth-child(4n+2) {
+    &:nth-child(3n+2) {
       @include zen-grid-item(8, 9);
     }
-    &:nth-child(4n+3) {
+    &:nth-child(3n+3) {
       @include zen-grid-item(8, 17);
-    }
-    &:nth-child(4n+4) {
-      @include zen-grid-item(24, 1);
-      clear: both;
-      &.contained {
-        width: 33%;
-      }
     }
   }
   .max-five {

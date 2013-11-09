@@ -12,7 +12,7 @@
    ========================================================================== */
 /* Wrapper for a form element (or group of form elements) and its label. */
 .form-item {
-  margin: rhythm(1) 0;
+  margin: 24px 0;
   /* Pack groups of checkboxes and radio buttons closer together. */
   /* Form items in a table. */
   /* Highlight the form elements that caused a form submission error. */
@@ -29,7 +29,7 @@ tr.odd .form-item, tr.even .form-item {
   /* The label for a form element */
   display: block;
   font-weight: bold;
-  margin: 0 0 rhythm(1) 0;
+  margin: 0 0 24px 0;
   font-size: 0.875em;
 }
 .form-item input.error,
@@ -118,7 +118,7 @@ fieldset, .fieldset {
   padding-right: 0.9125em;
   border-style: solid;
   padding: 24px;
-  margin: 0 0 rhythm(1) 0;
+  margin: 0 0 24px 0;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -129,7 +129,7 @@ fieldset, .fieldset {
 
 /* Drupal body field footer */
 fieldset.filter-wrapper {
-  margin: 0 0 rhythm(1) 0;
+  margin: 0 0 24px 0;
   padding: 1.5em 0 0 0;
   font-size: .875em;
   -moz-border-radius-topleft: 0;
@@ -606,7 +606,7 @@ table {
   width: 100%;
   /* Prevent cramped-looking tables */
   /* Add vertical rhythm margins. */
-  margin: rhythm(1) 0;
+  margin: 24px 0;
 }
 
 tbody {

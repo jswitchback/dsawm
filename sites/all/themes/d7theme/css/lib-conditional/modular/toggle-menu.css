@@ -177,19 +177,22 @@ html.js body.show-nav #navigation {
   #navigation ul.links li a,
   #navigation ul.menu li a {
     color: #0b4d6e;
-    background: none;
+    background: url('../../../images/generated/0000000d.png?1384016515');
+    background: rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid transparent;
   }
   #navigation ul.links li a:hover,
   #navigation ul.menu li a:hover {
-    background: #093d57;
-    color: #fff;
+    background: url('../../../images/generated/0000000d.png?1384016515');
+    background: rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid #0b4d6e;
   }
   #navigation ul.links li a:active,
   #navigation ul.menu li a:active {
+    background: #093d57;
     -webkit-box-shadow: #093d57 0 0 10px inset;
     -moz-box-shadow: #093d57 0 0 10px inset;
     box-shadow: #093d57 0 0 10px inset;
-    background: #0d5d85;
     color: #fff;
   }
 }

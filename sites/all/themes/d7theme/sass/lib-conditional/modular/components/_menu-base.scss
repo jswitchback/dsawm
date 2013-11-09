@@ -95,14 +95,15 @@ $nav-color: $link-color;
         }
         a {
           color: $link-color;
-          background: none;
+          @include rgba-background(rgba(0,0,0, .05));
+          border-bottom: 2px solid transparent;
         &:hover {
-          background: darken($nav-color, 5%);
-          color: #fff;
-        }
+          @include rgba-background(rgba(0,0,0, .05));
+          border-bottom: 2px solid $link-color;
+        } 
         &:active {
+          background: darken($nav-color, 5%);
           @include box-shadow(darken($nav-color, 5%) 0 0 10px inset);
-          background: lighten($nav-color, 5%);
           color: #fff;
         }
         }

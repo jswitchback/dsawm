@@ -1,7 +1,7 @@
 3.2.7 (Media Mark)
-e8e7a23ce0cbb436dfefb641e8387229e54527e5
+0e618a22cf1571ad7ac228fc01291bb4814a519f
 o:Sass::Tree::RootNode
-:@template"˜%/* Import Sass mixins, variables, Compass modules, etc. */
+:@template"š%/* Import Sass mixins, variables, Compass modules, etc. */
 @import "my-sass-resources/base";
 
 /* Instead of relying on the fonts that are available on a user's computer, you
@@ -100,7 +100,7 @@ body {
 /* HTML5 Boilerplate */
 // h1 {
 //     font-size: 2em;
-//     margin: 0.67em 0;
+//     margin: 0.67em 0; 
 // }
 
 // h2 {
@@ -321,7 +321,7 @@ p + p {
   margin-top: $vert-gutter;
 }
  
-
+ 
 /*
  * Corrects font family set oddly in IE6, S4/5, Chrome
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
@@ -567,9 +567,9 @@ o;
 
 ;;;["/* HTML5 Boilerplate */;@;	[ ;ifo;
 
-;;3;["D/* h1 {
+;;3;["E/* h1 {
  *     font-size: 2em;
- *     margin: 0.67em 0;
+ *     margin: 0.67em 0; 
  * } */;@;	[ ;igo;
 
 ;;3;["F/* h2 {

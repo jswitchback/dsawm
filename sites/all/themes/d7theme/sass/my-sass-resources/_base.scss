@@ -173,11 +173,6 @@ $font-monospace:   $courier;
 
 // VERTICAL RHTHYM & GRID VARIABLES __________________________________________
 
-// Universal vertical rhthym gutter. Determines baseline gutters as well as block and form element margins.
-
-$vr-gutters-desktop: rhythm(1);
-$vert-gutter: rhythm(1);
-
 //If using zen-grids as seen with Zen starter kit. 
 $zen-column-count:  24;
 $zen-gutter-width: $base-line-height;
@@ -187,6 +182,9 @@ $grids: 24;
 $gutters: $base-line-height;
 // $gutter-styles: 'split';
 
+// Universal vertical rhthym gutter. Determines baseline gutters as well as block and form element margins.
+$vr-gutters-desktop: $base-line-height;
+$vert-gutter: $base-line-height;
 
 
 // THEME VARIABLES __________________________________________

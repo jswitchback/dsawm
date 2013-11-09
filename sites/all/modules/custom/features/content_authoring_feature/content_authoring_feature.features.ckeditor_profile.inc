@@ -39,7 +39,7 @@ function content_authoring_feature_ckeditor_profile_defaults() {
     [\'Undo\',\'Redo\'],
     [\'RemoveFormat\',\'-\',\'Image\',\'MediaEmbed\',\'Iframe\',\'Table\',\'HorizontalRule\',\'SpecialChar\',\'-\',\'Find\',\'Replace\'],
     \'/\',
-    [\'Bold\',\'Italic\',\'Underline\',\'Format\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\'],
+    [\'Bold\',\'Italic\',\'Underline\',\'Styles\',\'-\',\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\'],
     [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\',\'-\',\'Link\',\'Unlink\']
 ]',
         'expand' => 't',
@@ -61,11 +61,11 @@ function content_authoring_feature_ckeditor_profile_defaults() {
             'pre_indent' => 0,
           ),
         ),
-        'css_mode' => 'theme',
-        'css_path' => '',
-        'css_style' => 'theme',
-        'styles_path' => '',
-        'filebrowser' => 'ckfinder',
+        'css_mode' => 'self',
+        'css_path' => '%tcss/lib-base/normalize.css,%tcss/lib-base/ckeditor-custom.css,%tcss/lib-base/typography.css',
+        'css_style' => 'self',
+        'styles_path' => '%tjs/ckeditor-extended-styles.js',
+        'filebrowser' => 'imce',
         'filebrowser_image' => '',
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/',
@@ -96,7 +96,9 @@ function content_authoring_feature_ckeditor_profile_defaults() {
           ),
         ),
       ),
-      'input_formats' => array(),
+      'input_formats' => array(
+        'wysiwyg' => 'WYSIWYG',
+      ),
     ),
   );
   return $data;

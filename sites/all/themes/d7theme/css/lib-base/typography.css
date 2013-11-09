@@ -159,7 +159,7 @@ hr {
   height: 1px;
   border: 1px solid #666;
   padding-bottom: -1px;
-  margin: rhythm(1) 0;
+  margin: 24px 0;
 }
 
 /*
@@ -181,7 +181,7 @@ strong {
 
 blockquote {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
-  margin: rhythm(1) 36px;
+  margin: 24px 36px;
   border-left: 3.2px solid #e4e491;
   padding: 8px 16px;
 }
@@ -214,7 +214,7 @@ p {
 }
 
 p + p {
-  margin-top: rhythm(1);
+  margin-top: 24px;
 }
 
 /*
@@ -231,7 +231,7 @@ var {
   /* The $font-monospace value ends with ", serif". */
   margin: 3em 2.25em;
   overflow: auto;
-  padding: rhythm(1);
+  padding: 24px;
   color: #fff;
   background: #192A56;
   font-size: 14px;
@@ -300,7 +300,7 @@ button, input, textarea {
 .wys-divider {
   height: 0;
   border-bottom: 1px solid #e9e9a5;
-  margin: rhythm(1) 0;
+  margin: 24px 0;
 }
 
 .wys-intro-title {

@@ -80,7 +80,7 @@ hr {
   height: 0;
   border: 1px solid #666;
   padding-bottom: -1px;
-  margin: rhythm(1) 0;
+  margin: 24px 0;
 }
 
 /* Address styling not present in IE 8/9. */
@@ -232,7 +232,7 @@ ol,
 ul,
 .item-list ul {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
-  margin: rhythm(1) 0;
+  margin: 24px 0;
 }
 
 .item-list ul li {
