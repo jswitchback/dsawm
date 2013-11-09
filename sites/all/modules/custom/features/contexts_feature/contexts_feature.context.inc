@@ -124,6 +124,12 @@ function contexts_feature_context_default_contexts() {
           'region' => 'navigation',
           'weight' => '-10',
         ),
+        'dsawm_custom-footer_old' => array(
+          'module' => 'dsawm_custom',
+          'delta' => 'footer_old',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
