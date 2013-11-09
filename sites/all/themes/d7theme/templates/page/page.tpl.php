@@ -166,6 +166,11 @@
       <div id="content" class="column" role="main">
         <?php print render($page['highlighted']); ?>
         <?php print $breadcrumb; ?>
+        <?php if ($sidebar_first): ?>
+        <div id="nav-inner">
+          <a id="sidebar-toggle" href="#sidebar-first"> MORE</a>
+        </div>
+        <?php endif; ?>
         <a id="main-content"></a>
         <?php if (!$is_front): ?>
         <?php print render($title_prefix); ?>
@@ -182,23 +187,26 @@
         <?php endif; ?>
         <?php print render($page['content_top']); ?>
         <?php print render($page['content']); ?>
-        <?php print render($page['content_bottom']); ?>
+        <?php if ($sidebar_second): ?>
+          <aside id="sidebar-second" class="sidebar-second" role="complementary">
+           <?php print $sidebar_second; ?>
+          </aside><!-- /.sidebar-second -->
+        <?php endif; ?>
         <?php print render($page['front_content']); ?>
         <?php if (!$is_front): ?>
         <?php print $feed_icons; ?>
         <?php endif; ?>
       </div><!-- /#content -->
 
-
-      <?php if ($sidebar_first || $sidebar_second): ?>
-        <aside class="sidebars">
+      <?php if ($sidebar_first): ?>
+        <aside id="sidebar-first" class="sidebar-first" role="complementary">
           <?php print $sidebar_first; ?>
-          <?php print $sidebar_second; ?>
-        </aside><!-- /.sidebars -->
+        </aside><!-- /.sidebar-first -->
       <?php endif; ?>
 
     </div><!-- /#main -->
   </div><!-- /#main-wrapper -->
+
 
   <?php print render($page['footer']); ?>
 

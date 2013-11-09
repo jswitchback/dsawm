@@ -21,7 +21,6 @@
         // OPTIONAL
         // If supplied, triggered when a media query matches.
         match : function() {
-          // alert('min 45em');
           offCanvas.reinit();
         },
                                     
@@ -58,33 +57,29 @@
   var offCanvas = {
 
     init : function () {
-      var mainMenu = $('#navigation');
-      var mainNavToggle = $('#menu-toggle');
-      var mainNavClose = $('#menu-close');
+      var sidebarMenu = $('#sidebar-first');
+      var sidebarNavToggle = $('#sidebar-toggle');
+      var sidebarNavClose = $('#menu-close');
       var $body = $('body');
-      var navTogglehtml = '<span class="toggle-bar"></span><span class="toggle-bar"></span><span class="toggle-bar"></span>';
+      var navTogglehtml = '<div class="sidebar-close">X</div>';
       
-      $body.addClass('mobile-nav');
-
-      $(mainNavToggle).bind('click', function(event){
+      $(sidebarNavToggle).bind('click', function(event){
         event.preventDefault();
         event.stopPropagation();
-
-        $body.toggleClass('show-nav');
+        $body.toggleClass('show-sidebar');
       });
 
-      $(mainNavClose).bind('click', function(event){
+      $(sidebarNavClose).bind('click', function(event){
         event.preventDefault();
         event.stopPropagation();
-        this.click(mainNavToggle);
-        $body.removeClass('show-nav');
+        this.click(sidebarNavToggle);
+        $body.removeClass('show-sidebar');
       });
     },
     reinit : function () {
-      $('body').addClass('mobile-nav');
     },
     destroy : function () {
-      $('body').removeClass('mobile-nav');
+      $body.removeClass('show-sidebar');
     }
   };
 

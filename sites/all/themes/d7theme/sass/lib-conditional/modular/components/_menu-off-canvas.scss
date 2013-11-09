@@ -1,21 +1,56 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "my-sass-resources/base";
 
-/* Off-Canvas Sidebar (body.has-mobile-sidebar)
+/* Off-Canvas Sidebar (body.has-sidebar-first)
    ========================================================================== */
-
-html.js #navigation {
-	display: none;
-	@include breakpoint($tablet-portrait-min-width) {
-		display: block;
-	}
-}
    
-#page {
-   width: 100%;
+
+#sidebar-toggle {
+ display: block;
+ z-index: 10px;
+ cursor: pointer;
 }
 
-#page:before {
+#sidebar-toggle {
+   display: inline-block;
+   font-size: .75em;
+   color: #fff;
+   background-color: $link-color;
+   @include background-image(linear-gradient(center top, $link-color, darken($link-color, 10%)));
+   background-repeat: repeat-x;
+   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+   color: lighten($link-color, 50%);
+   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+   margin-right: 10px;
+   padding: 7px 10px;
+   @include border-radius(2px);
+   border-style: solid;
+   border-width: 1px;
+   -moz-border-bottom-colors: none;
+   -moz-border-image: none;
+   -moz-border-left-colors: none;
+   -moz-border-right-colors: none;
+   -moz-border-top-colors: none;
+   line-height: 20px;
+   margin-bottom: 0;
+   text-align: center;
+   vertical-align: middle;
+   @include breakpoint($tablet-portrait-min-width) {
+      display: none;
+   }
+}
+
+/* BUTTON CSS */
+
+.js #navigation #nav-inner #sidebar-toggle:hover, .js #navigation #nav-inner #sidebar-toggle:focus {
+   background-color: $link-color;
+}
+.js #navigation #nav-inner #sidebar-toggle:active {
+   background-color: #000000;
+   @include box-shadow(#ffffff 0 0 5px inset);
+}  
+
+#content:before {
    content: " ";
    height: 100%;
    left: -100%;
@@ -24,8 +59,7 @@ html.js #navigation {
    width: 100%;
    z-index: -1;
 }
-
-#mobile-sidebar, #page {
+#sidebar-first, #content {
    display: block;
    position: relative;
    @include transition(all 0.25s ease-in-out);
@@ -33,39 +67,31 @@ html.js #navigation {
    z-index: 1;
 }
 
-#mobile-sidebar {
-	padding: $ui-padding;
-   height: 100%;
-   float: right;
-   margin-right: -100%;
+#sidebar-first {
+   float: left;
+   margin-left: -100%;
    width: 80%;
    z-index: 2;
    @include box-sizing(border-box);
    @include breakpoint($tablet-portrait-min-width) {
-      display: block;
+      margin-left: 0;
    }
 }
-#page {
-   float: left;
-   margin-right: 0;
+#content {
+   float: right;
+   margin-left: 0;
    position: relative;
    z-index: 1;
 }
 
-.show-nav #mobile-sidebar {
-   margin-right: 0;
-   @include breakpoint($tablet-portrait-min-width) {
-	   float: right;
-	   margin-right: -100%;
-	   width: 80%;
-   }
+.show-sidebar #sidebar-first {
+   margin-left: 0;
 }
-.show-nav #page {
-   margin-left: -80%;
-   @include breakpoint($tablet-portrait-min-width) {
-	   margin-left: 0%;
-	   margin-right: -100%;
-	   width: 100%;
-   }
+.show-sidebar #content {
+   margin-right: -80%;
+}
+
+.sidebar-button {
+   display: none;
 }
 

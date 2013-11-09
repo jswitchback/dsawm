@@ -28,20 +28,29 @@ body {
 
  #logo-wrapper {
   float: left;
-  padding: 10px 16px;
-  margin: 18px 0 17px -16px;
-  height: 90px;
-  width: 393px;
+  width: 100%;
+  height: auto;
+  padding: 0 24px 0 0;
+  margin-top: 12px;
+  @include breakpoint($tablet-portrait-min-width) {
+    height: 90px;
+    width: 393px;
+    padding: 0;
+  }
 }
 
 #logo {
   height: 90px;
-  width: 393px;
+  width: 100%;
   display: block;
   overflow: hidden;
   text-indent: -9999em;
   background: url(../../../images/svg/dsawm-logo.svg) no-repeat scroll top left;
   background-size: contain;
+  @include breakpoint($tablet-portrait-min-width) {
+    height: 90px;
+    width: 393px;
+  }
   img {
     vertical-align: bottom;
   }

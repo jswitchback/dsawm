@@ -641,15 +641,6 @@ function d7theme_preprocess_html(&$variables, $hook) {
     drupal_add_js(drupal_get_path('theme', 'd7theme') . '/js/lib-conditional/theming-sidebar.js', array('type' => 'file'));
     drupal_add_css(drupal_get_path('theme','d7theme') .'/css/lib-conditional/theming-sidebar.css');
   } 
-  // Add body class, css and js when mobile sidebar has blocks content.. Otherwise use slidetoggle style menu
-  if (!empty($variables['page']['mobile_sidebar'])) {
-    $variables['classes_array'][] = 'has-mobile-sidebar';
-    drupal_add_js(drupal_get_path('theme', 'd7theme') . '/js/lib-conditional/off-canvas-sidebar.js', array('type' => 'file','weight' => 1050,'group' => JS_LIBRARY));
-    drupal_add_css(drupal_get_path('theme','d7theme') .'/css/lib-conditional/modular/off-canvas-sidebar.css');
-  } else {
-    drupal_add_js(drupal_get_path('theme', 'd7theme') . '/js/lib-conditional/toggle-menu.js', array('type' => 'file','weight' => 1055,'group' => JS_LIBRARY));
-    drupal_add_css(drupal_get_path('theme','d7theme') .'/css/lib-conditional/modular/toggle-menu.css');
-  }
 
   drupal_add_library('d7theme', 'modernizr');
   drupal_add_library('d7theme', 'core');

@@ -109,13 +109,78 @@ html {
    * The layout when there is only one sidebar, the left one.
    */
 
-  .sidebar-first {
+//   .sidebar-first {
+//     #content {
+//       @include zen-grid-item(16, 9);
+//     }
+
+//     .region-sidebar-first { 
+//       @include zen-grid-item(8, 1);
+//     }
+//   }
+
+//   /*
+//    * The layout when there is only one sidebar, the right one.
+//    */
+
+//   .sidebar-second {
+//     #content { 
+//       @include zen-grid-item(16, 1);
+//     }
+
+//     .region-sidebar-second {
+//       @include zen-grid-item(8, 17);
+//     }
+//   }
+
+//   /*
+//    * The layout when there are two sidebars.
+//    */
+
+//   .two-sidebars {
+//     #content { 
+//       @include zen-grid-item(16, 9);
+//     }
+
+//     .region-sidebar-first { 
+//       @include zen-grid-item(8, 1);
+//     }
+
+//     .region-sidebar-second { /* Start a new row and span all columns. */
+//       @include zen-grid-item(24, 1);
+//       @include zen-nested-container(); // Since we're making every block in this region be a grid item.
+//       @include zen-clear();
+
+//       .block {
+//         @include zen-grid-item-base();
+//       }
+//       .block:nth-child(3n+1) { 
+//         @include zen-grid-item(8, 1);
+//         @include zen-clear();
+//       }
+//       .block:nth-child(3n+2) { 
+//         @include zen-grid-item(8, 9);
+//       }
+//       .block:nth-child(3n) {
+//         @include zen-grid-item(8, 17);
+//       }
+//     }
+//   }
+}
+
+@include breakpoint($tablet-portrait-min-width) {
+
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first, .two-sidebars {
     #content {
-      @include zen-grid-item(16, 9);
+      @include zen-grid-item(18, 7);
     }
 
-    .region-sidebar-first { 
-      @include zen-grid-item(8, 1);
+    #sidebar-first { 
+      @include zen-grid-item(6, 1);
     }
   }
 
@@ -123,8 +188,8 @@ html {
    * The layout when there is only one sidebar, the right one.
    */
 
-  .sidebar-second {
-    #content { 
+  .sidebar-second, .two-sidebars {
+    .region-content { 
       @include zen-grid-item(16, 1);
     }
 
@@ -133,39 +198,39 @@ html {
     }
   }
 
-  /*
-   * The layout when there are two sidebars.
-   */
+  // /*
+  //  * The layout when there are two sidebars.
+  //  */
 
-  .two-sidebars {
-    #content { 
-      @include zen-grid-item(16, 9);
-    }
+  // .two-sidebars {
+  //   #content { 
+  //     @include zen-grid-item(16, 9);
+  //   }
 
-    .region-sidebar-first { 
-      @include zen-grid-item(8, 1);
-    }
+  //   .region-sidebar-first { 
+  //     @include zen-grid-item(8, 1);
+  //   }
 
-    .region-sidebar-second { /* Start a new row and span all columns. */
-      @include zen-grid-item(24, 1);
-      @include zen-nested-container(); // Since we're making every block in this region be a grid item.
-      @include zen-clear();
+  //   .region-sidebar-second { /* Start a new row and span all columns. */
+  //     @include zen-grid-item(24, 1);
+  //     @include zen-nested-container(); // Since we're making every block in this region be a grid item.
+  //     @include zen-clear();
 
-      .block {
-        @include zen-grid-item-base();
-      }
-      .block:nth-child(3n+1) { 
-        @include zen-grid-item(8, 1);
-        @include zen-clear();
-      }
-      .block:nth-child(3n+2) { 
-        @include zen-grid-item(8, 9);
-      }
-      .block:nth-child(3n) {
-        @include zen-grid-item(8, 17);
-      }
-    }
-  }
+  //     .block {
+  //       @include zen-grid-item-base();
+  //     }
+  //     .block:nth-child(3n+1) { 
+  //       @include zen-grid-item(8, 1);
+  //       @include zen-clear();
+  //     }
+  //     .block:nth-child(3n+2) { 
+  //       @include zen-grid-item(8, 9);
+  //     }
+  //     .block:nth-child(3n) {
+  //       @include zen-grid-item(8, 17);
+  //     }
+  //   }
+  // }
 }
 
 
@@ -183,45 +248,45 @@ html {
    * The layout when there is only one sidebar, the left one.
    */
 
-  .sidebar-first {
-    #content { 
-      @include zen-grid-item(18, 7);
-    }
+  // .sidebar-first {
+  //   #content { 
+  //     @include zen-grid-item(18, 7);
+  //   }
 
-    .region-sidebar-first { 
-      @include zen-grid-item(6, 1);
-    }
-  }
+  //   .region-sidebar-first { 
+  //     @include zen-grid-item(6, 1);
+  //   }
+  // }
 
-  /*
-   * The layout when there is only one sidebar, the right one.
-   */
+  // /*
+  //  * The layout when there is only one sidebar, the right one.
+  //  */
 
-  .sidebar-second {
-    #content { 
-      @include zen-grid-item(18, 1);
-    }
+  // .sidebar-second {
+  //   #content { 
+  //     @include zen-grid-item(18, 1);
+  //   }
 
-    .region-sidebar-second { 
-      @include zen-grid-item(6, 19);
-    }
-  }
+  //   .region-sidebar-second { 
+  //     @include zen-grid-item(6, 19);
+  //   }
+  // }
 
-  /*
-   * The layout when there are two sidebars.
-   */
+  
+  //  * The layout when there are two sidebars.
+   
 
-  .two-sidebars {
-    #content { /* Span 3 columns, starting in 2nd column from left. */
-      @include zen-grid-item(12, 7);
-    }
+  // .two-sidebars {
+  //   #content { /* Span 3 columns, starting in 2nd column from left. */
+  //     @include zen-grid-item(12, 7);
+  //   }
 
-    .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
-      @include zen-grid-item(6, 1);
-    }
+  //   .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+  //     @include zen-grid-item(6, 1);
+  //   }
 
-    .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
-      @include zen-grid-item(6, 19);
-    }
-  }
+  //   .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
+  //     @include zen-grid-item(6, 19);
+  //   }
+  // }
 }
