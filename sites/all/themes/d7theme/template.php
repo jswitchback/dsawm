@@ -594,6 +594,10 @@ function d7theme_library() {
  *   this function to have consistent variables.
  */
 function d7theme_preprocess_html(&$variables, $hook) {
+
+  // Add Google font
+  drupal_add_css('http://fonts.googleapis.com/css?family=Lato:400', array('rel' => 'stylesheet', 'type' => 'external'));
+
   // Add variables and paths needed for HTML5 and responsive support.
   $variables['base_path'] = base_path();
   $variables['path_to_d7theme'] = drupal_get_path('theme', 'd7theme');

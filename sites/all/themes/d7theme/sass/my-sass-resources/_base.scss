@@ -154,8 +154,9 @@ $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 $sans-serif:     "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$webfont-normal:      Arial, Helvetica, sans-serif;
-$webfont-bold:        Arial, Helvetica, sans-serif;
+// Oxygen has 3 weights light (300), Normal (400), Bold (700)
+$webfont-normal:      'Lato', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
+$webfont-bold:        'Lato', Arial, Helvetica, sans-serif;
 
 
 // For an explanation of why "sans-serif" is at the end of this list, see
@@ -164,9 +165,9 @@ $courier:         monospace, "Courier New", "DejaVu Sans Mono", sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
 $base-title-family:  $webfont-bold; 
-$base-page-title-family: $sans-serif;
+$base-page-title-family: $webfont-normal;
 $base-block-title: $webfont-bold;
-$base-font-family: $sans-serif;
+$base-font-family: $webfont-normal;
 $font-monospace:   $courier;
 
 

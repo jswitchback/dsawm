@@ -34,7 +34,7 @@
     url('../fonts/example.ttf') format('truetype'),
     url('../fonts/example.svg#webfontOkOndcij') format('svg');
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; 
 }
 */
 /**
@@ -45,7 +45,7 @@
  *    `em` units.
  */
 html {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
   /* 1 */
   font-size: 100%;
   /* 3 */
@@ -117,8 +117,8 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   color: #454545;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   word-wrap: break-word;
 }
 
@@ -132,17 +132,17 @@ h1, h2, h3, h4, h5, h6 {
 .comments__form-title,
 .comment__title {
   /* Comment title. */
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: normal;
 }
 
 .block-title {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   color: #454545;
 }
 
 #page-title {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
 }
 
 .field-label {
