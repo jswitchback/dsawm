@@ -294,7 +294,7 @@ function content_types_feature_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_resrource_category',
-    'label' => 'Resrource Category',
+    'label' => 'Resource Category',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -358,7 +358,6 @@ function content_types_feature_field_default_field_instances() {
   t('Description');
   t('Phone');
   t('Resource Category');
-  t('Resrource Category');
   t('Web Address');
 
   return $field_instances;
