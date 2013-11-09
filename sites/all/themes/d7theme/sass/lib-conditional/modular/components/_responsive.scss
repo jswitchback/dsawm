@@ -14,7 +14,7 @@
 // We are going to create a fluid grid with 24 columns and 20px gutters
 // between columns (applied as 10px of left/right padding on each column).
 $zen-column-count:  24;
-$zen-gutter-width:  20px;
+$zen-gutter-width:  48px;
 
 // If you need IE6/7 support for box-sizing: border-box (default), see _base.scss
 //$zen-box-sizing: content-box;

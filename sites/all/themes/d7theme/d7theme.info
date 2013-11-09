@@ -57,6 +57,7 @@ stylesheets[all][] = css/lib-conditional/modular/layout.css
 stylesheets[all][] = css/lib-base/ui.css
 stylesheets[all][] = css/lib-base/pages/webforms.css
 stylesheets[all][] = css/lib-base/pages/pages.css
+stylesheets[all][] = css/lib-base/pages/resource.css
 stylesheets[all][] = css/lib-base/blocks.css
 stylesheets[all][] = css/lib-base/navigation.css
 stylesheets[all][] = css/lib-conditional/modular/toggle-menu.css
