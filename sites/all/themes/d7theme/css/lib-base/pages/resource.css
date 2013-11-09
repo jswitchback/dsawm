@@ -17,7 +17,7 @@
   padding: 0 1em;
 }
 .resource-center .resource-item {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 .resource-center .resource-text {
   padding: 0 1em;
@@ -77,6 +77,7 @@
 #block-views-resrource-types-block-2 a {
   display: block;
   color: #dbde72;
+  text-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px;
   padding: 0 12px;
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
@@ -92,7 +93,7 @@
   background: #0b4d6e;
 }
 #block-views-resrource-types-block-2 a:visited {
-  color: #3E81B5;
+  color: #dbde72;
 }
 #block-views-resrource-types-block-2 .ui-list {
   margin: 0;
