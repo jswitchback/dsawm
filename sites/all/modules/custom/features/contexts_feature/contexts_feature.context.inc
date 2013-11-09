@@ -44,6 +44,12 @@ function contexts_feature_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
+        'views-promotions-block' => array(
+          'module' => 'views',
+          'delta' => 'promotions-block',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
       ),
     ),
     'theme' => array(
