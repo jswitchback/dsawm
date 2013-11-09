@@ -140,6 +140,22 @@ html {
 /* DESKTOP LAYOUT (min-width: 960px+)
   ========================================================================== */
 @media (min-width: 61.25em) {
+ /*
+* The layout when there is only one sidebar, the left one.
+*/
+  .sidebar-first #content, .two-sidebars #content {
+    float: left;
+    width: 70.83333%;
+    margin-left: 29.16667%;
+    margin-right: -100%;
+  }
+  .sidebar-first #sidebar-first, .two-sidebars #sidebar-first {
+    float: left;
+    width: 29.16667%;
+    margin-left: 0%;
+    margin-right: -29.16667%;
+  }
+
   /*
    * The layout when there is only one sidebar, the left one.
    */
@@ -166,6 +182,8 @@ body {
 .max-grid {
   margin-left: 0;
   padding-left: 0;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 .max-grid li {
   list-style-type: none;

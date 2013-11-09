@@ -29,6 +29,8 @@ body {
 // Class on the ul
 .max-grid {
   @include clean-list;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 

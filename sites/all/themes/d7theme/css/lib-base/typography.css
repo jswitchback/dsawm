@@ -45,7 +45,7 @@
  *    `em` units.
  */
 html {
-  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
   /* 1 */
   font-size: 100%;
   /* 3 */
@@ -60,7 +60,8 @@ html {
  * Addresses font-family inconsistency between 'textarea' and other form elements.
  */
 body {
-  font-size: 87.5%;
+  letter-spacing: 0.04em;
+  font-size: 93.75%;
 }
 
 /* =============================================================================
@@ -126,6 +127,10 @@ h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
+.menu {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
 /**
  * Titles.
  */
@@ -146,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page-title {
-  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
 }
 
 .field-label {
@@ -321,5 +326,5 @@ button, input, textarea {
 
 .wys-block-title {
   font-weight: bold;
-  color: #4b4b46;
+  color: #3f3f3c;
 }

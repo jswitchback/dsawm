@@ -22,7 +22,7 @@
    Since we're using Sass, you'll need to declare your font faces here, then you
    can add them to the font variables in the _base.scss partial.
 */
-
+ 
 /*
 @font-face {
   font-family: 'Example';
@@ -67,7 +67,8 @@ html {
 } 
 
 body {
-  font-size: 87.5%;
+  letter-spacing: 0.04em;
+  font-size: 93.75%;
   // @include baseline-grid-background;
   //  @include baseline-grid-background($baseline, $color);
   //Add just the baseline grid to an element's background
@@ -171,6 +172,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: $base-title-family;
   word-wrap: break-word;
+}
+
+.menu {
+  font-family: $base-title-family;
 }
 
 

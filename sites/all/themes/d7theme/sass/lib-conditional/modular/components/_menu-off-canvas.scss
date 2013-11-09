@@ -19,10 +19,10 @@
    @include background-image(linear-gradient(center top, $link-color, darken($link-color, 10%)));
    background-repeat: repeat-x;
    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-   color: lighten($link-color, 50%);
+   color: lighten($link-color, 60%);
    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
    margin-right: 10px;
-   padding: 7px 10px;
+   padding: 3px 10px;
    @include border-radius(2px);
    border-style: solid;
    border-width: 1px;
@@ -38,6 +38,10 @@
    @include breakpoint($tablet-portrait-min-width) {
       display: none;
    }
+}
+
+#nav-inner {
+   margin-bottom: 12px;
 }
 
 /* BUTTON CSS */

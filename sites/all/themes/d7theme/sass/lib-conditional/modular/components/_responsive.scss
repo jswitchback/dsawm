@@ -244,6 +244,20 @@ html {
 
 @include breakpoint($desktop-min-width) {
   
+
+    /*
+   * The layout when there is only one sidebar, the left one.
+   */
+
+  .sidebar-first, .two-sidebars {
+    #content {
+      @include zen-grid-item(17, 8);
+    }
+
+    #sidebar-first { 
+      @include zen-grid-item(7, 1);
+    }
+  }
   /*
    * The layout when there is only one sidebar, the left one.
    */
