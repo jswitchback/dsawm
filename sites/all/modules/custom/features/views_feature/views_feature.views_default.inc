@@ -33,9 +33,7 @@ function views_feature_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['class'] = 'ui-list';
   $handler->display->display_options['style_options']['wrapper_class'] = '';
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['view_mode'] = 'full';
-  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -43,6 +41,41 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Phone */
+  $handler->display->display_options['fields']['field_resource_phone']['id'] = 'field_resource_phone';
+  $handler->display->display_options['fields']['field_resource_phone']['table'] = 'field_data_field_resource_phone';
+  $handler->display->display_options['fields']['field_resource_phone']['field'] = 'field_resource_phone';
+  $handler->display->display_options['fields']['field_resource_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_phone']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_phone']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_phone']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_phone']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_phone']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_resource_phone']['multi_type'] = 'ul';
+  $handler->display->display_options['fields']['field_resource_phone']['field_api_classes'] = TRUE;
+  /* Field: Content: Web Address */
+  $handler->display->display_options['fields']['field_resource_link']['id'] = 'field_resource_link';
+  $handler->display->display_options['fields']['field_resource_link']['table'] = 'field_data_field_resource_link';
+  $handler->display->display_options['fields']['field_resource_link']['field'] = 'field_resource_link';
+  $handler->display->display_options['fields']['field_resource_link']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_link']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_resource_link']['field_api_classes'] = TRUE;
+  /* Field: Content: Description */
+  $handler->display->display_options['fields']['field_resource_description']['id'] = 'field_resource_description';
+  $handler->display->display_options['fields']['field_resource_description']['table'] = 'field_data_field_resource_description';
+  $handler->display->display_options['fields']['field_resource_description']['field'] = 'field_resource_description';
+  $handler->display->display_options['fields']['field_resource_description']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_description']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_description']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_description']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_description']['field_api_classes'] = TRUE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -91,6 +124,7 @@ function views_feature_views_default_views() {
 
   /* Display: Category Resources */
   $handler = $view->new_display('block', 'Category Resources', 'block_1');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
