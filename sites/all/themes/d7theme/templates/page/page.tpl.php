@@ -77,6 +77,8 @@
    $highlighted    = render($page['highlighted']);
    $sidebar_first  = render($page['sidebar_first']);
    $sidebar_second = render($page['sidebar_second']);
+   $content_top  = render($page['content_top']);
+   $content_bottom  = render($page['content_bottom']);
    $mobile_sidebar = render($page['mobile_sidebar']);
    $theming_sidebar= render($page['theming_sidebar']);
   ?>
@@ -178,7 +180,9 @@
         <?php if ($action_links): ?>
           <ul class="action-links"><?php print render($action_links); ?></ul>
         <?php endif; ?>
+        <?php print render($page['content_top']); ?>
         <?php print render($page['content']); ?>
+        <?php print render($page['content_bottom']); ?>
         <?php print render($page['front_content']); ?>
         <?php if (!$is_front): ?>
         <?php print $feed_icons; ?>

@@ -661,6 +661,11 @@ function d7theme_preprocess_html(&$variables, $hook) {
   drupal_add_library('d7theme', 'responsive_js');
   drupal_add_library('d7theme', 'touch');
 
+  // Add css and js if usimg theming helper region
+  if (!empty($variables['page']['content_bottom'])) {
+    $variables['classes_array'][] = 'has-content-bottom';
+  } 
+
 }
 
 
@@ -681,6 +686,26 @@ function d7theme_preprocess_page(&$variables) {
 
 
 /**
+ * Preprocess variables for region.tpl.php
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("region" in this case.)
+ */
+function d7theme_preprocess_region(&$variables, $hook) {
+ // Add template suggestions to appropriate blocks.
+  switch ($variables['region']) {
+    case 'content_top':
+    case 'content_bottom':
+      // Use no-wrapper template.
+      $variables['theme_hook_suggestions'][] = 'region__content';
+      break;
+  }
+}
+
+
+/**
  * Override or insert variables into the block templates.
  *
  * @param $variables
@@ -690,46 +715,46 @@ function d7theme_preprocess_page(&$variables) {
  */
 function d7theme_preprocess_block(&$variables, $hook) {
   // add grid class dependant upon number of blocks in a region. Requires rdg custom responsive blocks css
-  if ($variables['block']->region == 'footer') {
-      // Get the count of blocks
-      $aBlocks = block_list($variables['block']->region);
-      $count = count($aBlocks);
+  // if ($variables['block']->region == 'footer') {
+  //     // Get the count of blocks
+  //     $aBlocks = block_list($variables['block']->region);
+  //     $count = count($aBlocks);
       
-      switch ($count) {
-        case 0:
-          $count = 'empty';
-          break;
+  //     switch ($count) {
+  //       case 0:
+  //         $count = 'empty';
+  //         break;
           
-        case 1:
-          $count = 'one';
-          break;
+  //       case 1:
+  //         $count = 'one';
+  //         break;
           
-        case 2:
-          $count = 'two';
-          break;
+  //       case 2:
+  //         $count = 'two';
+  //         break;
 
-        case 3:
-          $count = 'three';
-          break;
+  //       case 3:
+  //         $count = 'three';
+  //         break;
           
-        case 4:
-          $count = 'four';
-          break;
+  //       case 4:
+  //         $count = 'four';
+  //         break;
           
-        case 5:
-          $count = 'five';
-          break;
+  //       case 5:
+  //         $count = 'five';
+  //         break;
           
-        case 6:
-          $count = 'six';
-          break;
+  //       case 6:
+  //         $count = 'six';
+  //         break;
 
-        default:
-          $count = 'one';
-      }
-      // add class to use to style responsive layout
-      $variables['classes_array'][] = 'max-'. ($count);
-  }
+  //       default:
+  //         $count = 'one';
+  //     }
+  //     // add class to use to style responsive layout
+  //     $variables['classes_array'][] = 'max-'. ($count);
+  // }
 
   // Add template suggestions to appropriate blocks.
   switch ($variables['block']->module) {
