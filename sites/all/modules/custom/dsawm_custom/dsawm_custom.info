@@ -1,0 +1,4 @@
+name = DSAWM Custom
+description = Some custom features for DSAWM
+core = 7.x
+package = DSAWM

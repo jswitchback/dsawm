@@ -8,3 +8,8 @@
 # Ignore sass cache files
 /sites/*/.sass-cache
 
+# Ignore local dev files
+
+.DS_Store*
+.idea*
+

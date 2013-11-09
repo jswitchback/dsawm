@@ -1,0 +1,11 @@
+name = Contexts Feature
+description = This has all of the context exports
+core = 7.x
+package = Features
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = dsawm_custom
+dependencies[] = views
+features[context][] = resources_landing
+features[ctools][] = context:context:3
+features[features_api][] = api:2
