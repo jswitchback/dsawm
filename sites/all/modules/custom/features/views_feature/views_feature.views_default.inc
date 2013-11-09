@@ -22,7 +22,7 @@ function views_feature_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Resources';
+  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -46,6 +46,22 @@ function views_feature_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'resource_category' => 'resource_category',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -63,10 +79,30 @@ function views_feature_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'resources';
+  $handler->display->display_options['path'] = 'resources/%';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Resources';
   $handler->display->display_options['menu']['name'] = 'main-menu';
+
+  /* Display: Category Resources */
+  $handler = $view->new_display('block', 'Category Resources', 'block_1');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Has taxonomy term ID */
+  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'resource_category' => 'resource_category',
+  );
+  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   $export['resources'] = $view;
 
   $view = new view();
@@ -81,7 +117,7 @@ function views_feature_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Resrource Types';
+  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -96,6 +132,10 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['field_resource_category_image']['table'] = 'field_data_field_resource_category_image';
   $handler->display->display_options['fields']['field_resource_category_image']['field'] = 'field_resource_category_image';
   $handler->display->display_options['fields']['field_resource_category_image']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_category_image']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_resource_category_image']['alter']['path'] = 'resources/%1';
+  $handler->display->display_options['fields']['field_resource_category_image']['alter']['replace_spaces'] = TRUE;
+  $handler->display->display_options['fields']['field_resource_category_image']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['field_resource_category_image']['element_type'] = '0';
   $handler->display->display_options['fields']['field_resource_category_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_resource_category_image']['element_wrapper_type'] = '0';
@@ -111,9 +151,13 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/%1';
+  $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   /* Field: Taxonomy term: Term description */
   $handler->display->display_options['fields']['description']['id'] = 'description';
   $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
@@ -124,6 +168,12 @@ function views_feature_views_default_views() {
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['name']['field'] = 'name';
+  /* Contextual filter: Taxonomy term: Name */
+  $handler->display->display_options['arguments']['name']['id'] = 'name';
+  $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['name']['field'] = 'name';
+  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
   /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -135,6 +185,45 @@ function views_feature_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['block_description'] = 'Landing Page Resource Types Block';
+
+  /* Display: Category Header Block */
+  $handler = $view->new_display('block', 'Category Header Block', 'block_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy term: Name */
+  $handler->display->display_options['arguments']['name']['id'] = 'name';
+  $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['name']['field'] = 'name';
+  $handler->display->display_options['arguments']['name']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['name']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['name']['limit'] = '0';
+
+  /* Display: Category Navigation */
+  $handler = $view->new_display('block', 'Category Navigation', 'block_2');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/%1';
+  $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $export['resrource_types'] = $view;
 
   return $export;
