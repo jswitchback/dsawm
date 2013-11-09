@@ -41,6 +41,9 @@ html.js #navigation {
    width: 80%;
    z-index: 2;
    @include box-sizing(border-box);
+   @include breakpoint($tablet-portrait-min-width) {
+      display: block;
+   }
 }
 #page {
    float: left;

@@ -32,11 +32,11 @@
   font-size: 1.5em;
   font-weight: bold;
   padding: 7px 5px;
-  -webkit-border-radius: 1.99999px;
-  -moz-border-radius: 1.99999px;
-  -ms-border-radius: 1.99999px;
-  -o-border-radius: 1.99999px;
-  border-radius: 1.99999px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
   line-height: 18px;
   margin-bottom: 0;
   text-align: center;
@@ -179,6 +179,11 @@ html.js #navigation {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+@media (min-width: 47.5em) {
+  #mobile-sidebar {
+    display: block;
+  }
 }
 
 #page {

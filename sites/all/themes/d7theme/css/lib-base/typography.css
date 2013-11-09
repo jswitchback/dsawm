@@ -182,7 +182,7 @@ strong {
 blockquote {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
   margin: rhythm(1) 36px;
-  border-left: 3.2px solid #cbeafa;
+  border-left: 3.2px solid #e4e491;
   padding: 8px 16px;
 }
 

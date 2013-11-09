@@ -83,8 +83,9 @@
 
  <div id= "header-wrapper">
     <header id="header" role="banner">
-
-    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+    <div id="logo-wrapper">
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">Home</a>
+    </div>
       <?php print render($page['header']); ?>
       
       <?php if ($site_name || $site_slogan): ?>
@@ -179,8 +180,11 @@
         <?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print render($page['front_content']); ?>
+        <?php if (!$is_front): ?>
         <?php print $feed_icons; ?>
+        <?php endif; ?>
       </div><!-- /#content -->
+
 
       <?php if ($sidebar_first || $sidebar_second): ?>
         <aside class="sidebars">

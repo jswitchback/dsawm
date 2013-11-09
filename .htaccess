@@ -141,3 +141,9 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
+
+
+# Add MIME type for SVG files
+AddType image/svg+xml svg
+AddType image/svg+xml svgz
+

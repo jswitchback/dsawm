@@ -103,7 +103,7 @@ legend {
 }
 
 fieldset, .fieldset {
-  border-color: #cbeafa;
+  border-color: #e4e491;
   border-top-style: solid;
   border-top-width: 0.0625em;
   padding-top: 0.4625em;
@@ -119,12 +119,12 @@ fieldset, .fieldset {
   border-style: solid;
   padding: 24px;
   margin: 0 0 rhythm(1) 0;
-  -webkit-border-radius: 1.99999px;
-  -moz-border-radius: 1.99999px;
-  -ms-border-radius: 1.99999px;
-  -o-border-radius: 1.99999px;
-  border-radius: 1.99999px;
-  background: none repeat scroll 0 0 #d4eefb;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: none repeat scroll 0 0 white;
 }
 
 /* Drupal body field footer */
@@ -138,12 +138,12 @@ fieldset.filter-wrapper {
   -moz-border-radius-topright: 0;
   -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
-  -moz-border-radius-bottomleft: 1.99999px;
-  -webkit-border-bottom-left-radius: 1.99999px;
-  border-bottom-left-radius: 1.99999px;
-  -moz-border-radius-bottomright: 1.99999px;
-  -webkit-border-bottom-right-radius: 1.99999px;
-  border-bottom-right-radius: 1.99999px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 fieldset.filter-wrapper .filter-help {
   margin: 0;
@@ -415,6 +415,26 @@ input[value="Delete"]:active, input[value="Remove"]:active {
   margin-top: 1em;
 }
 
+textarea,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"]
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-size: .75em;
+}
+
 input[type="date"],
 input[type="datetime"],
 input[type="datetime-local"],
@@ -447,15 +467,15 @@ input[type="number"] {
 textarea,
 input {
   background: white;
-  border: 1px solid #cbeafa;
+  border: 1px solid #b0b02c;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 1.99999px;
-  -moz-border-radius: 1.99999px;
-  -ms-border-radius: 1.99999px;
-  -o-border-radius: 1.99999px;
-  border-radius: 1.99999px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -494,7 +514,7 @@ input:active {
 }
 
 input {
-  height: 24px;
+  height: 32px;
 }
 
 /*
@@ -631,24 +651,24 @@ fieldset {
   /* Darken table when in a ui-block */
 }
 fieldset th {
-  border-color: #c6e8f9;
+  border-color: #fcfcf3;
 }
 fieldset tbody {
-  border-color: #c6e8f9;
+  border-color: #fcfcf3;
 }
 fieldset tr.even {
-  background: #c6e8f9;
-  border-color: #c6e8f9;
+  background: #fcfcf3;
+  border-color: #fcfcf3;
 }
 fieldset tr.odd {
   background: transparent;
-  border-color: #c6e8f9;
+  border-color: #fcfcf3;
 }
 fieldset tr.drag-previous {
   background-color: #fffce5;
 }
 fieldset tr.drag {
-  background: #c6e8f9;
+  background: #fcfcf3;
 }
 
 table .item-list ul {

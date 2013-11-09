@@ -13,14 +13,14 @@ div.horizontal-tabs {
 }
 
 .horizontal-tabs-panes {
-  border: 1px solid #cbeafa;
+  border: 1px solid #e4e491;
   margin-top: -9px;
-  -moz-border-radius-bottomleft: 1.99999px;
-  -webkit-border-bottom-left-radius: 1.99999px;
-  border-bottom-left-radius: 1.99999px;
-  -moz-border-radius-bottomright: 1.99999px;
-  -webkit-border-bottom-right-radius: 1.99999px;
-  border-bottom-right-radius: 1.99999px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .horizontal-tabs ul.horizontal-tabs-list {
@@ -58,10 +58,10 @@ fieldset.field-group-htab {
 
 /* Layout of each tab */
 .horizontal-tabs ul.horizontal-tabs-list li {
-  background: #d4eefb;
-  border-right: 1px solid #cbeafa;
-  border-top: 1px solid #cbeafa;
-  border-bottom: 1px solid #cbeafa;
+  background: white;
+  border-right: 1px solid #e4e491;
+  border-top: 1px solid #e4e491;
+  border-bottom: 1px solid #e4e491;
   padding: 1px;
   padding-top: 0;
   margin: 0;
@@ -70,7 +70,7 @@ fieldset.field-group-htab {
   float: left;
 }
 .horizontal-tabs ul.horizontal-tabs-list li.first {
-  border-left: 1px solid #cbeafa;
+  border-left: 1px solid #e4e491;
 }
 .horizontal-tabs ul.horizontal-tabs-list li.selected {
   border-bottom: 1px solid #fff;

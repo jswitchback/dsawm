@@ -1,0 +1,10 @@
+name = Taxonomy Feature
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = image
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[field_base][] = field_resource_category_image
+features[field_instance][] = taxonomy_term-resource_category-field_resource_category_image
+features[taxonomy][] = resource_category

@@ -341,23 +341,25 @@ input[value="Delete"], input[value="Remove"] {
 }
 
 
-// textarea, /* Every input field known to css. work in progress */
-// input[type="date"],
-// input[type="datetime"],
-// input[type="datetime-local"],
-// input[type="email"],
-// input[type="month"],
-// input[type="number"],
-// input[type="password"],
-// input[type="search"],
-// input[type="tel"],
-// input[type="text"],
-// input[type="time"],
-// input[type="url"],
-// input[type="week"]
-// input[type="text"], 
-// input[type="email"], 
-// input[type="password"]
+textarea, /* Every input field known to css. work in progress */
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"]
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+  font-size: .75em;
+}
 
 input[type="date"],
 input[type="datetime"],
@@ -415,7 +417,7 @@ input {
 }
 
 input {
-   height: $base-font-size * 1.5;
+   height: $base-font-size * 2;
 }
 
 /*

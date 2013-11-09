@@ -154,21 +154,21 @@ function strongarm_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cron_last';
-  $strongarm->value = 1383431577;
+  $strongarm->value = 1383973705;
   $export['cron_last'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'css_js_query_string';
-  $strongarm->value = 'mvnt74';
+  $strongarm->value = 'mvzfar';
   $export['css_js_query_string'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ctools_last_cron';
-  $strongarm->value = 1383431586;
+  $strongarm->value = 1383973714;
   $export['ctools_last_cron'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -270,9 +270,9 @@ function strongarm_feature_strongarm() {
   $strongarm->name = 'features_codecache';
   $strongarm->value = array(
     'content_authoring_feature' => array(
-      'ckeditor_profile' => '7242973c4695dc167d5c614e99760492',
+      'ckeditor_profile' => '277603bdf27b3b59f8e159a5d74e32f2',
       'filter' => '3209e7c9bac70e31bb8ff101229a598e',
-      'user_permission' => 'b546207916d008bfdc2aae2c14cffc46',
+      'user_permission' => 'c7662e2287d1e71f820786a1b7e982dd',
       'dependencies' => '33cc2e253f5e91d0419cb3a01d9693af',
     ),
     'content_type_feature' => array(
@@ -294,6 +294,16 @@ function strongarm_feature_strongarm() {
     ),
     'views_feature' => array(
       'views_view' => '1176a1873fd4f02462ae37100364efcc',
+    ),
+    'strongarm_feature' => array(
+      'dependencies' => 'e410ca96d90029817c7bb9c7cb1f7ea4',
+      'variable' => '3959b6f4ad87c71870e10a20ad911a35',
+    ),
+    'taxonomy_feature' => array(
+      'field_base' => 'edfb1a83faa1ff1cbde2d5fead73b596',
+      'field_instance' => '5318c93c82d96469d22fb0c1263db983',
+      'taxonomy' => '9b4c680ceed8165dbf81af5a777a0d19',
+      'dependencies' => 'a639b7f27f7122da20bad2935328248c',
     ),
   );
   $export['features_codecache'] = $strongarm;
@@ -682,13 +692,6 @@ function strongarm_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_tags_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_term_tags_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_user_pattern';
   $strongarm->value = 'users/[user:name]';
   $export['pathauto_user_pattern'] = $strongarm;
@@ -741,7 +744,7 @@ function strongarm_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'update_last_check';
-  $strongarm->value = 1383431597;
+  $strongarm->value = 1383973725;
   $export['update_last_check'] = $strongarm;
 
   $strongarm = new stdClass();

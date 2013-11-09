@@ -16,9 +16,6 @@
    ========================================================================== */
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: $body-bgrd-color;
 }
 
 
@@ -28,6 +25,36 @@ body {
 /**
  * Branding header.
  */
+
+ #logo-wrapper {
+  float: left;
+  padding: 10px 16px;
+  margin: 18px 0 17px -16px;
+  height: 90px;
+  width: 393px;
+}
+
+#logo {
+  height: 90px;
+  width: 393px;
+  display: block;
+  overflow: hidden;
+  text-indent: -9999em;
+  background: url(../../../images/svg/dsawm-logo.svg) no-repeat scroll top left;
+  background-size: contain;
+  img {
+    vertical-align: bottom;
+  }
+}
+
+html.no-svg #logo {
+  background: url(../../images/dsawm-logo.png) no-repeat scroll transparent; 
+}
+
+
+ #logo {
+  @include hide-text;
+ }
 
 /* Wrapping link for logo. */
 .header__logo {

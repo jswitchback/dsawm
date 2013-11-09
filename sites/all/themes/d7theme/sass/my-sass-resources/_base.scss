@@ -226,10 +226,11 @@ $button-border-radius: $base-line-height;
 
 
 // GENERAL UI BLOCK & FIELDSETS
-$ui-border-color: lighten($link-color, 65%);
-$ui-background-color: lighten($link-color, 67%);
+$ui-base-color: darken($body-bgrd-color, 25%);
+$ui-border-color: $ui-base-color;
+$ui-background-color: lighten($ui-base-color, 67%);
 $ui-padding: $base-line-height;
-$ui-border-radius: .083333  * $base-line-height;
+$ui-border-radius: 2px;
 
 $fieldset-background-color: $ui-background-color;
 $fieldset-border-color: $ui-border-color;
@@ -312,7 +313,7 @@ $input-font-size: 1em;
 $input-background-color: #fff;
 $input-backgroud-color-focus: lighten;
 
-$input-border-color: $ui-border-color;
+$input-border-color: darken($ui-border-color, 30%);
 $input-border-color-focus: $link-color;
 $input-border-radius: $ui-border-radius;
 

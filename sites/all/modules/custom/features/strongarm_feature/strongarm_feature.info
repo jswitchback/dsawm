@@ -68,7 +68,6 @@ features[variable][] = pathauto_node_resource_pattern
 features[variable][] = pathauto_node_webform_pattern
 features[variable][] = pathauto_punctuation_hyphen
 features[variable][] = pathauto_taxonomy_term_pattern
-features[variable][] = pathauto_taxonomy_term_tags_pattern
 features[variable][] = pathauto_user_pattern
 features[variable][] = save_continue_resource
 features[variable][] = site_default_country

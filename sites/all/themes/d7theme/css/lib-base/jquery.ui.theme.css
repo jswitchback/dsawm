@@ -174,63 +174,63 @@
 
 /* Corner radius */
 .ui-corner-tl {
-  -moz-border-radius-topleft: 1.99999px;
-  -webkit-border-top-left-radius: 1.99999px;
-  border-top-left-radius: 1.99999px;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
 }
 
 .ui-corner-tr {
-  -moz-border-radius-topright: 1.99999px;
-  -webkit-border-top-right-radius: 1.99999px;
-  border-top-right-radius: 1.99999px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
 }
 
 .ui-corner-bl {
-  -moz-border-radius-bottomleft: 1.99999px;
-  -webkit-border-bottom-left-radius: 1.99999px;
-  border-bottom-left-radius: 1.99999px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 
 .ui-corner-br {
-  -moz-border-radius-bottomright: 1.99999px;
-  -webkit-border-bottom-right-radius: 1.99999px;
-  border-bottom-right-radius: 1.99999px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .ui-corner-top {
-  -moz-border-radius-topleft: 1.99999px;
-  -webkit-border-top-left-radius: 1.99999px;
-  border-top-left-radius: 1.99999px;
-  -moz-border-radius-topright: 1.99999px;
-  -webkit-border-top-right-radius: 1.99999px;
-  border-top-right-radius: 1.99999px;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
 }
 
 .ui-corner-bottom {
-  -moz-border-radius-bottomleft: 1.99999px;
-  -webkit-border-bottom-left-radius: 1.99999px;
-  border-bottom-left-radius: 1.99999px;
-  -moz-border-radius-bottomright: 1.99999px;
-  -webkit-border-bottom-right-radius: 1.99999px;
-  border-bottom-right-radius: 1.99999px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .ui-corner-right {
-  -moz-border-radius-topright: 1.99999px;
-  -webkit-border-top-right-radius: 1.99999px;
-  border-top-right-radius: 1.99999px;
-  -moz-border-radius-bottomright: 1.99999px;
-  -webkit-border-bottom-right-radius: 1.99999px;
-  border-bottom-right-radius: 1.99999px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .ui-corner-left {
-  -moz-border-radius-topleft: 1.99999px;
-  -webkit-border-top-left-radius: 1.99999px;
-  border-top-left-radius: 1.99999px;
-  -moz-border-radius-bottomleft: 1.99999px;
-  -webkit-border-bottom-left-radius: 1.99999px;
-  border-bottom-left-radius: 1.99999px;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
 }
 
 /* Datepicker  -- Custom Selectors from theme
