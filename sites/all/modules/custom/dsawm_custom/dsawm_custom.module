@@ -12,6 +12,11 @@ function dsawm_custom_block_info() {
         'info' => t('Resource Landing Header')
 
     );
+    $blocks['footer_old'] = array(
+        // info: The name of the block.
+        'info' => t('Footer block')
+
+    );
     return $blocks;
 }
 
@@ -35,6 +40,38 @@ function dsawm_custom_block_configure($delta = '') {
         );
 
     }
+
+    if ($delta == 'footer_old'){
+        $default = '
+        <div class="Affiliates">
+            <p>The Down Syndrome Association of West Michigan is an affiliate of:</p>
+
+            <a href="http://www.ndss.org" target="_blank">
+                <img src="/sites/all/themes/d7theme/images/NDSS.png" width="77" height="40"  alt="">
+            </a>
+            <a href="http://www.ndsccenter.org">
+                <img border="0" alt="National Down Syndrome Congress" width="115" height="35" src="/sites/all/themes/d7theme/images/ndsc.jpg">
+            </a
+            <a target="_blank" href="http://www.dsaia.org">
+                <img border="0" alt="Down Syndrome Affiliates in Action" width="239" height="35" src="/sites/all/themes/d7theme/images/DSAIA.jpg">
+            </a>
+        </div>
+
+        <div>
+            <p>Copyright © 2012 Down Syndrome Association of West Michigan</p>
+            <p>233 E Fulton St, Ste 108 | Grand Rapids, MI 49503</p>
+            <p><strong>Phone:  616-956-3488 &nbsp; &nbsp; Toll Free 866-665-7451</strong></p>
+        </div>
+        ';
+        $form['footer_old_content'] = array(
+            '#type' => 'text_format',
+            '#title' => t('Block contents'),
+            '#size' => 60,
+            '#description' => t('This text will appear in the footer.'),
+            '#default_value' => variable_get('footer_old_content', $default),
+        );
+
+    }
     return $form;
 }
 
@@ -49,6 +86,10 @@ function dsawm_custom_block_save($delta = '', $edit = array()) {
     if ($delta == 'landing_header') {
         variable_set('landing_header_content', $edit['landing_header_content']['value']);
     }
+
+    if ($delta == 'footer_old') {
+        variable_set('footer_old', $edit['footer_old_content']['value']);
+    }
 }
 
 /**
@@ -62,6 +103,34 @@ function dsawm_custom_block_view($delta = '') {
             $default = '<div style="background: no-repeat url(/sites/all/themes/d7theme/images/header-landing.png) left center; width:100%; height: 259px; padding-left: 643px;"><h2 style="margin-bottom:5px;">Resources</h2><p style="font-size: 12px;">The Down Syndrome Association of West Michigan (DSAWM) has assembled a list of helpful resources and information that are relevant to individuals with Down syndrome, their families and friends, and interested community members. See below and select the category in which you are interested to get started. If you have any questions or need further assistance, please contact the DSAWM Administrative Assistant, Audrey Day, at audrey@dsawm.org.</p></div>';
             $block['subject'] = t('');
             $content =  variable_get('landing_header_content', $default);
+
+            $block['content'] = $content;
+            break;
+
+        case 'footer_old':
+            $default = '
+            <div class="Affiliates">
+                <p>The Down Syndrome Association of West Michigan is an affiliate of:</p>
+
+                <a href="http://www.ndss.org" target="_blank">
+                    <img src="/sites/all/themes/d7theme/images/NDSS.png" width="77" height="40"  alt="">
+                </a>
+                <a href="http://www.ndsccenter.org">
+                    <img border="0" alt="National Down Syndrome Congress" width="115" height="35" src="/sites/all/themes/d7theme/images/ndsc.jpg">
+                </a
+                <a target="_blank" href="http://www.dsaia.org">
+                    <img border="0" alt="Down Syndrome Affiliates in Action" width="239" height="35" src="/sites/all/themes/d7theme/images/DSAIA.jpg">
+                </a>
+            </div>
+
+            <div>
+                <p>Copyright © 2012 Down Syndrome Association of West Michigan</p>
+                <p>233 E Fulton St, Ste 108 | Grand Rapids, MI 49503</p>
+                <p><strong>Phone:  616-956-3488 &nbsp; &nbsp; Toll Free 866-665-7451</strong></p>
+            </div>
+            ';
+            $block['subject'] = t('');
+            $content =  variable_get('footer_old_content', $default);
 
             $block['content'] = $content;
             break;
