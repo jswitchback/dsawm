@@ -26,6 +26,14 @@ function content_types_feature_node_info() {
       'title_label' => t('Page Title'),
       'help' => '',
     ),
+    'promo' => array(
+      'name' => t('Promotional Item'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'resource' => array(
       'name' => t('Resource'),
       'base' => 'node_content',

@@ -25,12 +25,13 @@ function dsawm_custom_block_configure($delta = '') {
     if ($delta == 'landing_header') {
 
         $form['landing_header_content'] = array(
-            '#type' => 'textarea',
+            '#type' => 'text_format',
             '#title' => t('Block contents'),
             '#size' => 60,
             '#description' => t('This text will appear in the landing header.'),
             '#default_value' => variable_get('landing_header_content', t('<h2>Resources</h2>')),
         );
+
     }
     return $form;
 }

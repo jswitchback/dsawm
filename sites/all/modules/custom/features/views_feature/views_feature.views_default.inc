@@ -133,7 +133,7 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['field_resource_category_image']['field'] = 'field_resource_category_image';
   $handler->display->display_options['fields']['field_resource_category_image']['label'] = '';
   $handler->display->display_options['fields']['field_resource_category_image']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_resource_category_image']['alter']['path'] = 'resources/%1';
+  $handler->display->display_options['fields']['field_resource_category_image']['alter']['path'] = 'resources/[name]';
   $handler->display->display_options['fields']['field_resource_category_image']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['field_resource_category_image']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['field_resource_category_image']['element_type'] = '0';
@@ -152,7 +152,7 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/%1';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
@@ -164,6 +164,13 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['description']['field'] = 'description';
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
   /* Sort criterion: Taxonomy term: Name */
   $handler->display->display_options['sorts']['name']['id'] = 'name';
   $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
@@ -218,7 +225,7 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/%1';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'resources/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;

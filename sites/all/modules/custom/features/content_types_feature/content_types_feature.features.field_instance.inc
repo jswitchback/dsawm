@@ -51,6 +51,88 @@ function content_types_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-promo-body'
+  $field_instances['node-promo-body'] = array(
+    'bundle' => 'promo',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-promo-field_promo_resource_category'
+  $field_instances['node-promo-field_promo_resource_category'] = array(
+    'bundle' => 'promo',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_promo_resource_category',
+    'label' => 'Resource Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-resource-field_resource_description'
   $field_instances['node-resource-field_resource_description'] = array(
     'bundle' => 'resource',
@@ -88,7 +170,7 @@ function content_types_feature_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -212,7 +294,7 @@ function content_types_feature_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_resrource_category',
-    'label' => 'Resrource Category',
+    'label' => 'Resource Category',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -275,7 +357,7 @@ function content_types_feature_field_default_field_instances() {
   t('Body');
   t('Description');
   t('Phone');
-  t('Resrource Category');
+  t('Resource Category');
   t('Web Address');
 
   return $field_instances;
