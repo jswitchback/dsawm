@@ -291,6 +291,8 @@ function views_feature_views_default_views() {
   $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['name']['limit'] = '0';
+  $handler->display->display_options['arguments']['name']['path_case'] = 'lower';
+  $handler->display->display_options['arguments']['name']['transform_dash'] = TRUE;
 
   /* Display: Category Navigation */
   $handler = $view->new_display('block', 'Category Navigation', 'block_2');
