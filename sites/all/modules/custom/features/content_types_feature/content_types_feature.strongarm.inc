@@ -116,7 +116,7 @@ function content_types_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_promo';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_promo'] = $strongarm;
 
   return $export;

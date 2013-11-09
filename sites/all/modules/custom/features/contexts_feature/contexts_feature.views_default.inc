@@ -31,8 +31,7 @@ function contexts_feature_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -40,6 +39,44 @@ function contexts_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_promo_image']['id'] = 'field_promo_image';
+  $handler->display->display_options['fields']['field_promo_image']['table'] = 'field_data_field_promo_image';
+  $handler->display->display_options['fields']['field_promo_image']['field'] = 'field_promo_image';
+  $handler->display->display_options['fields']['field_promo_image']['label'] = '';
+  $handler->display->display_options['fields']['field_promo_image']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_promo_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_promo_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_promo_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_promo_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_promo_image']['settings'] = array(
+    'image_style' => 'promo_image',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_promo_image']['field_api_classes'] = TRUE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['body']['field_api_classes'] = TRUE;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['field_promo_link']['id'] = 'field_promo_link';
+  $handler->display->display_options['fields']['field_promo_link']['table'] = 'field_data_field_promo_link';
+  $handler->display->display_options['fields']['field_promo_link']['field'] = 'field_promo_link';
+  $handler->display->display_options['fields']['field_promo_link']['label'] = '';
+  $handler->display->display_options['fields']['field_promo_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_promo_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_promo_link']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_promo_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_promo_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_promo_link']['field_api_classes'] = TRUE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
