@@ -121,7 +121,8 @@ html.no-svg #logo {
 /* MAIN
    ========================================================================== */
 
-#main {
+#main-wrapper {
+  @include background(linear-gradient(#89c3d1 100px, white 100%));
 }
 
 

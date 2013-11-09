@@ -118,6 +118,14 @@ html.no-svg #logo {
 
 /* MAIN
    ========================================================================== */
+#main-wrapper {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(100px, #89c3d1), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(#89c3d1 100px, #ffffff 100%);
+  background: -moz-linear-gradient(#89c3d1 100px, #ffffff 100%);
+  background: -o-linear-gradient(#89c3d1 100px, #ffffff 100%);
+  background: linear-gradient(#89c3d1 100px, #ffffff 100%);
+}
+
 /* CONTENT
    ========================================================================== */
 .region-content-top,

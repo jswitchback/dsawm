@@ -369,6 +369,12 @@ ul.tabs-primary {
  /* Misc
     ========================================================================== */
 
+.ui-list-wrpr ul {
+  @include clean-list;
+}
 
+ul.ui-list {
+  @include clean-list;
+}
 
 

@@ -369,3 +369,20 @@ ul.tabs-primary li a.active:hover {
 
 /* Misc
    ========================================================================== */
+.ui-list-wrpr ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+.ui-list-wrpr ul li {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+ul.ui-list {
+  margin-left: 0;
+  padding-left: 0;
+}
+ul.ui-list li {
+  list-style-type: none;
+  list-style-image: none;
+}

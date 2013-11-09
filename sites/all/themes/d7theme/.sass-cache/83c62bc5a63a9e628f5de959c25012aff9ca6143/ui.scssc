@@ -1,7 +1,7 @@
 3.2.7 (Media Mark)
-a0ee0aab3fca07b7018de3466b58a864a82d298b
+cec57eb48cefbcc141c9fb1b354b43206ca04285
 o:Sass::Tree::RootNode
-:@template"ƒ(/* Import Sass mixins, variables, Compass modules, etc. */
+:@template"Õ(/* Import Sass mixins, variables, Compass modules, etc. */
 @import "my-sass-resources/base";
 
 /**
@@ -372,10 +372,16 @@ ul.tabs-primary {
  /* Misc
     ========================================================================== */
 
+.ui-list-wrpr ul {
+  @include clean-list;
+}
+
+ul.ui-list {
+  @include clean-list;
+}
 
 
-
-:@has_childrenT:@options{ :@children[3o:Sass::Tree::CommentNode
+:@has_childrenT:@options{ :@children[5o:Sass::Tree::CommentNode
 :
 @type:normal:@value["?/* Import Sass mixins, variables, Compass modules, etc. */;@;	[ :
 @lineio:Sass::Tree::ImportNode:@imported_file0:@imported_filename"my-sass-resources/base;0;@;	[ ;io;
@@ -783,4 +789,14 @@ color;o;1;2{ ;"lighten;@;30;ih;4[o;+	;,"link_color;"link-color;@;
 color;o;1;2{ ;"lighten;@;30;il;4[o;+	;,"link_color;"link-color;@;ilo;-;.["%;/"60%;iA;@;0[ ;il;%;&;@; i ;	[ ;il;ijo;
 
 ;;;["]/* Misc
-   ========================================================================== */;@;	[ ;iq;i
+   ========================================================================== */;@;	[ ;iqo;;[".ui-list-wrpr ul;o;;" ;it;[o;;[o;
+;0;@×
+;o;;{ ;it;[o;;["ui-list-wrpr;@×
+;ito;
+;0;@×
+;o;;{ ;it;[o;9	;["ul;@×
+;:0;it;T;@; i ;	[o;<;2{ ;"clean-list;@;	[ ;30;iu;4[ ;ito;;["ul.ui-list;o;;" ;ix;[o;;[o;
+;0;@ó
+;o;;{ ;ix;[o;9	;["ul;@ó
+;:0;ixo;;["ui-list;@ó
+;ix;T;@; i ;	[o;<;2{ ;"clean-list;@;	[ ;30;iy;4[ ;ix;i
