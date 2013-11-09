@@ -13,6 +13,54 @@ function contexts_feature_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'category_landing';
+  $context->description = 'This is the category landing page for each of the terms';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'resources/*' => 'resources/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-resrource_types-block_1' => array(
+          'module' => 'views',
+          'delta' => 'resrource_types-block_1',
+          'region' => 'content_top',
+          'weight' => '-10',
+        ),
+        'views-resources-block_1' => array(
+          'module' => 'views',
+          'delta' => 'resources-block_1',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'views-resrource_types-block_2' => array(
+          'module' => 'views',
+          'delta' => 'resrource_types-block_2',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+    'theme' => array(
+      'title' => '<none>',
+      'subtitle' => '',
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('This is the category landing page for each of the terms');
+  $export['category_landing'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'resources_landing';
   $context->description = 'Resources Landing Page';
   $context->tag = '';
