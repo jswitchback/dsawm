@@ -106,12 +106,24 @@
     list-style-image: none;
     border-bottom: none;
   }
+  #navigation ul.links li.last,
+  #navigation ul.menu li.last {
+    margin-right: 0;
+    padding-right: 0;
+  }
   #navigation ul.links li.last a,
   #navigation ul.menu li.last a {
-    border: none;
+    border-bottom: 2px solid transparent;
   }
   #navigation ul.links li a,
   #navigation ul.menu li a {
+    font-size: .8em;
+    line-height: 1;
+    padding: .75em 1em .5em 1em;
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    transition: all 0.15s ease;
     color: #0b4d6e;
     background: url('../../../images/generated/0000000d.png?1384016515');
     background: rgba(0, 0, 0, 0.05);
@@ -119,6 +131,7 @@
   }
   #navigation ul.links li a:hover,
   #navigation ul.menu li a:hover {
+    padding-top: 1em;
     background: url('../../../images/generated/0000000d.png?1384016515');
     background: rgba(0, 0, 0, 0.05);
     border-bottom: 2px solid #0b4d6e;
@@ -126,10 +139,42 @@
   #navigation ul.links li a:active,
   #navigation ul.menu li a:active {
     background: #093d57;
-    -webkit-box-shadow: #093d57 0 0 10px inset;
-    -moz-box-shadow: #093d57 0 0 10px inset;
-    box-shadow: #093d57 0 0 10px inset;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px inset;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px inset;
     color: #fff;
+  }
+  #navigation ul.links .menu-mlid-546 a:hover,
+  #navigation ul.menu .menu-mlid-546 a:hover {
+    border-bottom: 2px solid #ad881d;
+  }
+  #navigation ul.links .menu-mlid-546 a:active,
+  #navigation ul.menu .menu-mlid-546 a:active {
+    background: #ad881d;
+  }
+  #navigation ul.links .menu-mlid-547 a:hover,
+  #navigation ul.menu .menu-mlid-547 a:hover {
+    border-bottom: 2px solid #90749d;
+  }
+  #navigation ul.links .menu-mlid-547 a:active,
+  #navigation ul.menu .menu-mlid-547 a:active {
+    background: #90749d;
+  }
+  #navigation ul.links .menu-mlid-548 a:hover,
+  #navigation ul.menu .menu-mlid-548 a:hover {
+    border-bottom: 2px solid #78ac7e;
+  }
+  #navigation ul.links .menu-mlid-548 a:active,
+  #navigation ul.menu .menu-mlid-548 a:active {
+    background: #78ac7e;
+  }
+  #navigation ul.links .menu-mlid-549 a:hover,
+  #navigation ul.menu .menu-mlid-549 a:hover {
+    border-bottom: 2px solid #91521d;
+  }
+  #navigation ul.links .menu-mlid-549 a:active,
+  #navigation ul.menu .menu-mlid-549 a:active {
+    background: #91521d;
   }
 }
 /* Import Sass mixins, variables, Compass modules, etc. */
@@ -158,10 +203,10 @@
   background-image: linear-gradient(center top, #0b4d6e, #062d40);
   background-repeat: repeat-x;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: #85cef3;
+  color: #b4e1f7;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   margin-right: 10px;
-  padding: 7px 10px;
+  padding: 3px 10px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -183,6 +228,10 @@
   #sidebar-toggle {
     display: none;
   }
+}
+
+#nav-inner {
+  margin-bottom: 12px;
 }
 
 /* BUTTON CSS */

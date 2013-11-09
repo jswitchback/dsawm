@@ -493,7 +493,7 @@ input {
   transition-timing-function: ease-in;
   padding: 0.25em 0.5em;
   font-family: inherit;
-  color: #7f8077;
+  color: #73746d;
   font-size: 1em;
   max-width: 100%;
   /* fixed overflow of input fields in drupal 6 layouts */

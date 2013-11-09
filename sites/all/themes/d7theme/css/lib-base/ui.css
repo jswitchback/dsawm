@@ -316,7 +316,7 @@ ul.tabs-primary li a.active:hover {
 /* Placeholder and highlight color
    ========================================================================== */
 ::-webkit-input-placeholder {
-  color: #b1b1ac;
+  color: #a6a6a1;
 }
 ::-webkit-input-placeholder * {
   -webkit-transition: all 0.15s ease;
@@ -334,7 +334,7 @@ ul.tabs-primary li a.active:hover {
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #b1b1ac;
+  color: #a6a6a1;
 }
 :-moz-placeholder:focus {
   color: white;
@@ -342,14 +342,14 @@ ul.tabs-primary li a.active:hover {
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #b1b1ac;
+  color: #a6a6a1;
 }
 ::-moz-placeholder:focus {
   color: white;
 }
 
 :-ms-input-placeholder {
-  color: #b1b1ac;
+  color: #a6a6a1;
 }
 :-ms-input-placeholder:focus {
   color: white;

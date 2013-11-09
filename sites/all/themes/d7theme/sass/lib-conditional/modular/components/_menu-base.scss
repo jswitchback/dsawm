@@ -67,6 +67,12 @@ $nav-color: $link-color;
 /* Base Desktop Styles
    ========================================================================= */
 
+$orange-d: #ad881d;
+$purple-d: #90749d;
+$green-d: #78ac7e;
+$brown-d: #91521d;
+
+
 @include breakpoint($tablet-portrait-min-width) {
   #navigation {
     margin-left: 0;
@@ -92,24 +98,78 @@ $nav-color: $link-color;
         list-style-type: none;
         list-style-image: none;
         border-bottom: none;
-        &.last a {
-          border: none;
+        &.last {
+          margin-right: 0;
+          padding-right: 0;
+          a {
+            border-bottom: 2px solid transparent;
+          }
         }
         a {
+          font-size: .8em;
+          line-height: 1;
+          padding: .75em 1em .5em 1em;
+          @include transition(all .15s ease);
           color: $link-color;
           @include rgba-background(rgba(0,0,0, .05));
           border-bottom: 2px solid transparent;
         &:hover {
+          padding-top: 1em;
           @include rgba-background(rgba(0,0,0, .05));
           border-bottom: 2px solid $link-color;
         } 
         &:active {
           background: darken($nav-color, 5%);
-          @include box-shadow(darken($nav-color, 5%) 0 0 10px inset);
+          @include box-shadow(rgba(0,0,0,.25) 0 0 10px inset);
           color: #fff;
         }
         }
       }
+      .menu-mlid-546 {
+        a {
+          &:hover {
+            border-bottom: 2px solid $orange-d;
+          }
+          &:active {
+            background: $orange-d;
+          }
+        }
+      }
+
+      .menu-mlid-547 {
+        a {
+          &:hover {
+            border-bottom: 2px solid $purple-d;
+          }
+          &:active {
+            background: $purple-d;
+          }
+        }
+      }
+
+      .menu-mlid-548 {
+        a {
+          &:hover {
+            border-bottom: 2px solid $green-d;
+          }
+          &:active {
+            background: $green-d;
+          }
+        }
+      }
+       
+      .menu-mlid-549 {
+        a {
+          &:hover {
+            border-bottom: 2px solid $brown-d;
+          }
+          &:active {
+            background: $brown-d;
+          } 
+        }
+      }
     }
   }
-}
+} // END TABLET MEDIA QUERY
+
+

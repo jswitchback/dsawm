@@ -28,7 +28,7 @@
 
 #block-views-resources-block-1 {
 	.node-title {
-		font-size: 1.25em;
+		font-size: 1.15em;
 	}
 	.views-row {
 		margin-bottom: .5em;
@@ -61,6 +61,49 @@
 	}
 	ul {
 		margin: 0;
+	}
+}
+
+#block-dsawm-custom-landing-header {
+	.node-title, h2 {
+		margin-top: 0;
+	}
+}
+
+// Menu 
+
+$d-blue-d: #0b4d6e;
+// rgba(11,77,110, 1)
+#block-views-resrource-types-block-2 {
+	@include rgba-background(rgba(11,77,110, .25));
+	border: 1px solid rgba(11,77,110, .3);
+	@include box-shadow(rgba(255,255,255,.2) 2px 2px 1px);
+	padding: 12px 0;
+	a {
+		display: block;
+		color: #dbde72;
+		padding: 0 12px;
+		border-bottom: 1px solid transparent;
+		border-top: 1px solid transparent;
+		&:hover {
+			color: #fff;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+			border-top: 1px solid rgba(255,255,255,.5);
+			@include rgba-background(rgba(0,0,0,.05));
+		}
+		&:active {
+			background: #0b4d6e;
+		}
+		&:visited {
+			color: #3E81B5;
+		}
+	}
+	.ui-list {
+		margin: 0;
+	}
+	li {
+		color: #dbde72;
+		margin: 0 0 2px 0;
 	}
 }
 

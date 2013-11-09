@@ -167,7 +167,7 @@
         <?php print render($page['highlighted']); ?>
         <?php if ($sidebar_first): ?>
         <div id="nav-inner">
-          <a id="sidebar-toggle" href="#sidebar-first"> MORE</a>
+          <a id="sidebar-toggle" href="#sidebar-first">resource list</a>
         </div>
         <?php endif; ?>
         <a id="main-content"></a>

@@ -35,6 +35,11 @@ html.js body.show-nav #navigation {
   margin-left: -24px;
   margin-right: -24px;
 }
+@media (min-width: 47.5em) {
+  #navigation {
+    margin-top: 44px;
+  }
+}
 #navigation .block {
   margin-bottom: 0;
 }
@@ -48,7 +53,7 @@ html.js body.show-nav #navigation {
   border-bottom: 1px solid #0b4d6e;
 }
 #navigation ul.menu li a {
-  padding: .5em;
+  padding: .25em .5em;
   display: block;
   text-align: center;
   color: #fff;
@@ -172,12 +177,24 @@ html.js body.show-nav #navigation {
     list-style-image: none;
     border-bottom: none;
   }
+  #navigation ul.links li.last,
+  #navigation ul.menu li.last {
+    margin-right: 0;
+    padding-right: 0;
+  }
   #navigation ul.links li.last a,
   #navigation ul.menu li.last a {
-    border: none;
+    border-bottom: 2px solid transparent;
   }
   #navigation ul.links li a,
   #navigation ul.menu li a {
+    font-size: .8em;
+    line-height: 1;
+    padding: .75em 1em .5em 1em;
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    transition: all 0.15s ease;
     color: #0b4d6e;
     background: url('../../../images/generated/0000000d.png?1384016515');
     background: rgba(0, 0, 0, 0.05);
@@ -185,6 +202,7 @@ html.js body.show-nav #navigation {
   }
   #navigation ul.links li a:hover,
   #navigation ul.menu li a:hover {
+    padding-top: 1em;
     background: url('../../../images/generated/0000000d.png?1384016515');
     background: rgba(0, 0, 0, 0.05);
     border-bottom: 2px solid #0b4d6e;
@@ -192,9 +210,41 @@ html.js body.show-nav #navigation {
   #navigation ul.links li a:active,
   #navigation ul.menu li a:active {
     background: #093d57;
-    -webkit-box-shadow: #093d57 0 0 10px inset;
-    -moz-box-shadow: #093d57 0 0 10px inset;
-    box-shadow: #093d57 0 0 10px inset;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px inset;
+    -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px inset;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px inset;
     color: #fff;
+  }
+  #navigation ul.links .menu-mlid-546 a:hover,
+  #navigation ul.menu .menu-mlid-546 a:hover {
+    border-bottom: 2px solid #ad881d;
+  }
+  #navigation ul.links .menu-mlid-546 a:active,
+  #navigation ul.menu .menu-mlid-546 a:active {
+    background: #ad881d;
+  }
+  #navigation ul.links .menu-mlid-547 a:hover,
+  #navigation ul.menu .menu-mlid-547 a:hover {
+    border-bottom: 2px solid #90749d;
+  }
+  #navigation ul.links .menu-mlid-547 a:active,
+  #navigation ul.menu .menu-mlid-547 a:active {
+    background: #90749d;
+  }
+  #navigation ul.links .menu-mlid-548 a:hover,
+  #navigation ul.menu .menu-mlid-548 a:hover {
+    border-bottom: 2px solid #78ac7e;
+  }
+  #navigation ul.links .menu-mlid-548 a:active,
+  #navigation ul.menu .menu-mlid-548 a:active {
+    background: #78ac7e;
+  }
+  #navigation ul.links .menu-mlid-549 a:hover,
+  #navigation ul.menu .menu-mlid-549 a:hover {
+    border-bottom: 2px solid #91521d;
+  }
+  #navigation ul.links .menu-mlid-549 a:active,
+  #navigation ul.menu .menu-mlid-549 a:active {
+    background: #91521d;
   }
 }

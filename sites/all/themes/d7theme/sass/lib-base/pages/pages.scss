@@ -141,7 +141,7 @@ html.no-svg #logo {
    ========================================================================== */
    
 #content {
-  @include rgba-background(rgba(255,255,255, .9));
+  @include rgba-background(rgba(255,255,255, .95));
   @include box-shadow(0,0,12px, #ffffff, inset);
   padding-top: 24px;
   padding-bottom: 24px;

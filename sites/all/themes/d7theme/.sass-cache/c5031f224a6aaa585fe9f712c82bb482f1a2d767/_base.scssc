@@ -1,7 +1,7 @@
 3.2.7 (Media Mark)
-a8de132af0800cf1f3bf09a7601fb60370bd704c
+ada1411677abdfaae5bbbc5c1183311518fc50bc
 o:Sass::Tree::RootNode
-:@template".0//
+:@template"&0//
 // Initialization partial
 //
 // To make it easier to use all variables and mixins in any Sass file in this
@@ -158,7 +158,7 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 $sans-serif:     "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 // Oxygen has 3 weights light (300), Normal (400), Bold (700)
-$webfont-normal:      'Lato', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
+$webfont-normal:      "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
 $webfont-bold:        'Lato', Arial, Helvetica, sans-serif;
 
 
@@ -195,7 +195,7 @@ $vert-gutter: $base-line-height;
 // TYPOGRAPHY
 $page-title-color: #454545; 
 $block-title-color: $page-title-color;
-$body-font-color: #7f8077;
+$body-font-color: #73746d;
 $body-bgrd-color: #fdfdf7;
 $form-input-font-size: .85em;
 
@@ -533,7 +533,7 @@ Arial;@;iöo;	;;;"Helvetica;@;iöo;	;;;"Nimbus Sans L;@;iöo;
 arial;@;	[ ;iöo;;0;o;	;;);[o;	;;;"HelveticaNeue-Light;@;iõo;	;;;"Helvetica Neue Light;@;iõo;	;;;"Helvetica Neue;@;iõo;	;;;"Helvetica;@;iõo;	;;;"
 Arial;@;iõo;	;;;"Lucida Grande;@;iõo;	;;;"sans-serif;@;iõ;@;iõ;"sans-serif;@;	[ ;iõo;
 
-;;;["E/* Oxygen has 3 weights light (300), Normal (400), Bold (700) */;@;	[ ;iùo;;0;o;	;;);[o;	;;;"	Lato;@;iûo;	;;;"HelveticaNeue-Light;@;iûo;	;;;"Helvetica Neue Light;@;iûo;	;;;"Helvetica Neue;@;iûo;	;;;"Helvetica;@;iûo;	;;;"
+;;;["E/* Oxygen has 3 weights light (300), Normal (400), Bold (700) */;@;	[ ;iùo;;0;o;	;;);[o;	;;;"HelveticaNeue-Light;@;iûo;	;;;"Helvetica Neue Light;@;iûo;	;;;"Helvetica Neue;@;iûo;	;;;"Helvetica;@;iûo;	;;;"
 Arial;@;iûo;	;;;"Helvetica;@;iûo;	;;;"sans-serif;@;iû;@;iû;"webfont-normal;@;	[ ;iûo;;0;o;	;;);[	o;	;;;"	Lato;@;iüo;	;;;"
 Arial;@;iüo;	;;;"Helvetica;@;iüo;	;;;"sans-serif;@;iü;@;iü;"webfont-bold;@;	[ ;iüo;
 
@@ -557,7 +557,7 @@ grids;@;	[ ;iµo;;0;o;$	;%"base_line_height;"base-line-height;@;i∂
 
 ;;;["/* TYPOGRAPHY */;@;	[ ;i¿o;;0;o:Sass::Script::Color	:@attrs{	:rediJ:
 alphai:
-greeniJ:	blueiJ;0;@;i¡;"page-title-color;@;	[ ;i¡o;;0;o;$	;%"page_title_color;"page-title-color;@;i¬;"block-title-color;@;	[ ;i¬o;;0;o;*	;+{	;,i;-i;.iÄ;/i|;0;@;i√;"body-font-color;@;	[ ;i√o;;0;o;*	;+{	;,i˝;-i;.i˝;/i˜;0;@;iƒ;"body-bgrd-color;@;	[ ;iƒo;;0;o;;["em;"0.85em;f0.84999999999999998 33;@;[ ;i≈;"form-input-font-size;@;	[ ;i≈o;
+greeniJ:	blueiJ;0;@;i¡;"page-title-color;@;	[ ;i¡o;;0;o;$	;%"page_title_color;"page-title-color;@;i¬;"block-title-color;@;	[ ;i¬o;;0;o;*	;+{	;,ix;-i;.iy;/ir;0;@;i√;"body-font-color;@;	[ ;i√o;;0;o;*	;+{	;,i˝;-i;.i˝;/i˜;0;@;iƒ;"body-bgrd-color;@;	[ ;iƒo;;0;o;;["em;"0.85em;f0.84999999999999998 33;@;[ ;i≈;"form-input-font-size;@;	[ ;i≈o;
 
 ;;;["/* UI THEME VARIABLES */;@;	[ ;i…o;;0;o;*	;+{	;,i;-i;.iR;/is;0;@;i ;"primary-color;@;	[ ;i o;;0;o;*	;+{	;,i‡;-i;.i);/iH;0;@;iÀ;"delete-color;@;	[ ;iÀo;;0;o;$	;%"delete_color;"delete-color;@;iÃ;"error-color;@;	[ ;iÃo;;0;o;*	;+{	;,iÓ;-i;.iÓ;/iÓ;0;@;iŒ;"disabled-background-color;@;	[ ;iŒo;;0;o;*	;+{	;,ià;-i;.ià;/ià;0;@;iœ;"disabled-font-color;@;	[ ;iœo;
 
