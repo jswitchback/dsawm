@@ -86,7 +86,7 @@
  <div id= "header-wrapper">
     <header id="header" role="banner">
     <div id="logo-wrapper">
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">Home</a>
+      <a href="http://www.dsawm.org" title="<?php print t('Home'); ?>" rel="home" id="logo">Home</a>
     </div>
       <?php print render($page['header']); ?>
       
@@ -165,7 +165,6 @@
 
       <div id="content" class="column" role="main">
         <?php print render($page['highlighted']); ?>
-        <?php print $breadcrumb; ?>
         <?php if ($sidebar_first): ?>
         <div id="nav-inner">
           <a id="sidebar-toggle" href="#sidebar-first"> MORE</a>

@@ -79,7 +79,9 @@ html.js body.show-nav #navigation {
 }
 
 #mobile-nav-toggle {
-  float: right;
+  position: absolute;
+  top: 44px;
+  right: 24px;
 }
 
 /* Toggle Button

@@ -142,7 +142,9 @@ html.no-svg #logo {
    
 #content {
   @include rgba-background(rgba(255,255,255, .9));
-  @include box-shadow(0,0,12px, #ffffff, inset)
+  @include box-shadow(0,0,12px, #ffffff, inset);
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .region-content-top,
@@ -161,6 +163,13 @@ html.no-svg #logo {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+}
+
+#back-home {
+  a {
+    display: inline-block;
+    background: #d1d1d1;
   }
 }
 

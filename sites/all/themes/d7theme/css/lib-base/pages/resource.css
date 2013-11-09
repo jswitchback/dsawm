@@ -1,3 +1,9 @@
+/* Import Sass mixins, variables, Compass modules, etc. */
+/* Darken table when in a ui-block */
+/*
+  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
+  rgba-background mixin can now be passed an option $dir variable
+*/
 .resource-center ul {
   margin: 0;
 }
@@ -15,4 +21,42 @@
 }
 .resource-center .resource-text {
   padding: 0 1em;
+}
+
+/* Resource Detail Page */
+#block-views-resources-block-1 .node-title {
+  font-size: 1.25em;
+}
+#block-views-resources-block-1 .views-row {
+  margin-bottom: .5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #d1d1d1;
+}
+#block-views-resources-block-1 .field-resrource-category-wrapper {
+  margin-top: 6px;
+}
+#block-views-resources-block-1 .field-resrource-category-wrapper .field-resrource-category {
+  display: inline-block;
+}
+#block-views-resources-block-1 .field-resrource-category-wrapper .field-resrource-category a {
+  display: block;
+  background: #f1f1f1;
+  padding: 2px 6px;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+#block-views-resources-block-1 .field-resrource-category-wrapper .field-resrource-category a:hover {
+  background: #0b4d6e;
+  padding: 2px 10px;
+  color: #ffffff;
+}
+
+#block-views-resrource-types-block-1 .field-resource-category-image {
+  float: left;
+  margin: 0 12px 12px 0;
+}
+#block-views-resrource-types-block-1 ul {
+  margin: 0;
 }

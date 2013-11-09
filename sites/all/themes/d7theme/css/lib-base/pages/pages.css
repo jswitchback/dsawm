@@ -148,6 +148,8 @@ html.no-svg #logo {
   -webkit-box-shadow: 0, 0, 12px, white, inset;
   -moz-box-shadow: 0, 0, 12px, white, inset;
   box-shadow: 0, 0, 12px, white, inset;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .region-content-top,
@@ -168,6 +170,11 @@ html.no-svg #logo {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+#back-home a {
+  display: inline-block;
+  background: #d1d1d1;
 }
 
 tr.even {
