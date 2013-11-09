@@ -69,5 +69,73 @@ function views_feature_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $export['resources'] = $view;
 
+  $view = new view();
+  $view->name = 'resrource_types';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'taxonomy_term_data';
+  $view->human_name = 'Resrource Types';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Resrource Types';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Taxonomy term: Landing Page Image */
+  $handler->display->display_options['fields']['field_resource_category_image']['id'] = 'field_resource_category_image';
+  $handler->display->display_options['fields']['field_resource_category_image']['table'] = 'field_data_field_resource_category_image';
+  $handler->display->display_options['fields']['field_resource_category_image']['field'] = 'field_resource_category_image';
+  $handler->display->display_options['fields']['field_resource_category_image']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_category_image']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_category_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_category_image']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_category_image']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_category_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_resource_category_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_resource_category_image']['field_api_classes'] = TRUE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  /* Sort criterion: Taxonomy term: Name */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'resource_category' => 'resource_category',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['block_description'] = 'Landing Page Resource Types Block';
+  $export['resrource_types'] = $view;
+
   return $export;
 }

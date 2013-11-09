@@ -1,7 +1,7 @@
 3.2.7 (Media Mark)
-cb2de2092b606cd4395c659efe19e6123cd0ba1c
+e8e7a23ce0cbb436dfefb641e8387229e54527e5
 o:Sass::Tree::RootNode
-:@template"í%/* Import Sass mixins, variables, Compass modules, etc. */
+:@template"ò%/* Import Sass mixins, variables, Compass modules, etc. */
 @import "my-sass-resources/base";
 
 /* Instead of relying on the fonts that are available on a user's computer, you
@@ -35,9 +35,9 @@ cb2de2092b606cd4395c659efe19e6123cd0ba1c
     url('../fonts/example.ttf') format('truetype'),
     url('../fonts/example.svg#webfontOkOndcij') format('svg');
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; 
 }
-*/
+*/ 
 
 /**
  * 1. Set default font family to sans-serif.
@@ -170,7 +170,7 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   color: $page-title-color;
-  font-weight: bold;
+  font-weight: normal;
   font-family: $base-title-family;
   word-wrap: break-word;
 }
@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
 .comment__title {      /* Comment title. */
   // margin: 0;
   font-family: $base-title-family;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .block-title {
@@ -464,7 +464,7 @@ button, input, textarea {
    can add them to the font variables in the _base.scss partial.
 */;@;	[ ;i	o;
 
-;;;["[/*
+;;;["\/*
 @font-face {
   font-family: 'Example';
   src: url('../fonts/example.eot');
@@ -473,7 +473,7 @@ button, input, textarea {
     url('../fonts/example.ttf') format('truetype'),
     url('../fonts/example.svg#webfontOkOndcij') format('svg');
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; 
 }
 */;@;	[ ;io;
 
@@ -613,7 +613,7 @@ o;
 ;0;@ﬁ;o;;{ ;i®;[o;	;["h4;@ﬁ; 0;i®o;;[o;
 ;0;@ﬁ;o;;{ ;i®;[o;	;["h5;@ﬁ; 0;i®o;;[o;
 ;0;@ﬁ;o;;{ ;i®;[o;	;["h6;@ﬁ; 0;i®;T;@;!i ;	[	o;";["
-color;o;#	;$"page_title_color;"page-title-color;@;i©;%;&;@;!i ;	[ ;i©o;";["font-weight;o;1;;2;"	bold;@;%;&;@;!i ;	[ ;i™o;";["font-family;o;#	;$"base_title_family;"base-title-family;@;i´;%;&;@;!i ;	[ ;i´o;";["word-wrap;o;1;;2;"break-word;@;%;&;@;!i ;	[ ;i¨;i®o;
+color;o;#	;$"page_title_color;"page-title-color;@;i©;%;&;@;!i ;	[ ;i©o;";["font-weight;o;1;;2;"normal;@;%;&;@;!i ;	[ ;i™o;";["font-family;o;#	;$"base_title_family;"base-title-family;@;i´;%;&;@;!i ;	[ ;i´o;";["word-wrap;o;1;;2;"break-word;@;%;&;@;!i ;	[ ;i¨;i®o;
 
 ;;;["/**
  * Titles.
@@ -637,7 +637,7 @@ o;
 
 ;;;["/* Comment title. */;@;	[ ;iπo;
 
-;;3;["/* margin: 0; */;@;	[ ;i∫o;";["font-family;o;#	;$"base_title_family;"base-title-family;@;iª;%;&;@;!i ;	[ ;iªo;";["font-weight;o;1;;2;"	bold;@;%;&;@;!i ;	[ ;iº;iπo;;[".block-title;o;;" ;iø;[o;;[o;
+;;3;["/* margin: 0; */;@;	[ ;i∫o;";["font-family;o;#	;$"base_title_family;"base-title-family;@;iª;%;&;@;!i ;	[ ;iªo;";["font-weight;o;1;;2;"normal;@;%;&;@;!i ;	[ ;iº;iπo;;[".block-title;o;;" ;iø;[o;;[o;
 ;0;@ê;o;;{ ;iø;[o;9;["block-title;@ê;iø;T;@;!i ;	[o;";["font-family;o;#	;$"base_block_title;"base-block-title;@;i¿;%;&;@;!i ;	[ ;i¿o;";["
 color;o;#	;$"block_title_color;"block-title-color;@;i¡;%;&;@;!i ;	[ ;i¡;iøo;;["#page-title;o;;" ;iƒ;[o;;[o;
 ;0;@Æ;o;;{ ;iƒ;[o:Sass::Selector::Id;["page-title;@Æ;iƒ;T;@;!i ;	[o;";["font-family;o;#	;$"base_page_title_family;"base-page-title-family;@;i≈;%;&;@;!i ;	[ ;i≈;iƒo;
