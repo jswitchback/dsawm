@@ -38,17 +38,23 @@ function contexts_feature_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'views-resrource_types-block_2' => array(
+        'views-promotions-block_1' => array(
           'module' => 'views',
-          'delta' => 'resrource_types-block_2',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
+          'delta' => 'promotions-block_1',
+          'region' => 'content',
+          'weight' => '-9',
         ),
         'views-promotions-block' => array(
           'module' => 'views',
           'delta' => 'promotions-block',
-          'region' => 'sidebar_second',
+          'region' => 'sidebar_first',
           'weight' => '-10',
+        ),
+        'views-resrource_types-block_2' => array(
+          'module' => 'views',
+          'delta' => 'resrource_types-block_2',
+          'region' => 'sidebar_first',
+          'weight' => '-9',
         ),
       ),
     ),
