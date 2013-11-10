@@ -1,0 +1,7 @@
+name = Media Stye Feature
+core = 7.x
+package = Features
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = category_large
+features[image][] = category_small

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Media Stye Feature feature.
+ */
+
+include_once 'media_stye_feature.features.inc';
