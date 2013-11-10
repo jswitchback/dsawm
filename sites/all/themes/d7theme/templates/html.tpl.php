@@ -96,11 +96,11 @@
   
   <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
-    <script src="<?php print $GLOBALS['base_url'] . '/' . $path_to_d7theme; ?>/js/optional-js/html5-respond.js"></script>
+    <script src="<?php print $GLOBALS['base_url'] . '/' . $path_to_d7theme; ?>/js/lib-conditional/html5-respond.js"></script>
     <![endif]-->
   <?php elseif ($add_html5_shim): ?>
     <!--[if lt IE 9]>
-    <script src="<?php print $GLOBALS['base_url'] . '/' . $path_to_d7theme; ?>/js/optional-js/html5.js"></script>
+    <script src="<?php print $GLOBALS['base_url'] . '/' . $path_to_d7theme; ?>/js/lib-conditional/html5.js"></script>
     <![endif]-->
   <?php endif; ?>
   

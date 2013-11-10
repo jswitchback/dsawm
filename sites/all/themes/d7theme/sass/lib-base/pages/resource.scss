@@ -13,7 +13,6 @@ $zen-column-count:  24;
 		font-size: 1.15em;
 		margin-bottom: 6px;
 		padding: 0 8px;
-		// margin-left: -4px;
 	}
 	.resource-item {
 		margin-bottom: 24px;
@@ -36,10 +35,12 @@ $zen-column-count:  24;
 		font-size: .915em;
 	}
 	.header-left {
-		float: left;
+		max-width: 597px;
+    width: auto\9; 
+		@include breakpoint(860px) {
+			float: left;
+		}
 		margin-bottom: 24px;
-		// border: 5px solid #ffffff;
-		// @include box-shadow(0 8px 6px -6px #d1d1d1);
 	}
 	.header-right {
 		clear: both;

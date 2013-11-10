@@ -36,8 +36,14 @@
   font-size: .915em;
 }
 #block-dsawm-custom-landing-header .header-left {
-  float: left;
+  max-width: 597px;
+  width: auto\9;
   margin-bottom: 24px;
+}
+@media (min-width: 53.75em) {
+  #block-dsawm-custom-landing-header .header-left {
+    float: left;
+  }
 }
 #block-dsawm-custom-landing-header .header-right {
   clear: both;
