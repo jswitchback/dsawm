@@ -77,6 +77,7 @@ body {
   }
 }
 
+#block-views-promotions-block-1 .views-field-title a,
 #block-views-promotions-block .views-field-title a,
 .field-resource-link a {
   display: inline-block;
@@ -141,10 +142,12 @@ body {
   content: "\e60c";
 }
 
+#block-views-promotions-block-1 .views-field-title a:after,
 #block-views-promotions-block .views-field-title a:after,
 .field-resource-link a:after,
 .icon-arrow-right:before {
   content: "\e60d";
+  padding-left: 2px;
 }
 .icon-download:before {
   content: "\e60e";

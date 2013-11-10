@@ -56,10 +56,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#block-views-promotions-block-1 .views-field-title a,
 #block-views-promotions-block .views-field-title a,
 .field-resource-link a {
   display: inline-block;
 }
+#block-views-promotions-block-1 .views-field-title a:after,
 #block-views-promotions-block .views-field-title a:after,
 .field-resource-link a:after {
   font-family: 'icomoon';
@@ -74,6 +76,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#block-views-promotions-block-1 .views-field-title a:hover:after,
 #block-views-promotions-block .views-field-title a:hover:after,
 .field-resource-link a:hover:after {
   padding-right: 6px;
@@ -131,10 +134,12 @@ body {
   content: "\e60c";
 }
 
+#block-views-promotions-block-1 .views-field-title a:after,
 #block-views-promotions-block .views-field-title a:after,
 .field-resource-link a:after,
 .icon-arrow-right:before {
   content: "\e60d";
+  padding-left: 2px;
 }
 
 .icon-download:before {

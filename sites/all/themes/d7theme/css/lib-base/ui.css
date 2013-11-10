@@ -346,13 +346,13 @@ ul.ui-list li {
   list-style-image: none;
 }
 
-.shadow-bottom, #block-views-resrource-types-block {
+.shadow-bottom, #block-views-resrource-types-block, #block-views-promotions-block-1 {
   overflow: hidden;
   z-index: 1;
   position: relative;
   padding-bottom: 24px;
 }
-.shadow-bottom:before, #block-views-resrource-types-block:before {
+.shadow-bottom:before, #block-views-resrource-types-block:before, #block-views-promotions-block-1:before {
   content: "";
   position: absolute;
   bottom: -31px;
@@ -369,7 +369,7 @@ ul.ui-list li {
   border-radius: 12px;
 }
 
-.shadow-top, #block-views-resrource-types-block {
+.shadow-top, #block-views-resrource-types-block, #block-views-promotions-block-1 {
   background: #f1f1f1;
   padding: 24px;
   overflow: hidden;
@@ -377,7 +377,7 @@ ul.ui-list li {
   position: relative;
   padding-top: 24px;
 }
-.shadow-top:before, #block-views-resrource-types-block:before {
+.shadow-top:before, #block-views-resrource-types-block:before, #block-views-promotions-block-1:before {
   content: "";
   position: absolute;
   top: -31px;

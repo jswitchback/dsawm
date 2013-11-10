@@ -74,7 +74,10 @@ $zen-column-count:  24;
 		margin-bottom: .5em;
 	}
 	.resource-phone {
+		display: inline-block;
+		vertical-align: bottom;
 		margin-bottom: .5em;
+		line-height: 1;
 		ul {
 			@include clean-list;
 			margin: 0;
@@ -94,6 +97,17 @@ $zen-column-count:  24;
 	}
 	.field-resource-link {
 		margin-bottom: .5em;
+		display: inline-block;
+		vertical-align: bottom;
+		line-height: 1.15;
+		margin-left: -4px;
+		a {
+			vertical-align: bottom;
+			&:after {
+				line-height: .875;
+				vertical-align: bottom;
+			}
+		}
 	}
 	.field-resource-description {
 	}
@@ -187,19 +201,23 @@ $d-blue-d: #0b4d6e;
 #block-views-promotions-block {
 	display: none;
 	color: #fff;
+	@include rgba-background(rgba(0,0,0,.05));
 	border-bottom: 1px solid rgba(255,255,255,.2);
+	@include breakpoint($tablet-portrait-min-width) {
+		display: block;
+	}
+}
+
+#block-views-promotions-block-1,
+#block-views-promotions-block {
 	line-height: 1.5;
 	.views-row {
 		padding: 1em;
-		@include rgba-background(rgba(0,0,0,.05));
 	}
 	.views-field-title {
 		a {
 			display: block;
-			margin-top: .5em;
+			margin-top: 1em;
 		}
-	}
-	@include breakpoint($tablet-portrait-min-width) {
-		display: block;
 	}
 }
