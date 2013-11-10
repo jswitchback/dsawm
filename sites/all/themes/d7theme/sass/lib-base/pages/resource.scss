@@ -10,16 +10,17 @@ $zen-column-count:  24;
 	.field-resource-category-image{
 	}
 	.resource-title {
-		font-size: 1em;
+		font-size: 1.15em;
 		margin-bottom: 6px;
-		padding: 0 1em;
+		padding: 0 8px;
 		// margin-left: -4px;
 	}
 	.resource-item {
 		margin-bottom: 24px;
 	}
 	.resource-text {
-		padding: 0 1em;
+		padding: 0 8px;
+		line-height: 1.5;
 	}
 }
 
@@ -43,7 +44,6 @@ $zen-column-count:  24;
 	.header-right {
 		clear: both;
 		float: left;
-		line-height: 1.5;
 	}
 	@include breakpoint(860px) {
 		.header-image {
@@ -121,6 +121,14 @@ $zen-column-count:  24;
 		float: left;
 		margin: 0 12px 12px 0;
 	}
+	#resource-header {
+		p {
+			font-size: .915em
+		}
+		p + p {
+		margin-top: 0;
+		}
+	}
 	ul {
 		margin: 0;
 	}
@@ -164,7 +172,7 @@ $d-blue-d: #0b4d6e;
 	}
 	li {
 		color: #dbde72;
-		margin: 0 0 1px 0;
+		margin: 0 0 4px 0;
 	}
 }
 
@@ -178,10 +186,18 @@ $d-blue-d: #0b4d6e;
 /* Sidebar area promotions */
 #block-views-promotions-block {
 	display: none;
-	padding: 1em 0 1.5em 0;
+	color: #fff;
 	border-bottom: 1px solid rgba(255,255,255,.2);
+	line-height: 1.5;
 	.views-row {
-		@include rgba-background(rgba(255,255,255,.95));
+		padding: 1em;
+		@include rgba-background(rgba(0,0,0,.05));
+	}
+	.views-field-title {
+		a {
+			display: block;
+			margin-top: .5em;
+		}
 	}
 	@include breakpoint($tablet-portrait-min-width) {
 		display: block;

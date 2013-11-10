@@ -36,7 +36,7 @@ html {
  */
 body {
   letter-spacing: 0.04em;
-  font-size: 87.5%;
+  font-size: 81.25%;
 }
 
 /* Typography
@@ -56,9 +56,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#block-views-promotions-block .views-field-title a,
 .field-resource-link a {
   display: inline-block;
 }
+#block-views-promotions-block .views-field-title a:after,
 .field-resource-link a:after {
   font-family: 'icomoon';
   speak: none;
@@ -72,6 +74,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#block-views-promotions-block .views-field-title a:hover:after,
 .field-resource-link a:hover:after {
   padding-right: 6px;
 }
@@ -128,6 +131,7 @@ body {
   content: "\e60c";
 }
 
+#block-views-promotions-block .views-field-title a:after,
 .field-resource-link a:after,
 .icon-arrow-right:before {
   content: "\e60d";
