@@ -43,7 +43,7 @@ html {
 
 body {
   letter-spacing: 0.04em;
-  font-size: 87.5%;
+  font-size: 81.25%;
   // @include baseline-grid-background;
   //  @include baseline-grid-background($baseline, $color);
   //Add just the baseline grid to an element's background
@@ -77,6 +77,7 @@ body {
   }
 }
 
+#block-views-promotions-block .views-field-title a,
 .field-resource-link a {
   display: inline-block;
   &:after {
@@ -139,6 +140,8 @@ body {
 .icon-arrow-up:before {
   content: "\e60c";
 }
+
+#block-views-promotions-block .views-field-title a:after,
 .field-resource-link a:after,
 .icon-arrow-right:before {
   content: "\e60d";
