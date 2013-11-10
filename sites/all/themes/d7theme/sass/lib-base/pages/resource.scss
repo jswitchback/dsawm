@@ -8,11 +8,9 @@ $zen-column-count:  24;
 		margin: 0;
 	}
 	.field-resource-category-image{
-		padding: 1em;
 	}
 	.resource-title {
-		font-size: 1.15em;
-		margin-top: 0;
+		font-size: 1em;
 		margin-bottom: 6px;
 		padding: 0 1em;
 		margin-left: -4px;
@@ -22,7 +20,6 @@ $zen-column-count:  24;
 	}
 	.resource-text {
 		padding: 0 1em;
-		font-size: .875em;
 	}
 }
 
@@ -31,9 +28,11 @@ $zen-column-count:  24;
 	@include clear-floats;
 	.node-title, h1, h2 {
 		margin-top: 0;
+		position: relative;
+		top: 5px;
 	}
 	.resource-header {
-		font-size: .875em;
+		font-size: .915em;
 	}
 	.header-left {
 		float: left;
@@ -70,7 +69,8 @@ $zen-column-count:  24;
 
 .view-resources.view-display-id-page {
 	.resource-title {
-		font-size: 1.15em;
+		font-size: 1em;
+		margin-bottom: .5em;
 	}
 	.resource-phone {
 		ul {
@@ -86,6 +86,14 @@ $zen-column-count:  24;
 		margin-bottom: .5em;
 		padding-bottom: 1.5em;
 		border-bottom: 1px solid #d1d1d1;
+	}
+	.views-row-last {
+		border-bottom: 1px solid transparent;
+	}
+	.field-resource-link {
+		margin-bottom: .5em;
+	}
+	.field-resource-description {
 	}
 	.field-resrource-category-wrapper {
 		margin-top: 6px;
@@ -157,4 +165,17 @@ $d-blue-d: #0b4d6e;
 	}
 }
 
+/* Content area promotions */
+#block-views-promotions-block-1 {
+	@include breakpoint($tablet-portrait-min-width) {
+		display: none;
+	}
+}
 
+/* Sidebar area promotions */
+#block-views-promotions-block {
+	display: none;
+	@include breakpoint($tablet-portrait-min-width) {
+		display: block;
+	}
+}

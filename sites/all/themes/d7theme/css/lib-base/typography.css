@@ -36,11 +36,12 @@ html {
  */
 body {
   letter-spacing: 0.04em;
-  font-size: 93.75%;
+  font-size: 87.5%;
 }
 
 /* Typography
    ========================================================================== */
+.field-resource-link a,
 [class*="icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -53,8 +54,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.field-resource-link a:before,
 [class*="icon-"]:before {
   vertical-align: middle;
+}
+
+.field-resource-link a {
+  display: inline-block;
+}
+.field-resource-link a:after {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1.2;
+  vertical-align: middle;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.field-resource-link a:hover:after {
+  padding-right: 6px;
 }
 
 .icon-phone:before {
@@ -109,6 +131,7 @@ body {
   content: "\e60c";
 }
 
+.field-resource-link a:after,
 .icon-arrow-right:before {
   content: "\e60d";
 }

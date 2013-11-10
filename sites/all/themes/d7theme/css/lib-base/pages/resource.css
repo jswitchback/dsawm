@@ -7,12 +7,8 @@
 .resource-center ul {
   margin: 0;
 }
-.resource-center .field-resource-category-image {
-  padding: 1em;
-}
 .resource-center .resource-title {
-  font-size: 1.15em;
-  margin-top: 0;
+  font-size: 1em;
   margin-bottom: 6px;
   padding: 0 1em;
   margin-left: -4px;
@@ -22,7 +18,6 @@
 }
 .resource-center .resource-text {
   padding: 0 1em;
-  font-size: .875em;
 }
 
 #block-dsawm-custom-landing-header:before, #block-dsawm-custom-landing-header:after {
@@ -34,9 +29,11 @@
 }
 #block-dsawm-custom-landing-header .node-title, #block-dsawm-custom-landing-header h1, #block-dsawm-custom-landing-header h2 {
   margin-top: 0;
+  position: relative;
+  top: 5px;
 }
 #block-dsawm-custom-landing-header .resource-header {
-  font-size: .875em;
+  font-size: .915em;
 }
 #block-dsawm-custom-landing-header .header-left {
   float: left;
@@ -65,7 +62,8 @@
 
 /* Resource Detail Page */
 .view-resources.view-display-id-page .resource-title {
-  font-size: 1.15em;
+  font-size: 1em;
+  margin-bottom: .5em;
 }
 .view-resources.view-display-id-page .resource-phone ul {
   margin-left: 0;
@@ -84,6 +82,12 @@
   margin-bottom: .5em;
   padding-bottom: 1.5em;
   border-bottom: 1px solid #d1d1d1;
+}
+.view-resources.view-display-id-page .views-row-last {
+  border-bottom: 1px solid transparent;
+}
+.view-resources.view-display-id-page .field-resource-link {
+  margin-bottom: .5em;
 }
 .view-resources.view-display-id-page .field-resrource-category-wrapper {
   margin-top: 6px;
@@ -157,4 +161,21 @@
 #block-views-resrource-types-block-2 li {
   color: #dbde72;
   margin: 0 0 1px 0;
+}
+
+/* Content area promotions */
+@media (min-width: 47.5em) {
+  #block-views-promotions-block-1 {
+    display: none;
+  }
+}
+
+/* Sidebar area promotions */
+#block-views-promotions-block {
+  display: none;
+}
+@media (min-width: 47.5em) {
+  #block-views-promotions-block {
+    display: block;
+  }
 }

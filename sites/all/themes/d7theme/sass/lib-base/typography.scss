@@ -43,7 +43,7 @@ html {
 
 body {
   letter-spacing: 0.04em;
-  font-size: 93.75%;
+  font-size: 87.5%;
   // @include baseline-grid-background;
   //  @include baseline-grid-background($baseline, $color);
   //Add just the baseline grid to an element's background
@@ -60,7 +60,7 @@ body {
 /* Typography
    ========================================================================== */
 
-
+.field-resource-link a,
 [class*="icon-"] {
   font-family: 'icomoon';
   speak: none;
@@ -76,6 +76,29 @@ body {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.field-resource-link a {
+  display: inline-block;
+  &:after {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1.2;
+  vertical-align: middle;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+  &:hover {
+    &:after {
+      padding-right: 6px;
+    }
+  }
 }
 
 .icon-phone:before {
@@ -117,6 +140,7 @@ body {
 .icon-arrow-up:before {
   content: "\e60c";
 }
+.field-resource-link a:after,
 .icon-arrow-right:before {
   content: "\e60d";
 }

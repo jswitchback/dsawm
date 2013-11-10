@@ -465,6 +465,41 @@ $diag-stripe-color: darken($link-color, 8%);
     }
 }
 
+.field-resource-category-image { 
+    display: inline-block;
+    position: relative; 
+    background-color: #FFFFFF; 
+    border-width:1px; 
+    border-style: solid; 
+    border-color: #ffffff; 
+    border-radius: 0px; 
+    // &:before {
+    //   content: ""; 
+    //   z-index: -1; 
+    //   position: absolute; 
+    //   width: 50%; 
+    //   top: 60px; 
+    //   bottom: 15px; 
+    //   left: 10px; 
+    //   -webkit-transform: rotate(-3deg); 
+    //   transform: rotate(-3deg); 
+    //   box-shadow: 0px 15px 10px #777; 
+    // }
+    &:after {
+      content: ""; 
+      z-index: -1; 
+      position: absolute; 
+      width: 70%; 
+      top: 60px; 
+      right: 10px; 
+      bottom: 15px; 
+      -webkit-transform: rotate(3deg); 
+      transform: rotate(3deg); 
+      @include box-shadow(0px 15px 10px #777);
+      margin-left: -35%;
+    }
+}
+
 .no-boxshadow {
   .img-shadow {
     border: 5px solid #d1d1d1;
