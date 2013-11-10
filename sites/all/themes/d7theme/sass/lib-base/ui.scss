@@ -112,39 +112,40 @@
   text-align: center;
 }
 %pager__item {
-  display: inline;
-  padding: 0 0.5em;
   list-style-type: none;
   background-color: $pager-color;
   @include background-image(linear-gradient(center top, $pager-color, darken($pager-color, 10%)));
   background-repeat: repeat-x;
-  border: 1px solid darken($pager-color, 10%);
+  border: 1px solid darken($pager-color, 5%);
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   @include border-radius($ui-border-radius);
   @include box-shadow(rgba(255, 255, 255, 0.2) 0 1px 0 inset, rgba(0, 0, 0, 0.05) 0 1px 2px);
-  color: lighten($pager-color, 100%);
-  text-shadow: 0 1px 1px #000;
-  text-transform: uppercase;
+  color: #fff; 
+  text-shadow: 0 1px 1px #999;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  height: 24px;
-  width: 24px;
-  padding: 3px 8px;
-  @include transition(padding .15s ease-in);
-  a:hover, a:active {
-    background-color: darken($pager-color, 10%);
-    @include background-image(linear-gradient(center top, darken($pager-color, 2%), $pager-color));
-    background-repeat: repeat-x;
-    border: 1px solid lighten($pager-color, 20%);
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    @include border-radius($ui-border-radius);
-    @include box-shadow(rgba(255, 255, 255, 0.2) 0 0 8px inset, rgba(0, 0, 0, 0.05) 0 1px 2px);
-    text-shadow: 0 1px 1px darken($pager-color, 10%);
-    text-transform: uppercase;
-    color: lighten($pager-color, 100%);
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-    text-align: center;
-    text-decoration: none;
-    padding: 5px 10px;
+  padding: .5em;
+  a {
+    color: #fff;
+    display: inline-block;
+    padding: .5em;
+
+    &:visited {
+      color: #fff
+    }
+    &:hover, &:active {
+      background-color: $pager-color;
+      @include background-image(linear-gradient(center top, darken($pager-color, 2%), $pager-color));
+      background-repeat: repeat-x;
+      border: 1px solid darken($pager-color, 5%);
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+      @include border-radius($ui-border-radius);
+      @include box-shadow(rgba(255, 255, 255, 0.2) 0 0 8px inset, rgba(0, 0, 0, 0.05) 0 1px 2px);
+      text-shadow: 0 1px 1px darken($pager-color, 30%);
+      text-transform: uppercase;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+      text-align: center;
+      text-decoration: none;
+    }
   }
 }
 
@@ -154,21 +155,19 @@
 .pager-next,      /* The next page's list item. */
 .pager-last,      /* The last page's list item. */
 .pager-ellipsis { /* A concatenation of several list items using an ellipsis. */
-  @extend %pager__item;
 }
 
 /* The current page's list item. */
 .pager-current {
-  @extend %pager__item;
   font-weight: bold;
   margin: 0 0.25em;
 }
 
 .item-list .pager { /* A list of page numbers when more than 1 page of content is available */
   padding: 0;
-  font-size: .75em;
   li { /* Each page number in the pager list */
     padding: 0 0.15em;
+    margin-right: .25em;
   }
 }
 
@@ -177,33 +176,39 @@
 }
 
 /* oDesk pagination.... better than mine ? */
-//.oBtnSecondary {
-//  cursor: pointer;
-//  font-weight: normal;
-//  font-size: 16px;
-//  padding: 12px;
-//  color: #80807C;
-//  background-image: -webkit-gradient(linear,center top,center bottom,color-stop(0%,#F4F4F2),color-stop(100%,#E5E5E3));
-//  background-image: -webkit-linear-gradient(#F4F4F2 0,#E5E5E3 100%);
-//  background-image: -moz-linear-gradient(#F4F4F2 0,#E5E5E3 100%);
-//  background-image: -o-linear-gradient(#F4F4F2 0,#E5E5E3 100%);
-//  background-image: -ms-linear-gradient(#F4F4F2 0,#E5E5E3 100%);
-//  background-image: linear-gradient(#F4F4F2 0,#E5E5E3 100%);
-//  -webkit-border-radius: 5px;
-//  -moz-border-radius: 5px;
-//  -ms-border-radius: 5px;
-//  -o-border-radius: 5px;
-//  border-radius: 5px;
-//  border: 1px solid #D1D1D1;
-//  border-bottom-color: #B8B8B8;
-//  box-shadow: 0 2px 2px rgba(204, 202, 202, 0.51),inset 0 1px 0 rgba(229, 228, 228, 0.51);
-//  text-shadow: 0 1px 0 rgba(128, 128, 124, 0.1);
-//  display: -moz-inline-box;
-//  -moz-box-orient: vertical;
-//  display: inline-block;
-//  vertical-align: middle;
-//  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#F4F4F2",endColorstr="#E5E5E3");
-//}
+.pager a {
+  line-height: 22px;
+ cursor: pointer;
+ font-weight: normal;
+ font-size: 16px;
+ padding: 3px 10px;
+ color: #80807C;
+ font-size: .915em;
+ background-image: -webkit-gradient(linear,center top,center bottom,color-stop(0%,#F4F4F2),color-stop(100%,#E5E5E3));
+ background-image: -webkit-linear-gradient(#F4F4F2 0,#E5E5E3 100%);
+ background-image: -moz-linear-gradient(#F4F4F2 0,#E5E5E3 100%);
+ background-image: -o-linear-gradient(#F4F4F2 0,#E5E5E3 100%);
+ background-image: -ms-linear-gradient(#F4F4F2 0,#E5E5E3 100%);
+ background-image: linear-gradient(#F4F4F2 0,#E5E5E3 100%);
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ -ms-border-radius: 5px;
+ -o-border-radius: 5px;
+ border-radius: 5px;
+ border: 1px solid #D1D1D1;
+ border-bottom-color: #B8B8B8;
+ box-shadow: 0 2px 2px rgba(204, 202, 202, 0.51),inset 0 1px 0 rgba(229, 228, 228, 0.51);
+ text-shadow: 0 1px 0 rgba(128, 128, 124, 0.1);
+ display: -moz-inline-box;
+ -moz-box-orient: vertical;
+ display: inline-block;
+ vertical-align: middle;
+ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#F4F4F2",endColorstr="#E5E5E3");
+ &:hover {
+  background-color: #D1D1D1;
+  background-image: none;
+ }
+}
 
 
 /* NODE EDIT TABS

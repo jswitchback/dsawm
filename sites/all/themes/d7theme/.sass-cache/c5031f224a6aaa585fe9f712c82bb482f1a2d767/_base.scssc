@@ -1,7 +1,7 @@
 3.2.7 (Media Mark)
-ada1411677abdfaae5bbbc5c1183311518fc50bc
+08dd13add3da5329f1835759b61ce0353226cd2f
 o:Sass::Tree::RootNode
-:@template"&0//
+:@template""0//
 // Initialization partial
 //
 // To make it easier to use all variables and mixins in any Sass file in this
@@ -219,7 +219,7 @@ $link-color-focus: lighten($link-color, 10%);
 $link-color-active: darken($link-color, 10%); 
 $link-text-decoration: none;
 
-$pager-color: $link-color;
+$pager-color: #d1d1d1;
 
 $button-color: $link-color;
 $button-border: #DDDDDD;
@@ -561,7 +561,7 @@ greeniJ:	blueiJ;0;@;iÁ;"page-title-color;@;	[ ;iÁo;;0;o;$	;%"pag
 
 ;;;["/* UI THEME VARIABLES */;@;	[ ;iÉo;;0;o;*	;+{	;,i;-i;.iR;/is;0;@;iÊ;"primary-color;@;	[ ;iÊo;;0;o;*	;+{	;,ià;-i;.i);/iH;0;@;iË;"delete-color;@;	[ ;iËo;;0;o;$	;%"delete_color;"delete-color;@;iÌ;"error-color;@;	[ ;iÌo;;0;o;*	;+{	;,iî;-i;.iî;/iî;0;@;iÎ;"disabled-background-color;@;	[ ;iÎo;;0;o;*	;+{	;,iˆ;-i;.iˆ;/iˆ;0;@;iÏ;"disabled-font-color;@;	[ ;iÏo;
 
-;;;["+/* LINKS, BUTTONS, SUBMITS & PAGERS */;@;	[ ;iÓo;;0;o;$	;%"primary_color;"primary-color;@;iÔ;"link-color;@;	[ ;iÔo;;0;o;;{ ;"darken;@; 0;iÕ;![o;$	;%"link_color;"link-color;@;iÕo;;["%;"20%;i;@;[ ;iÕ;"link-color-visited;@;	[ ;iÕo;;0;o;;{ ;"lighten;@; 0;iÖ;![o;$	;%"link_color;"link-color;@;iÖo;;["%;"10%;i;@;[ ;iÖ;"link-color-hover;@;	[ ;iÖo;;0;o;;{ ;"lighten;@; 0;i×;![o;$	;%"link_color;"link-color;@;i×o;;["%;"10%;i;@;[ ;i×;"link-color-focus;@;	[ ;i×o;;0;o;;{ ;"darken;@; 0;iØ;![o;$	;%"link_color;"link-color;@;iØo;;["%;"10%;i;@;[ ;iØ;"link-color-active;@;	[ ;iØo;;0;o;	;;;"	none;@;iÙ;"link-text-decoration;@;	[ ;iÙo;;0;o;$	;%"link_color;"link-color;@;iÛ;"pager-color;@;	[ ;iÛo;;0;o;$	;%"link_color;"link-color;@;iÝ;"button-color;@;	[ ;iÝo;;0;o;*	;+{	;,iÝ;-i;.iÝ;/iÝ;0;@;iÞ;"button-border;@;	[ ;iÞo;;0;o;$	;%"base_line_height;"base-line-height;@;iß;"button-border-radius;@;	[ ;ißo;
+;;;["+/* LINKS, BUTTONS, SUBMITS & PAGERS */;@;	[ ;iÓo;;0;o;$	;%"primary_color;"primary-color;@;iÔ;"link-color;@;	[ ;iÔo;;0;o;;{ ;"darken;@; 0;iÕ;![o;$	;%"link_color;"link-color;@;iÕo;;["%;"20%;i;@;[ ;iÕ;"link-color-visited;@;	[ ;iÕo;;0;o;;{ ;"lighten;@; 0;iÖ;![o;$	;%"link_color;"link-color;@;iÖo;;["%;"10%;i;@;[ ;iÖ;"link-color-hover;@;	[ ;iÖo;;0;o;;{ ;"lighten;@; 0;i×;![o;$	;%"link_color;"link-color;@;i×o;;["%;"10%;i;@;[ ;i×;"link-color-focus;@;	[ ;i×o;;0;o;;{ ;"darken;@; 0;iØ;![o;$	;%"link_color;"link-color;@;iØo;;["%;"10%;i;@;[ ;iØ;"link-color-active;@;	[ ;iØo;;0;o;	;;;"	none;@;iÙ;"link-text-decoration;@;	[ ;iÙo;;0;o;*	;+{	;,iÑ;-i;.iÑ;/iÑ;0;@;iÛ;"pager-color;@;	[ ;iÛo;;0;o;$	;%"link_color;"link-color;@;iÝ;"button-color;@;	[ ;iÝo;;0;o;*	;+{	;,iÝ;-i;.iÝ;/iÝ;0;@;iÞ;"button-border;@;	[ ;iÞo;;0;o;$	;%"base_line_height;"base-line-height;@;iß;"button-border-radius;@;	[ ;ißo;
 
 ;;;["'/* GENERAL UI BLOCK & FIELDSETS */;@;	[ ;ião;;0;o;;{ ;"darken;@; 0;iä;![o;$	;%"body_bgrd_color;"body-bgrd-color;@;iäo;;["%;"25%;i;@;[ ;iä;"ui-base-color;@;	[ ;iäo;;0;o;$	;%"ui_base_color;"ui-base-color;@;iå;"ui-border-color;@;	[ ;iåo;;0;o;;{ ;"lighten;@; 0;iæ;![o;$	;%"ui_base_color;"ui-base-color;@;iæo;;["%;"67%;iH;@;[ ;iæ;"ui-background-color;@;	[ ;iæo;;0;o;$	;%"base_line_height;"base-line-height;@;iç;"ui-padding;@;	[ ;iço;;0;o;;["px;"2px;i;@;[ ;iè;"ui-border-radius;@;	[ ;ièo;;0;o;$	;%"ui_background_color;"ui-background-color;@;iê;"fieldset-background-color;@;	[ ;iêo;;0;o;$	;%"ui_border_color;"ui-border-color;@;ië;"fieldset-border-color;@;	[ ;iëo;;0;o;$	;%"ui_border_radius;"ui-border-radius;@;iì;"fieldset-border-radius;@;	[ ;iìo;;0;o;$	;%"ui_padding;"ui-padding;@;ií;"fieldset-padding;@;	[ ;iío;;0;o;	;;;"
 solid;@;iî;"fieldset-border-style;@;	[ ;iîo;;0;o;	;;;"	bold;@;iï;"legend-font-weight;@;	[ ;iïo;

@@ -62,13 +62,16 @@
 
 /* Resource Detail Page */
 .view-resources.view-display-id-page .resource-title {
-  font-size: 1em;
+  font-size: 1.15em;
+  margin-bottom: .5em;
+}
+.view-resources.view-display-id-page .resource-phone {
   margin-bottom: .5em;
 }
 .view-resources.view-display-id-page .resource-phone ul {
   margin-left: 0;
   padding-left: 0;
-  margin: 6px 0;
+  margin: 0;
 }
 .view-resources.view-display-id-page .resource-phone ul li {
   list-style-type: none;
@@ -118,6 +121,7 @@
   margin: 0;
 }
 #block-views-resrource-types-block-1 h1 {
+  margin-bottom: .5em;
   margin-top: 0;
 }
 
