@@ -102,7 +102,7 @@ function dsawm_custom_block_save($delta = '', $edit = array()) {
 function dsawm_custom_block_view($delta = '') {
     switch ($delta) {
         case 'landing_header':
-            $default = '<div class="resource-header"><div class="header-left img-shadow"><img class="header-image" src="/sites/all/themes/d7theme/images/header-landing.png" /></div><div class="header-right"><h2>Resources</h2><p>The Down Syndrome Association of West Michigan (DSAWM) has assembled a list of helpful resources and information that are relevant to individuals with Down syndrome, their families and friends, and interested community members. See below and select the category in which you are interested to get started. If you have any questions or need further assistance, please contact the DSAWM Administrative Assistant, Audrey Day, at audrey@dsawm.org.</p></div></div>';
+            $default = '<div class="resource-header"><div class="header-left img-shadow"><img class="header-image" src="/sites/all/themes/d7theme/images/header-landing.png" /></div><div class="header-right"><h2>Resources</h2><p>The Down Syndrome Association of West Michigan (DSAWM) has assembled a list of helpful resources that are relevant to individuals with Down syndrome, their families and friends, and interested community members. Select the category in which you are interested to get started. If you have any questions or need further assistance, please contact the DSAWM Administrative Assistant, Audrey Day, at audrey@dsawm.org.</p></div></div>';
             $block['subject'] = t('');
             $content =  variable_get('landing_header_content', $default);
 
