@@ -37,17 +37,22 @@
 }
 
 #logo {
-  height: 80px;
-  width: 100%;
+  height: 53px;
+  width: 90%;
   display: block;
   overflow: hidden;
   text-indent: -9999em;
   background: url(../../../images/svg/dsawm-logo.svg) no-repeat scroll top left;
   background-size: contain;
 }
-@media (min-width: 47.5em) {
+@media (min-width: 30em) {
   #logo {
     height: 80px;
+    width: 100%;
+  }
+}
+@media (min-width: 47.5em) {
+  #logo {
     width: 350px;
   }
 }
@@ -135,6 +140,7 @@ html.no-svg #logo {
    ========================================================================== */
 #main {
   padding-top: 24px;
+  overflow: hidden;
 }
 
 #main-wrapper {

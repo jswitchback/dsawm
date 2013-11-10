@@ -85,8 +85,13 @@ html.js body.show-nav #navigation {
 
 #mobile-nav-toggle {
   position: absolute;
-  top: 44px;
+  top: 24px;
   right: 24px;
+}
+@media (min-width: 30em) {
+  #mobile-nav-toggle {
+    top: 44px;
+  }
 }
 
 /* Toggle Button

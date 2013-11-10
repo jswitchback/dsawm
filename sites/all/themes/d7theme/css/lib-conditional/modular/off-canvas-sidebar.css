@@ -14,8 +14,13 @@
 
 #mobile-nav-toggle {
   position: absolute;
-  top: 44px;
+  top: 24px;
   right: 24px;
+}
+@media (min-width: 30em) {
+  #mobile-nav-toggle {
+    top: 44px;
+  }
 }
 
 /* Toggle Button
@@ -196,7 +201,7 @@
   background: #f1f1f1;
   margin-bottom: 12px;
   display: inline-block;
-  font-size: .75em;
+  font-size: .875em;
   text-shadow: 255 255 255 #aaaaaa, 255 255 255 0.8 #aaaaaa;
   text-shadow: 255 255 255 0.8 #aaaaaa, 255 255 255 0.8 #aaaaaa;
   padding: 6px;
@@ -221,7 +226,7 @@
 
 .show-sidebar #sidebar-toggle {
   line-height: 36px;
-  font-size: 0.875em;
+  font-size: 1em;
 }
 .show-sidebar #sidebar-toggle:before, .show-sidebar #sidebar-toggle:after {
   font-size: 2em;

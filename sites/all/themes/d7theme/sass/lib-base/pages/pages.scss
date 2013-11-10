@@ -41,16 +41,24 @@ body {
   }
 }
 
+
 #logo {
-  height: 80px;
-  width: 100%;
+
+}
+
+#logo {
+  height: 53px;
+  width: 90%;
   display: block;
   overflow: hidden;
   text-indent: -9999em;
   background: url(../../../images/svg/dsawm-logo.svg) no-repeat scroll top left;
   background-size: contain;
-  @include breakpoint($tablet-portrait-min-width) {
+  @include breakpoint($phone-min-width) {
     height: 80px;
+    width: 100%;
+  }
+  @include breakpoint($tablet-portrait-min-width) {
     width: 350px;
   }
   img {
@@ -132,6 +140,7 @@ html.no-svg #logo {
    ========================================================================== */
 #main {
   padding-top: 24px;
+  overflow: hidden;
 }
 
 #main-wrapper {
