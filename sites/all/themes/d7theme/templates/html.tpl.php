@@ -103,6 +103,10 @@
     <script src="<?php print $GLOBALS['base_url'] . '/' . $path_to_d7theme; ?>/js/lib-conditional/html5.js"></script>
     <![endif]-->
   <?php endif; ?>
+
+  <!--[if IE 8]>
+    <script src="<?php print $GLOBALS['base_url'] . '/' . $path_to_d7theme; ?>/js/lib-conditional/selectivizr.js"></script>
+  <![endif]-->
   
   <meta name="application-name" content="<?php print $head_title_array['name']; ?>"> 
   <meta name="msapplication-TileColor" content="#<?php print $add_ms_tile_color; ?>"> 

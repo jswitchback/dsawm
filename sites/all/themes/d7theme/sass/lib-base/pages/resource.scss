@@ -36,6 +36,7 @@ $zen-column-count:  24;
 	}
 	.header-left {
 		max-width: 597px;
+		overflow: hidden;
     width: auto\9; 
 		@include breakpoint(860px) {
 			float: left;

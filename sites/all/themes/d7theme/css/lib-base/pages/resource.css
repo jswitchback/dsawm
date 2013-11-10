@@ -37,6 +37,7 @@
 }
 #block-dsawm-custom-landing-header .header-left {
   max-width: 597px;
+  overflow: hidden;
   width: auto\9;
   margin-bottom: 24px;
 }
