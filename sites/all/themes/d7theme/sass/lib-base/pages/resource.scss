@@ -78,19 +78,18 @@ $d-blue-d: #0b4d6e;
 	@include rgba-background(rgba(11,77,110, .25));
 	border: 1px solid rgba(11,77,110, .3);
 	@include box-shadow(rgba(255,255,255,.2) 2px 2px 1px);
-	padding: 12px 0;
+	padding: 12px;
 	a {
+		line-height: 1;
 		display: block;
 		color: #dbde72;
+		padding: 4px 6px;
 		@include text-shadow(rgba(0,0,0, 0.2) 0 1px 1px);
-
-		padding: 0 12px;
 		border-bottom: 1px solid transparent;
 		border-top: 1px solid transparent;
 		&:hover {
 			color: #fff;
-			border-bottom: 1px solid rgba(0,0,0,.1);
-			border-top: 1px solid rgba(255,255,255,.5);
+			@include border-radius(2px);
 			@include rgba-background(rgba(0,0,0,.05));
 		}
 		&:active {
@@ -105,7 +104,7 @@ $d-blue-d: #0b4d6e;
 	}
 	li {
 		color: #dbde72;
-		margin: 0 0 2px 0;
+		margin: 0 0 1px 0;
 	}
 }
 

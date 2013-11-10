@@ -43,7 +43,7 @@ function dsawm_custom_block_configure($delta = '') {
 
     if ($delta == 'footer_old'){
         $default = '
-        <div class="Affiliates">
+        <div id="affiliates">
             <p>The Down Syndrome Association of West Michigan is an affiliate of:</p>
 
             <a href="http://www.ndss.org" target="_blank">
@@ -57,7 +57,7 @@ function dsawm_custom_block_configure($delta = '') {
             </a>
         </div>
 
-        <div>
+        <div id="contact-info">
             <p>Copyright © 2012 Down Syndrome Association of West Michigan</p>
             <p>233 E Fulton St, Ste 108 | Grand Rapids, MI 49503</p>
             <p><strong>Phone:  616-956-3488 &nbsp; &nbsp; Toll Free 866-665-7451</strong></p>

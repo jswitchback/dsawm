@@ -277,6 +277,34 @@ span.field-label { /* The inline field label used by the Fences module */
    ========================================================================== */
 
 #footer {
+  font-size: .875em;
+  border-top: 1px solid darken($body-bgrd-color, 55%);
+  @include box-shadow(0,-6px,12px, #ffffff);
+  padding-bottom: 24px;
+  @include clear-floats;
+  background-color: $body-bgrd-color;
+}
+
+#block-dsawm-custom-footer-old {
+  @include clear-floats;
+  margin-bottom: 0;
+}
+
+#affiliates {
+  @include breakpoint($tablet-portrait-min-width) {
+    float: left;
+  }
+}
+
+#contact-info {
+  text-align: center;
+  @include breakpoint($tablet-portrait-min-width) {
+    float: right;
+    text-align: right;
+  }
+  p + p {
+    margin-top: 0;
+  }
 }
 
 
