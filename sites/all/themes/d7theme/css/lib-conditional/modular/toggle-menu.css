@@ -53,7 +53,7 @@ html.js body.show-nav #navigation {
   border-bottom: 1px solid #0b4d6e;
 }
 #navigation ul.menu li a {
-  padding: .25em .5em;
+  padding: 1em;
   display: block;
   text-align: center;
   color: #fff;
@@ -188,6 +188,7 @@ html.js body.show-nav #navigation {
   }
   #navigation ul.links li a,
   #navigation ul.menu li a {
+    padding: .25em .5em;
     font-size: .8em;
     line-height: 1;
     padding: .75em 1em .5em 1em;

@@ -276,12 +276,12 @@ span.field-label { /* The inline field label used by the Fences module */
 /* FOOTER
    ========================================================================== */
 
-#footer {
+#footer-wrpr {
   font-size: .875em;
-  border-top: 1px solid darken($body-bgrd-color, 55%);
+  border-top: 1px solid darken($body-bgrd-color, 20%);
   @include box-shadow(0,-6px,12px, #ffffff);
-  padding-bottom: 24px;
   @include clear-floats;
+  padding-top: 24px;
   background-color: $body-bgrd-color;
 }
 
@@ -291,14 +291,18 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 #affiliates {
-  @include breakpoint($tablet-portrait-min-width) {
+  text-align: center;
+  padding-bottom: 24px;
+  @include breakpoint($desktop-min-width) {
     float: left;
+    text-align: left;
   }
 }
 
 #contact-info {
   text-align: center;
-  @include breakpoint($tablet-portrait-min-width) {
+  padding-bottom: 24px;
+  @include breakpoint($desktop-min-width) {
     float: right;
     text-align: right;
   }

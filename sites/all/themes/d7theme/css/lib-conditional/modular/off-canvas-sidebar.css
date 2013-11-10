@@ -117,6 +117,7 @@
   }
   #navigation ul.links li a,
   #navigation ul.menu li a {
+    padding: .25em .5em;
     font-size: .8em;
     line-height: 1;
     padding: .75em 1em .5em 1em;
@@ -194,7 +195,6 @@
 #sidebar-toggle {
   display: inline-block;
   font-size: .75em;
-  color: #fff;
   background-color: #0b4d6e;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0b4d6e), color-stop(100%, #062d40));
   background-image: -webkit-linear-gradient(center top, #0b4d6e, #062d40);
@@ -203,7 +203,7 @@
   background-image: linear-gradient(center top, #0b4d6e, #062d40);
   background-repeat: repeat-x;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: #b4e1f7;
+  color: #e2f3fc;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   margin-right: 10px;
   padding: 3px 10px;

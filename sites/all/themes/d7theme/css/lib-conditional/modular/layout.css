@@ -108,15 +108,15 @@ html {
    */
   .sidebar-first #content, .two-sidebars #content {
     float: left;
-    width: 75%;
-    margin-left: 25%;
+    width: 70.83333%;
+    margin-left: 29.16667%;
     margin-right: -100%;
   }
   .sidebar-first #sidebar-first, .two-sidebars #sidebar-first {
     float: left;
-    width: 25%;
+    width: 29.16667%;
     margin-left: 0%;
-    margin-right: -25%;
+    margin-right: -29.16667%;
   }
 
   /*

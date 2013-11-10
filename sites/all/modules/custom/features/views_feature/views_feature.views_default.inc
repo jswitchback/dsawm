@@ -41,7 +41,10 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = 'resource-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_resource_phone']['id'] = 'field_resource_phone';
@@ -50,11 +53,11 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['field_resource_phone']['label'] = '';
   $handler->display->display_options['fields']['field_resource_phone']['element_type'] = '0';
   $handler->display->display_options['fields']['field_resource_phone']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_resource_phone']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_resource_phone']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_resource_phone']['element_wrapper_class'] = 'resource-phone';
   $handler->display->display_options['fields']['field_resource_phone']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_resource_phone']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_resource_phone']['multi_type'] = 'ul';
-  $handler->display->display_options['fields']['field_resource_phone']['field_api_classes'] = TRUE;
   /* Field: Content: Web Address */
   $handler->display->display_options['fields']['field_resource_link']['id'] = 'field_resource_link';
   $handler->display->display_options['fields']['field_resource_link']['table'] = 'field_data_field_resource_link';
@@ -115,6 +118,8 @@ function views_feature_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'resource-list';
   $handler->display->display_options['path'] = 'resources/%';
   $handler->display->display_options['menu']['title'] = 'Resources';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -299,9 +304,6 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['name']['element_class'] = 'resource-title';
-  $handler->display->display_options['fields']['name']['element_label_type'] = '0';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
   /* Field: Taxonomy term: Term description */
@@ -310,9 +312,7 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['description']['field'] = 'description';
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['description']['alter']['text'] = '<div id="resource-header">[name][description]</div>';
-  $handler->display->display_options['fields']['description']['element_type'] = 'p';
-  $handler->display->display_options['fields']['description']['element_class'] = 'resource-text';
+  $handler->display->display_options['fields']['description']['alter']['text'] = '<div id="resource-header"><h1 class="resource-title">[name]</h1><p class="resource-text">[description]</p></div>';
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;

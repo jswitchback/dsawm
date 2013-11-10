@@ -12,6 +12,8 @@ html.js #toTop {
 
 #toTop {
   background: #0b4d6e;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUKTW5FMMUbAAAAAXRSTlPM0jRW/QAAAApJREFUeJxjYgAAAAYAAzY3fKgAAAAASUVORK5CYII=');
+  background: rgba(10, 77, 110, 0.8);
   z-index: 1;
   text-shadow: 1px 1px 0 #020c11;
   border-radius: 4px 0 0 4px;
@@ -19,12 +21,11 @@ html.js #toTop {
 }
 
 #toTop {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
   position: fixed;
   right: 0;
   bottom: 10px;
-  padding: 1em 1.5em;
-}
-
-html.fontface #toTop {
-  padding: 1em 1.5em .8em 1.5em;
+  padding: 1em;
+  line-height: 1;
+  font-size: .875em;
 }

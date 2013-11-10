@@ -10,6 +10,7 @@ html.js #toTop {
 
 #toTop {
     background: $link-color;
+    @include rgba-background-inline(rgba(10,77,110, .8));
     z-index: 1;
     @include single-text-shadow(darken($link-color, 20%), 1px, 1px, 0);
     border-radius: 4px 0 0 4px;
@@ -17,16 +18,13 @@ html.js #toTop {
 }
 
 #toTop {
+  font-family: $base-page-title-family;
   position: fixed;
   right: 0;
   bottom: 10px;
-  padding: 1em 1.5em;
-}
-
-html.fontface {
-  #toTop {
-    padding: 1em 1.5em .8em 1.5em;
-  } 
+  padding: 1em;
+  line-height: 1;
+  font-size: .875em;
 }
 
  

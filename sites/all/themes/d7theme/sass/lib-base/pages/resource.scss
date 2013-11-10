@@ -26,9 +26,20 @@
 
 /* Resource Detail Page */
 
-#block-views-resources-block-1 {
-	.node-title {
+
+.view-resources.view-display-id-page {
+	.resource-title {
 		font-size: 1.15em;
+	}
+	.resource-phone {
+		ul {
+			@include clean-list;
+			margin: 6px 0;
+		}
+		li {
+			display: inline-block;
+			margin-right: 6px;
+		}
 	}
 	.views-row {
 		margin-bottom: .5em;
@@ -65,7 +76,7 @@
 }
 
 #block-dsawm-custom-landing-header {
-	.node-title, h2 {
+	.node-title, h1, h2 {
 		margin-top: 0;
 	}
 }
