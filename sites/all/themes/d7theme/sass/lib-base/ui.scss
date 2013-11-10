@@ -378,3 +378,95 @@ ul.ui-list {
 }
 
 
+.shadow-bottom, #block-views-resrource-types-block {
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  padding-bottom: 24px;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    @include box-shadow(#d1d1d1 0 0 12px);
+    @include border-radius(12px);
+  }
+}
+
+.shadow-top, #block-views-resrource-types-block {
+  background: #f1f1f1;
+  padding: 24px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  padding-top: 24px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    @include box-shadow(#d1d1d1 0 0 12px);
+    @include border-radius(12px);
+  }
+}
+
+$diag-bgrd-color: darken($link-color, 5%);
+$diag-stripe-color: darken($link-color, 8%);
+
+.diag-bgrd {
+  background-color: $diag-bgrd-color;
+  background-image: repeating-linear-gradient(-30deg, transparent, transparent 8px, $diag-stripe-color 8px, $diag-stripe-color 16px);
+  border-top: 5px solid $diag-stripe-color;
+  border-bottom: 5px solid $diag-stripe-color;
+}
+
+// .header-left {
+//   @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+//   position: relative;
+//   background-color: #fff;
+//   border: 5px solid #fff;
+// }
+
+.img-shadow { 
+    @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+    position: relative; 
+    background-color: #FFFFFF; 
+    border-width: 5px; 
+    border-style: solid; 
+    border-color: #ffffff; 
+    border-radius: 0px; 
+    &:before {
+      content: ""; 
+      z-index: -1; 
+      position: absolute; 
+      width: 50%; 
+      top: 160px; 
+      bottom: 15px; 
+      left: 10px; 
+      -webkit-transform: rotate(-3deg); 
+      transform: rotate(-3deg); 
+      box-shadow: 0px 15px 10px #777; 
+    }
+    &:after {
+      content: ""; 
+      z-index: -1; 
+      position: absolute; 
+      width: 50%; 
+      top: 160px; 
+      right: 10px; 
+      bottom: 15px; 
+      -webkit-transform: rotate(3deg); 
+      transform: rotate(3deg); 
+      box-shadow: 0px 15px 10px #777; 
+    }
+}
+
+.no-boxshadow {
+  .img-shadow {
+    border: 5px solid #d1d1d1;
+  }
+}

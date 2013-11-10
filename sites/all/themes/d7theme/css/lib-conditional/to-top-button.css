@@ -10,7 +10,7 @@ html.js #toTop {
   display: none;
 }
 
-#toTop {
+#to-top {
   background: #0b4d6e;
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUKTW5FMMUbAAAAAXRSTlPM0jRW/QAAAApJREFUeJxjYgAAAAYAAzY3fKgAAAAASUVORK5CYII=');
   background: rgba(10, 77, 110, 0.8);
@@ -20,12 +20,12 @@ html.js #toTop {
   color: white;
 }
 
-#toTop {
+#to-top {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
   position: fixed;
   right: 0;
   bottom: 10px;
   padding: 1em;
   line-height: 1;
-  font-size: .875em;
+  font-size: .75em;
 }

@@ -167,7 +167,7 @@
         <?php print render($page['highlighted']); ?>
         <?php if ($sidebar_first): ?>
         <div id="nav-inner">
-          <a id="sidebar-toggle" href="#sidebar-first">resource list</a>
+          <a id="sidebar-toggle" class="icon-arrow-left" href="#sidebar-first">RESOURCE LIST</a>
         </div>
         <?php endif; ?>
         <a id="main-content"></a>
@@ -210,7 +210,7 @@
   <?php print render($page['footer']); ?>
 
   <?php if ($add_to_top == 1): ?>
-    <a id="toTop" href="#">TO TOP</a>
+    <a id="to-top" href="#">TO TOP</a>
   <?php endif; ?>
 
 </div><!-- /#page -->

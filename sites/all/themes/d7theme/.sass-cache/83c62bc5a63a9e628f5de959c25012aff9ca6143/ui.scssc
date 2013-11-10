@@ -1,7 +1,7 @@
 3.2.7 (Media Mark)
-cec57eb48cefbcc141c9fb1b354b43206ca04285
+a902dae9fb258760721cf07762d2d460f216c1ae
 o:Sass::Tree::RootNode
-:@template"Õ(/* Import Sass mixins, variables, Compass modules, etc. */
+:@template"J1/* Import Sass mixins, variables, Compass modules, etc. */
 @import "my-sass-resources/base";
 
 /**
@@ -381,7 +381,98 @@ ul.ui-list {
 }
 
 
-:@has_childrenT:@options{ :@children[5o:Sass::Tree::CommentNode
+.shadow-bottom, #block-views-resrource-types-block {
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  padding-bottom: 24px;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    @include box-shadow(#d1d1d1 0 0 12px);
+    @include border-radius(12px);
+  }
+}
+
+.shadow-top, #block-views-resrource-types-block {
+  background: #f1f1f1;
+  padding: 24px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  padding-top: 24px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    @include box-shadow(#d1d1d1 0 0 12px);
+    @include border-radius(12px);
+  }
+}
+
+$diag-bgrd-color: darken($link-color, 5%);
+$diag-stripe-color: darken($link-color, 8%);
+
+.diag-bgrd {
+  background-color: $diag-bgrd-color;
+  background-image: repeating-linear-gradient(-30deg, transparent, transparent 8px, $diag-stripe-color 8px, $diag-stripe-color 16px);
+  border-top: 5px solid $diag-stripe-color;
+  border-bottom: 5px solid $diag-stripe-color;
+}
+
+// .header-left {
+//   @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+//   position: relative;
+//   background-color: #fff;
+//   border: 5px solid #fff;
+// }
+
+.img-shadow { 
+    @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+    position: relative; 
+    background-color: #FFFFFF; 
+    border-width: 5px; 
+    border-style: solid; 
+    border-color: #ffffff; 
+    border-radius: 0px; 
+    &:before {
+      content: ""; 
+      z-index: -1; 
+      position: absolute; 
+      width: 50%; 
+      top: 160px; 
+      bottom: 15px; 
+      left: 10px; 
+      -webkit-transform: rotate(-3deg); 
+      transform: rotate(-3deg); 
+      box-shadow: 0px 15px 10px #777; 
+    }
+    &:after {
+      content: ""; 
+      z-index: -1; 
+      position: absolute; 
+      width: 50%; 
+      top: 160px; 
+      right: 10px; 
+      bottom: 15px; 
+      -webkit-transform: rotate(3deg); 
+      transform: rotate(3deg); 
+      box-shadow: 0px 15px 10px #777; 
+    }
+}
+
+.no-boxshadow {
+  .img-shadow {
+    border: 5px solid #d1d1d1;
+  }
+}:@has_childrenT:@options{ :@children[=o:Sass::Tree::CommentNode
 :
 @type:normal:@value["?/* Import Sass mixins, variables, Compass modules, etc. */;@;	[ :
 @lineio:Sass::Tree::ImportNode:@imported_file0:@imported_filename"my-sass-resources/base;0;@;	[ ;io;
@@ -799,4 +890,50 @@ color;o;1;2{ ;"lighten;@;30;il;4[o;+	;,"link_color;"link-color;@;
 ;0;@ó
 ;o;;{ ;ix;[o;9	;["ul;@ó
 ;:0;ixo;;["ui-list;@ó
-;ix;T;@; i ;	[o;<;2{ ;"clean-list;@;	[ ;30;iy;4[ ;ix;i
+;ix;T;@; i ;	[o;<;2{ ;"clean-list;@;	[ ;30;iy;4[ ;ixo;;["7.shadow-bottom, #block-views-resrource-types-block;o;;" ;i};[o;;[o;
+;0;@;o;;{ ;i};[o;;["shadow-bottom;@;i}o;;[o;
+;0;@;o;;{ ;i};[o;!;["&block-views-resrource-types-block;@;i};T;@; i ;	[
+o;";["overflow;o;#;;$;"hidden;@;%;&;@; i ;	[ ;i~o;";["z-index;o;#;;$;"1;@;%;&;@; i ;	[ ;io;";["position;o;#;;$;"relative;@;%;&;@; i ;	[ ;i€o;";["padding-bottom;o;#;;$;"	24px;@;%;&;@; i ;	[ ;io;;["&:before;o;;" ;i‚;[o;;[o;
+;0;@<;o;;{ ;i‚;[o;G;@<;i‚o;=
+;;>;["before;@<;?0;i‚;T;@; i ;	[o;";["content;o;#;;$;""";@;%;&;@; i ;	[ ;iƒo;";["position;o;#;;$;"absolute;@;%;&;@; i ;	[ ;i„o;";["bottom;o;#;;$;"
+-31px;@;%;&;@; i ;	[ ;i…o;";["	left;o;#;;$;"0;@;%;&;@; i ;	[ ;i†o;";["height;o;#;;$;"	30px;@;%;&;@; i ;	[ ;i‡o;";["
+width;o;#;;$;"	100%;@;%;&;@; i ;	[ ;iˆo;<;2{ ;"box-shadow;@;	[ ;30;i‰;4[o;(	;);*;[	o;A	;B{	;CiÑ;Di;EiÑ;FiÑ;0;@;i‰o;-;.[ ;/"0;i ;@;0@Ÿ;i‰o;-;.[ ;/"0;i ;@;0@Ÿ;i‰o;-;.["px;/"	12px;i;@;0[ ;i‰;@;i‰o;<;2{ ;"border-radius;@;	[ ;30;iŠ;4[o;-;.["px;/"	12px;i;@;0[ ;iŠ;i‚;i}o;;["4.shadow-top, #block-views-resrource-types-block;o;;" ;iŽ;[o;;[o;
+;0;@;o;;{ ;iŽ;[o;;["shadow-top;@;iŽo;;[o;
+;0;@;o;;{ ;iŽ;[o;!;["&block-views-resrource-types-block;@;iŽ;T;@; i ;	[o;";["background;o;#;;$;"#f1f1f1;@;%;&;@; i ;	[ ;io;";["padding;o;#;;$;"	24px;@;%;&;@; i ;	[ ;io;";["overflow;o;#;;$;"hidden;@;%;&;@; i ;	[ ;i‘o;";["z-index;o;#;;$;"1;@;%;&;@; i ;	[ ;i’o;";["position;o;#;;$;"relative;@;%;&;@; i ;	[ ;i“o;";["padding-top;o;#;;$;"	24px;@;%;&;@; i ;	[ ;i”o;;["&:before;o;;" ;i•;[o;;[o;
+;0;@Ì;o;;{ ;i•;[o;G;@Ì;i•o;=
+;;>;["before;@Ì;?0;i•;T;@; i ;	[o;";["content;o;#;;$;""";@;%;&;@; i ;	[ ;i–o;";["position;o;#;;$;"absolute;@;%;&;@; i ;	[ ;i—o;";["top;o;#;;$;"
+-31px;@;%;&;@; i ;	[ ;i˜o;";["	left;o;#;;$;"0;@;%;&;@; i ;	[ ;i™o;";["height;o;#;;$;"	30px;@;%;&;@; i ;	[ ;išo;";["
+width;o;#;;$;"	100%;@;%;&;@; i ;	[ ;i›o;<;2{ ;"box-shadow;@;	[ ;30;iœ;4[o;(	;);*;[	o;A	;B{	;CiÑ;Di;EiÑ;FiÑ;0;@;iœo;-;.[ ;/"0;i ;@;0@Ÿ;iœo;-;.[ ;/"0;i ;@;0@Ÿ;iœo;-;.["px;/"	12px;i;@;0[ ;iœ;@;iœo;<;2{ ;"border-radius;@;	[ ;30;i;4[o;-;.["px;/"	12px;i;@;0[ ;i;i•;iŽo:Sass::Tree::VariableNode:@guarded0:
+@expro;1;2{ ;"darken;@;30;i¡;4[o;+	;,"link_color;"link-color;@;i¡o;-;.["%;/"5%;i
+;@;0[ ;i¡;"diag-bgrd-color;@;	[ ;i¡o;N;O0;Po;1;2{ ;"darken;@;30;i¢;4[o;+	;,"link_color;"link-color;@;i¢o;-;.["%;/"8%;i;@;0[ ;i¢;"diag-stripe-color;@;	[ ;i¢o;;[".diag-bgrd;o;;" ;i¤;[o;;[o;
+;0;@=;o;;{ ;i¤;[o;;["diag-bgrd;@=;i¤;T;@; i ;	[	o;";["background-color;o;+	;,"diag_bgrd_color;"diag-bgrd-color;@;i¥;%;&;@; i ;	[ ;i¥o;";["background-image;o;1;2{ ;"repeating-linear-gradient;@;30;i¦;4[
+o;-;.["deg;/"-30deg;iÝ;@;0[ ;i¦o;#	;;$;"transparent;@;i¦o;(	;);*;[o;#	;;$;"transparent;@;i¦o;-;.["px;/"8px;i;@;0[ ;i¦;@;i¦o;(	;);*;[o;+	;,"diag_stripe_color;"diag-stripe-color;@;i¦o;-;.["px;/"8px;i;@;0[ ;i¦;@;i¦o;(	;);*;[o;+	;,"diag_stripe_color;"diag-stripe-color;@;i¦o;-;.["px;/"	16px;i;@;0[ ;i¦;@;i¦;%;&;@; i ;	[ ;i¦o;";["border-top;o;(	;);*;[o;-;.["px;/"5px;i
+;@;0[ ;i§o;#	;;$;"
+solid;@;i§o;+	;,"diag_stripe_color;"diag-stripe-color;@;i§;@;i§;%;&;@; i ;	[ ;i§o;";["border-bottom;o;(	;);*;[o;-;.["px;/"5px;i
+;@;0[ ;i¨o;#	;;$;"
+solid;@;i¨o;+	;,"diag_stripe_color;"diag-stripe-color;@;i¨;@;i¨;%;&;@; i ;	[ ;i¨;i¤o;
+
+;;@;["Ç/* .header-left {
+ *   @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset);
+ *   position: relative;
+ *   background-color: #fff;
+ *   border: 5px solid #fff;
+ * } */;@;	[ ;i«o;;[".img-shadow;o;;" ;i²;[o;;[o;
+;0;@¤;o;;{ ;i²;[o;;["img-shadow;@¤;i²;T;@; i ;	[o;<;2{ ;"box-shadow;@;	[ ;30;i³;4[o;(	;);*;[	o;-;.[ ;/"0;i ;@;0@Ÿ;i³o;-;.["px;/"1px;i;@;0[ ;i³o;-;.["px;/"4px;i	;@;0[ ;i³o;1;2{ ;"	rgba;@;30;i³;4[	o;-;.[ ;/"0;i ;@;0@Ÿ;i³o;-;.[ ;/"0;i ;@;0@Ÿ;i³o;-;.[ ;/"0;i ;@;0@Ÿ;i³o;-;.[ ;/"0.2;f0.20000000000000001 ™š;@;0@Ÿ;i³;@;i³o;(	;);*;[
+o;-;.[ ;/"0;i ;@;0@Ÿ;i³o;-;.[ ;/"0;i ;@;0@Ÿ;i³o;-;.["px;/"	40px;i-;@;0[ ;i³o;1;2{ ;"	rgba;@;30;i³;4[	o;-;.[ ;/"0;i ;@;0@Ÿ;i³o;-;.[ ;/"0;i ;@;0@Ÿ;i³o;-;.[ ;/"0;i ;@;0@Ÿ;i³o;-;.[ ;/"0.1;f0.10000000000000001 ™š;@;0@Ÿ;i³o;#	;;$;"
+inset;@;i³;@;i³o;";["position;o;#;;$;"relative;@;%;&;@; i ;	[ ;i´o;";["background-color;o;#;;$;"#FFFFFF;@;%;&;@; i ;	[ ;iµo;";["border-width;o;#;;$;"5px;@;%;&;@; i ;	[ ;i¶o;";["border-style;o;#;;$;"
+solid;@;%;&;@; i ;	[ ;i·o;";["border-color;o;#;;$;"#ffffff;@;%;&;@; i ;	[ ;i¸o;";["border-radius;o;#;;$;"0px;@;%;&;@; i ;	[ ;i¹o;;["&:before;o;;" ;iº;[o;;[o;
+;0;@;o;;{ ;iº;[o;G;@;iºo;=
+;;>;["before;@;?0;iº;T;@; i ;	[o;";["content;o;#;;$;""";@;%;&;@; i ;	[ ;i»o;";["z-index;o;#;;$;"-1;@;%;&;@; i ;	[ ;i¼o;";["position;o;#;;$;"absolute;@;%;&;@; i ;	[ ;i½o;";["
+width;o;#;;$;"50%;@;%;&;@; i ;	[ ;i¾o;";["top;o;#;;$;"
+160px;@;%;&;@; i ;	[ ;i¿o;";["bottom;o;#;;$;"	15px;@;%;&;@; i ;	[ ;iÀo;";["	left;o;#;;$;"	10px;@;%;&;@; i ;	[ ;iÁo;";["-webkit-transform;o;1;2{ ;"rotate;@;30;iÂ;4[o;-;.["deg;/"
+-3deg;iø;@;0[ ;iÂ;%;&;@; i ;	[ ;iÂo;";["transform;o;1;2{ ;"rotate;@;30;iÃ;4[o;-;.["deg;/"
+-3deg;iø;@;0[ ;iÃ;%;&;@; i ;	[ ;iÃo;";["box-shadow;o;#;;$;"0px 15px 10px #777;@;%;&;@; i ;	[ ;iÄ;iºo;;["&:after;o;;" ;iÆ;[o;;[o;
+;0;@x;o;;{ ;iÆ;[o;G;@x;iÆo;=
+;;>;["
+after;@x;?0;iÆ;T;@; i ;	[o;";["content;o;#;;$;""";@;%;&;@; i ;	[ ;iÇo;";["z-index;o;#;;$;"-1;@;%;&;@; i ;	[ ;iÈo;";["position;o;#;;$;"absolute;@;%;&;@; i ;	[ ;iÉo;";["
+width;o;#;;$;"50%;@;%;&;@; i ;	[ ;iÊo;";["top;o;#;;$;"
+160px;@;%;&;@; i ;	[ ;iËo;";["
+right;o;#;;$;"	10px;@;%;&;@; i ;	[ ;iÌo;";["bottom;o;#;;$;"	15px;@;%;&;@; i ;	[ ;iÍo;";["-webkit-transform;o;1;2{ ;"rotate;@;30;iÎ;4[o;-;.["deg;/"	3deg;i;@;0[ ;iÎ;%;&;@; i ;	[ ;iÎo;";["transform;o;1;2{ ;"rotate;@;30;iÏ;4[o;-;.["deg;/"	3deg;i;@;0[ ;iÏ;%;&;@; i ;	[ ;iÏo;";["box-shadow;o;#;;$;"0px 15px 10px #777;@;%;&;@; i ;	[ ;iÐ;iÆ;i²o;;[".no-boxshadow;o;;" ;iÔ;[o;;[o;
+;0;@Ó;o;;{ ;iÔ;[o;;["no-boxshadow;@Ó;iÔ;T;@; i ;	[o;;[".img-shadow;o;;" ;iÕ;[o;;[o;
+;0;@ã;o;;{ ;iÕ;[o;;["img-shadow;@ã;iÕ;T;@; i ;	[o;";["border;o;#;;$;"5px solid #d1d1d1;@;%;&;@; i ;	[ ;iÖ;iÕ;iÔ;i

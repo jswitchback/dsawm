@@ -8,7 +8,7 @@ html.js #toTop {
   display: none;
 }
 
-#toTop {
+#to-top {
     background: $link-color;
     @include rgba-background-inline(rgba(10,77,110, .8));
     z-index: 1;
@@ -17,14 +17,14 @@ html.js #toTop {
     color: white;
 }
 
-#toTop {
+#to-top {
   font-family: $base-page-title-family;
   position: fixed;
   right: 0;
   bottom: 10px;
   padding: 1em;
   line-height: 1;
-  font-size: .875em;
+  font-size: .75em;
 }
 
  

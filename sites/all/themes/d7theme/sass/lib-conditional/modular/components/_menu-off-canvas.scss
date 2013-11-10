@@ -12,35 +12,48 @@
 }
 
 #sidebar-toggle {
+   background: #f1f1f1;
+   margin-bottom: 12px;
    display: inline-block;
    font-size: .75em;
-   background-color: $link-color;
-   @include background-image(linear-gradient(center top, $link-color, darken($link-color, 10%)));
-   background-repeat: repeat-x;
-   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-   color: lighten($link-color, 70%);
-   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-   margin-right: 10px;
-   padding: 3px 10px;
-   @include border-radius(2px);
-   border-style: solid;
-   border-width: 1px;
-   -moz-border-bottom-colors: none;
-   -moz-border-image: none;
-   -moz-border-left-colors: none;
-   -moz-border-right-colors: none;
-   -moz-border-top-colors: none;
+   // background-color: $link-color;
+   // @include background-image(linear-gradient(center top, $link-color, darken($link-color, 10%)));
+   // background-repeat: repeat-x;
+   // border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+   // color: lighten($link-color, 70%);
+   // text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+   @include single-text-shadow(255,255,255,.8);
+   padding: 6px;
+   // @include border-radius(2px);
+   // border-style: solid;
+   // border-width: 1px;
+   // -moz-border-bottom-colors: none;
+   // -moz-border-image: none;
+   // -moz-border-left-colors: none;
+   // -moz-border-right-colors: none;
+   // -moz-border-top-colors: none;
    line-height: 20px;
-   margin-bottom: 0;
    text-align: center;
    vertical-align: middle;
+   line-height: 1;
+   @include transition(all .15s ease);
    @include breakpoint($tablet-portrait-min-width) {
       display: none;
    }
+   &:before, &:after {
+      line-height: 1;
+      font-size: 1em;
+   }
 }
 
-#nav-inner {
-   margin-bottom: 12px;
+.show-sidebar {
+   #sidebar-toggle {
+      line-height: 36px;
+      &:before, &:after {
+         font-size: 2em;
+         content: "\e60d";
+      }
+   }
 }
 
 /* BUTTON CSS */

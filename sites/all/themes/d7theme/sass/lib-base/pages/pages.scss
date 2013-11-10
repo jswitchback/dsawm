@@ -35,14 +35,14 @@ body {
   margin-bottom: 12px;
   margin-left: -12px;
   @include breakpoint($tablet-portrait-min-width) {
-    height: 90px;
-    width: 393px;
+    height: 80px;
+    width: 350px;
     padding: 0;
   }
 }
 
 #logo {
-  height: 90px;
+  height: 80px;
   width: 100%;
   display: block;
   overflow: hidden;
@@ -50,8 +50,8 @@ body {
   background: url(../../../images/svg/dsawm-logo.svg) no-repeat scroll top left;
   background-size: contain;
   @include breakpoint($tablet-portrait-min-width) {
-    height: 90px;
-    width: 393px;
+    height: 80px;
+    width: 350px;
   }
   img {
     vertical-align: bottom;
@@ -87,9 +87,11 @@ html.no-svg #logo {
 
 #header-wrapper {
   background-color: $body-bgrd-color;
+  @include background-image(linear-gradient(center top, #ffffff $body-bgrd-color));
   border-bottom: 1px solid darken($body-bgrd-color, 55%);
   @include box-shadow(0,0,12px, #ffffff)
 }
+
 /* The name of the website. */
 .header__site-name {
   margin: 0;
