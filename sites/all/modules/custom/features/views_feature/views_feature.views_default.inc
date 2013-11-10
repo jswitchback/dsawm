@@ -304,15 +304,15 @@ function views_feature_views_default_views() {
   $handler->display->display_options['fields']['name']['element_label_type'] = '0';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
-  /* Field: Taxonomy term: Term description */
-  $handler->display->display_options['fields']['description']['id'] = 'description';
-  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['description']['field'] = 'description';
-  $handler->display->display_options['fields']['description']['label'] = '';
-  $handler->display->display_options['fields']['description']['element_type'] = 'p';
-  $handler->display->display_options['fields']['description']['element_class'] = 'resource-text';
-  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+  /* Field: Taxonomy term: Short Description */
+  $handler->display->display_options['fields']['field_resource_short_description']['id'] = 'field_resource_short_description';
+  $handler->display->display_options['fields']['field_resource_short_description']['table'] = 'field_data_field_resource_short_description';
+  $handler->display->display_options['fields']['field_resource_short_description']['field'] = 'field_resource_short_description';
+  $handler->display->display_options['fields']['field_resource_short_description']['label'] = '';
+  $handler->display->display_options['fields']['field_resource_short_description']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_resource_short_description']['element_class'] = 'resource-text';
+  $handler->display->display_options['fields']['field_resource_short_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_resource_short_description']['element_default_classes'] = FALSE;
   $handler->display->display_options['block_description'] = 'Landing Page Resource Types Block';
 
   /* Display: Category Header Block */

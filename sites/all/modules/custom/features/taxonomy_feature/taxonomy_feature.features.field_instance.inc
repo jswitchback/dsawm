@@ -55,9 +55,43 @@ function taxonomy_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-resource_category-field_resource_short_description'
+  $field_instances['taxonomy_term-resource_category-field_resource_short_description'] = array(
+    'bundle' => 'resource_category',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_resource_short_description',
+    'label' => 'Short Description',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Landing Page Image');
+  t('Short Description');
 
   return $field_instances;
 }
