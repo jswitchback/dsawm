@@ -41,8 +41,8 @@ body {
 
 /* Typography
    ========================================================================== */
-.field-resource-link a,
-[class*="icon-"] {
+.field-resource-link a:before,
+[class*="icon-"]:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -50,13 +50,10 @@ body {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  vertical-align: middle;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.field-resource-link a:before,
-[class*="icon-"]:before {
-  vertical-align: middle;
 }
 
 .field-resource-link a {
