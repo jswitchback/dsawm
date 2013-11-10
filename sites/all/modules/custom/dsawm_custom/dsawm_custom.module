@@ -60,7 +60,7 @@ function dsawm_custom_block_configure($delta = '') {
         </div>
 
         <div id="contact-info">
-            <p>Copyright © 2012 Down Syndrome Association of West Michigan</p>
+            <p>Copyright © 2013 Down Syndrome Association of West Michigan</p>
             <p>233 E Fulton St, Ste 108 | Grand Rapids, MI 49503</p>
             <p><strong>Phone:  616-956-3488</br>Toll Free 866-665-7451</strong></p>
         </div>
