@@ -79,10 +79,10 @@
 }
 .view-resources.view-display-id-page .resource-phone li {
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 12px;
 }
 .view-resources.view-display-id-page .views-row {
-  margin-bottom: .5em;
+  margin-bottom: 1.5em;
   padding-bottom: 1.5em;
   border-bottom: 1px solid #d1d1d1;
 }
