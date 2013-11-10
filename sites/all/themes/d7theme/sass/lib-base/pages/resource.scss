@@ -13,7 +13,7 @@ $zen-column-count:  24;
 		font-size: 1em;
 		margin-bottom: 6px;
 		padding: 0 1em;
-		margin-left: -4px;
+		// margin-left: -4px;
 	}
 	.resource-item {
 		margin-bottom: 24px;
@@ -43,6 +43,7 @@ $zen-column-count:  24;
 	.header-right {
 		clear: both;
 		float: left;
+		line-height: 1.5;
 	}
 	@include breakpoint(860px) {
 		.header-image {
@@ -177,6 +178,11 @@ $d-blue-d: #0b4d6e;
 /* Sidebar area promotions */
 #block-views-promotions-block {
 	display: none;
+	padding: 1em 0 1.5em 0;
+	border-bottom: 1px solid rgba(255,255,255,.2);
+	.views-row {
+		@include rgba-background(rgba(255,255,255,.95));
+	}
 	@include breakpoint($tablet-portrait-min-width) {
 		display: block;
 	}

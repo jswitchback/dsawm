@@ -11,7 +11,6 @@
   font-size: 1em;
   margin-bottom: 6px;
   padding: 0 1em;
-  margin-left: -4px;
 }
 .resource-center .resource-item {
   margin-bottom: 24px;
@@ -42,6 +41,7 @@
 #block-dsawm-custom-landing-header .header-right {
   clear: both;
   float: left;
+  line-height: 1.5;
 }
 @media (min-width: 53.75em) {
   #block-dsawm-custom-landing-header .header-image {
@@ -177,6 +177,12 @@
 /* Sidebar area promotions */
 #block-views-promotions-block {
   display: none;
+  padding: 1em 0 1.5em 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+#block-views-promotions-block .views-row {
+  background: url('../../../images/generated/fffffff2.png?1384036770');
+  background: rgba(255, 255, 255, 0.95);
 }
 @media (min-width: 47.5em) {
   #block-views-promotions-block {

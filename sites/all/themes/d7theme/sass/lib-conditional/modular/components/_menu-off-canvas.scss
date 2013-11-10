@@ -41,7 +41,7 @@
       display: none;
    }
    &:before, &:after {
-      line-height: 1;
+      line-height: .75;
       font-size: 1em;
    }
 }
@@ -49,6 +49,7 @@
 .show-sidebar {
    #sidebar-toggle {
       line-height: 36px;
+      font-size: 0.875em;
       &:before, &:after {
          font-size: 2em;
          content: "\e60d";

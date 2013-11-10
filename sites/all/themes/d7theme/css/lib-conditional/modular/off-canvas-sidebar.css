@@ -215,12 +215,13 @@
   }
 }
 #sidebar-toggle:before, #sidebar-toggle:after {
-  line-height: 1;
+  line-height: .75;
   font-size: 1em;
 }
 
 .show-sidebar #sidebar-toggle {
   line-height: 36px;
+  font-size: 0.875em;
 }
 .show-sidebar #sidebar-toggle:before, .show-sidebar #sidebar-toggle:after {
   font-size: 2em;
