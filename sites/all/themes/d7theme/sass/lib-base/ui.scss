@@ -168,6 +168,9 @@
   li { /* Each page number in the pager list */
     padding: 0 0.15em;
     margin-right: .25em;
+    line-height: 27px;
+    vertical-align: bottom;
+    margin: 0 .5em;
   }
 }
 
@@ -204,9 +207,22 @@
  display: inline-block;
  vertical-align: middle;
  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#F4F4F2",endColorstr="#E5E5E3");
- &:hover {
+ &:hover, :focus {
   background-color: #D1D1D1;
   background-image: none;
+  @include box-shadow(none);
+ }
+ &:active {
+  background-color: #89c3d1;
+  border: 1px solid darken(#89c3d1, 20%);
+  color: #fff;
+  @include box-shadow(none);
+  &:visited {
+    color: #fff;
+  }
+ }
+ &:visited {
+  color: #80807C;
  }
 }
 

@@ -14,6 +14,12 @@
 }
 .resource-center .resource-item {
   margin-bottom: 24px;
+  text-align: center;
+}
+@media (min-width: 47.5em) {
+  .resource-center .resource-item {
+    text-align: left;
+  }
 }
 .resource-center .resource-text {
   padding: 0 8px;

@@ -112,6 +112,9 @@
   /* Each page number in the pager list */
   padding: 0 0.15em;
   margin-right: .25em;
+  line-height: 27px;
+  vertical-align: bottom;
+  margin: 0 .5em;
 }
 
 .item-list {
@@ -148,9 +151,26 @@
   vertical-align: middle;
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#F4F4F2",endColorstr="#E5E5E3");
 }
-.pager a:hover {
+.pager a:hover, .pager a :focus {
   background-color: #D1D1D1;
   background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.pager a:active {
+  background-color: #89c3d1;
+  border: 1px solid #449bb0;
+  color: #fff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.pager a:active:visited {
+  color: #fff;
+}
+.pager a:visited {
+  color: #80807C;
 }
 
 /* NODE EDIT TABS

@@ -16,6 +16,10 @@ $zen-column-count:  24;
 	}
 	.resource-item {
 		margin-bottom: 24px;
+		text-align: center;
+		@include breakpoint($tablet-portrait-min-width) {
+		text-align: left;
+		}
 	}
 	.resource-text {
 		padding: 0 8px;

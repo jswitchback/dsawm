@@ -9,11 +9,24 @@
 @media (max-width: 47.4375em) {
   html.js #navigation {
     overflow: hidden;
-    -webkit-transition: max-height 0.5s cubic-bezier(0.17, 0.67, 0.66, 1.04);
-    -moz-transition: max-height 0.5s cubic-bezier(0.17, 0.67, 0.66, 1.04);
-    -o-transition: max-height 0.5s cubic-bezier(0.17, 0.67, 0.66, 1.04);
-    transition: max-height 0.5s cubic-bezier(0.17, 0.67, 0.66, 1.04);
+    -webkit-transition-property: max-height, opacity;
+    -moz-transition-property: max-height, opacity;
+    -o-transition-property: max-height, opacity;
+    transition-property: max-height, opacity;
+    -webkit-transition-duration: 0.5s, 0;
+    -moz-transition-duration: 0.5s, 0;
+    -o-transition-duration: 0.5s, 0;
+    transition-duration: 0.5s, 0;
+    -webkit-transition-timing-function: cubic-bezier(0.17, 0.67, 0.66, 1.24), ease;
+    -moz-transition-timing-function: cubic-bezier(0.17, 0.67, 0.66, 1.24), ease;
+    -o-transition-timing-function: cubic-bezier(0.17, 0.67, 0.66, 1.24), ease;
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.66, 1.24), ease;
+    -webkit-transition-delay: 0, 0.5s;
+    -moz-transition-delay: 0, 0.5s;
+    -o-transition-delay: 0, 0.5s;
+    transition-delay: 0, 0.5s;
     max-height: 0;
+    opacity: 0;
   }
 }
 @media (min-width: 47.5em) {
@@ -23,7 +36,12 @@
 }
 
 html.js body.show-nav #navigation {
-  max-height: 30em;
+  max-height: 50em;
+  -webkit-transition-delay: 0, 0;
+  -moz-transition-delay: 0, 0;
+  -o-transition-delay: 0, 0;
+  transition-delay: 0, 0;
+  opacity: 1;
 }
 
 /* Styles

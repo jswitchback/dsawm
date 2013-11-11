@@ -11,8 +11,12 @@ $nav-color: $link-color;
 html.js #navigation {
   @include breakpoint($tablet-portrait-max-width) {
     overflow: hidden;
-    @include transition(max-height .5s cubic-bezier(.17,.67,.66,1.04));
+    @include transition-property(max-height, opacity);
+    @include transition-duration(.5s, 0);
+    @include transition-timing-function(cubic-bezier(.17,.67,.66,1.24), ease);
+    @include transition-delay(0, 0.5s);   
     max-height: 0;
+    opacity: 0;
   }
   @include breakpoint($tablet-portrait-min-width) {
     max-height: 30em;
@@ -20,7 +24,9 @@ html.js #navigation {
 } 
 
 html.js body.show-nav #navigation {
-  max-height: 30em;
+  max-height: 50em;
+  @include transition-delay(0, 0);   
+  opacity: 1;
 }
 // End behavior
 
