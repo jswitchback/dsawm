@@ -5,11 +5,15 @@
 // http://developers.google.com/mobile/articles/fast_buttons
 // http://github.com/ftlabs/fastclick
 
-if (Modernizr.touch) {
-// document.addEventListener("touchstart", function(){}, true);
-}
 
-//Then, you'll want to use CSS to add active states to our buttons and remove the tap highlight:
+(function ($, Drupal, window, document, undefined) {
 
-// -webkit-tap-highlight-color: rgba(0,0,0,0);
+$(document).ready(function($) {
 
+
+
+});  // End Ready
+
+
+
+})(jQuery, Drupal, this, this.document);

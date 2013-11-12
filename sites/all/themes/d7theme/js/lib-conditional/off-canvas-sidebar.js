@@ -75,6 +75,26 @@
         this.click(sidebarNavToggle);
         $body.removeClass('show-sidebar');
       });
+
+      if (Modernizr.touch) {
+        var body = $('body');
+
+          var element = document.getElementById('main');
+          var openSidebar = Hammer(element).on("swipeleft", function(event) {
+            if (body.hasClass('show-sidebar')) {
+              body.removeClass('show-sidebar');
+            }
+          });
+          var closeSidebar = Hammer(element).on("swiperight", function(event) {
+              body.addClass('show-sidebar');
+          });
+
+
+        // possibly need to add <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        document.addEventListener("touchstart", function(){}, true);
+        //Then, you'll want to use CSS to add active states to our buttons and remove the tap highlight:
+        // -webkit-tap-highlight-color: rgba(0,0,0,0);
+      }
     },
     reinit : function () {
     },

@@ -492,13 +492,24 @@ function d7theme_library() {
     ),
   );
 
+  $libraries['hammer'] = array(
+    'title' => 'Touch Device JS Library',
+    'version' => '1.0',
+    'js' => array(
+      drupal_get_path('theme', 'd7theme') . '/js/lib-conditional/hammer.js' => array(
+        'type' => 'file',
+        'weight' => 1005,
+        'group' => JS_LIBRARY),
+    ),
+  );
+
   $libraries['touch'] = array(
     'title' => 'Touch Device JS',
     'version' => '1.0',
     'js' => array(
       drupal_get_path('theme', 'd7theme') . '/js/lib-conditional/touch.js' => array(
         'type' => 'file',
-        'weight' => 1005,
+        'weight' => 1006,
         'group' => JS_LIBRARY),
     ),
   );
@@ -578,6 +589,7 @@ function d7theme_preprocess_html(&$variables, $hook) {
   }
 
   drupal_add_library('d7theme', 'responsive_js');
+  drupal_add_library('d7theme', 'hammer');
   drupal_add_library('d7theme', 'touch');
 
   // Add css and js if usimg theming helper region
