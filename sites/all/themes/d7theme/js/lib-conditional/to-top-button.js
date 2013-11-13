@@ -4,9 +4,9 @@ jQuery(document).ready(function($){
 
   $(window).scroll(function() {
   if($(this).scrollTop() > 300) {
-  $("#toTop").fadeIn();
+  $("#to-top").fadeIn();
   } else {
-  $("#toTop").fadeOut();
+  $("#to-top").fadeOut();
   }
   });
 
